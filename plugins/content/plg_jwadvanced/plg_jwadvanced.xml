@@ -1,0 +1,1489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+* Jw Player Plugin Advanced :  plg_jwadvanced
+* @package plg_jwadvanced
+* @subpackage plg_jwadvanced.xml
+* @author joomlarulez.
+* @copyright (C) www.joomlarulez.com
+* @license Limited  http://www.gnu.org/licenses/gpl.html
+* final 1.13.0
+*/
+-->
+<install version="1.5" type="plugin" group="content" method="upgrade">
+    <name>Content - JW Player Plugin Advanced</name>
+	<author>JoomlaRuleZ.com</author>
+	<creationDate>2012-04-02</creationDate>
+	<copyright>(C) 2010-2012 JoomlaRuleZ.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>webmaster@joomlarulez.com</authorEmail>
+	<authorUrl>www.joomlarulez.com</authorUrl>
+	<version>1.13.0</version>
+	<description>PLG_JWADVANCED_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="plg_jwadvanced">plg_jwadvanced.php</filename>
+		<filename>index.html</filename>
+		<folder>plg_jwadvanced</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_plg_jwadvanced.ini</language>
+		<language tag="en-GB">en-GB.plg_content_plg_jwadvanced.sys.ini</language>
+	</languages>
+	
+    <params group="advanced">
+		<param name="Global" type="spacer" default="PLG_JWADVANCED_DESC_GLOBAL" />
+		<param name="Playlisttrigger" type="text" label="PLG_JWADVANCED_LABEL_GLOBALTRIG" default="jwplayer" description="PLG_JWADVANCED_DESC_GLOBALTRIG" />
+		<param name="Playlistjwversion" type="list" label="PLG_JWADVANCED_LABEL_GLOBALJWV" default="JW5_HTML5" description="PLG_JWADVANCED_DESC_GLOBALJWV">
+			<option value="5">PLG_JWADVANCED_VALUE_JW5</option>
+			<option value="JW5_HTML5">PLG_JWADVANCED_VALUE_JW5_FALLBACK_HTML5</option>
+			<option value="HTML5_JW5">PLG_JWADVANCED_VALUE_HTML5_FALLBACK_JW5</option>
+			<option value="4">PLG_JWADVANCED_VALUE_JW4</option>
+		</param>
+		<param name="Playlistclass" type="text" default="" label="PLG_JWADVANCED_LABEL_GLOBALCLASS" description="PLG_JWADVANCED_DESC_GLOBALCLASS" />
+		<param name="PlaylistSwfobject" type="list" label="PLG_JWADVANCED_LABEL_GLOBALSWF" default="1" description="PLG_JWADVANCED_DESC_GLOBALSWF">
+			<option value="2">PLG_JWADVANCED_VALUE_AUTO</option>
+			<option value="0">PLG_JWADVANCED_VALUE_FORNO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_FORYES</option>
+		</param>
+		<param name="Playlistmetaload" type="list" label="PLG_JWADVANCED_LABEL_GLOBALMETA" default="2" description="PLG_JWADVANCED_DESC_GLOBALMETA">
+			<option value="2">PLG_JWADVANCED_VALUE_AUTO</option>
+			<option value="0">PLG_JWADVANCED_VALUE_FORNO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_FORYES</option>
+		</param>
+		<param name="Playlistflashinstall" type="radio" label="PLG_JWADVANCED_LABEL_GLOBALFI" default="1" description="PLG_JWADVANCED_DESC_GLOBALFI">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playlistconfig" type="text" default="" label="PLG_JWADVANCED_LABEL_GLOBALCONFIG" description="PLG_JWADVANCED_DESC_GLOBALCONFIG" size="70" />
+        <param name="Playlistdebug" type="list" default="none" label="PLG_JWADVANCED_LABEL_DEBUGCH" description="PLG_JWADVANCED_DESC_DEBUGCH">
+            <option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+            <option value="trace">PLG_JWADVANCED_VALUE_TRACE</option>
+			<option value="arthropod">PLG_JWADVANCED_VALUE_ARTHROPOD</option>
+        </param>
+		<param name="PLG_JWADVANCED_DESC_EVENTS" type="spacer" default="" />
+		<param name="Playlistevents" type="textarea" default="" label="PLG_JWADVANCED_LABEL_EXTRAJSEVENTS" description="PLG_JWADVANCED_DESC_EXTRAJSEVENTS" rows="5" cols="40" />
+		<param name="extrajsname" type="text" default="" label="PLG_JWADVANCED_LABEL_EXTRAJSNAME" description="PLG_JWADVANCED_DESC_EXTRAJSNAME" />
+		<param name="HTML5" type="spacer" default="PLG_JWADVANCED_DESC_HTML5" />
+		<param name="PlaylistjwplayerLoad" type="list" label="PLG_JWADVANCED_LABEL_GLOBALJWPLAYER" default="2" description="PLG_JWADVANCED_DESC_GLOBALJWPLAYER">
+			<option value="2">PLG_JWADVANCED_VALUE_AUTO</option>
+			<option value="0">PLG_JWADVANCED_VALUE_FORNO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_FORYES</option>
+		</param>
+		<param name="Playlistfallbackdownload" type="radio" label="PLG_JWADVANCED_LABEL_GLOBALFALLBACKDOWN" default="1" description="PLG_JWADVANCED_DESC_GLOBALFALLBACKDOWN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="PlaylistiscrollLoad" type="list" label="PLG_JWADVANCED_LABEL_GLOBALISCROLL" default="2" description="PLG_JWADVANCED_DESC_GLOBALISCROLL">
+			<option value="2">PLG_JWADVANCED_VALUE_AUTO</option>
+			<option value="0">PLG_JWADVANCED_VALUE_FORNO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_FORYES</option>
+		</param>
+		<param name="JWBOX" type="spacer" default="PLG_JWADVANCED_DESC_JWBOX" />
+		<param name="PlaylistjqueryLoad" type="list" label="PLG_JWADVANCED_LABEL_GLOBALJQU" default="2" description="PLG_JWADVANCED_DESC_GLOBALJQU">
+			<option value="0">PLG_JWADVANCED_VALUE_AUTO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_FORNO</option>
+			<option value="2">PLG_JWADVANCED_VALUE_FORYES</option>
+		</param>
+		<param name="PlaylistjqueryjwboxLoad" type="list" label="PLG_JWADVANCED_LABEL_GLOBALJQUJWBOX" default="2" description="PLG_JWADVANCED_DESC_GLOBALJQUJWBOX">
+			<option value="0">PLG_JWADVANCED_VALUE_AUTO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_FORNO</option>
+			<option value="2">PLG_JWADVANCED_VALUE_FORYES</option>
+		</param>
+		<param name="Playlistjquerymootoolsconflict" type="radio" label="PLG_JWADVANCED_LABEL_GLOBALJWBMOO" default="1" description="PLG_JWADVANCED_DESC_GLOBALJWBMOO">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playlistjwboxcontainer" type="list" label="PLG_JWADVANCED_LABEL_GLOBALJWBCON" default="span" description="PLG_JWADVANCED_DESC_GLOBALJWBCON">
+			<option value="span">PLG_JWADVANCED_VALUE_SPAN</option>
+			<option value="div">PLG_JWADVANCED_VALUE_DIV</option>
+		</param>
+		<param name="PlaylistcssLoad" type="list" label="PLG_JWADVANCED_LABEL_GLOBALCSS" default="1" description="PLG_JWADVANCED_DESC_GLOBALCSS">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+			<option value="cssfield">PLG_JWADVANCED_VALUE_USECSSFIELD</option>
+		</param>
+		<param name="mod_css" type="textarea" default="" label="PLG_JWADVANCED_LABEL_GLOBALCSSFIELD" description="PLG_JWADVANCED_DESC_GLOBALCSSFIELD" rows="5" cols="40" />
+    </params>
+    <params>
+		<param name="Playlist" type="spacer" default="PLG_JWADVANCED_DESC_PLAYLIST" />
+		<param name="Video.joomlarulez.com - Bits On The Run" type="spacer" default="PLG_JWADVANCED_DESC_PLAYLISTBOTR" />
+		<param name="BitsOnTherunmanage" type="spacer" default="PLG_JWADVANCED_DESC_PLAYLISTBOTRMANAGE" />
+		<param name="mod_plbotrdisplay" type="list" default="botr" label="PLG_JWADVANCED_LABEL_PLAYLISTBOTRDISPLAY" description="PLG_JWADVANCED_DESC_PLAYLISTBOTRDISPLAY">
+			<option value="botr">PLG_JWADVANCED_VALUE_PLAYLISTBOTRBOTRDISPLAY</option>
+			<option value="combinebotr">PLG_JWADVANCED_VALUE_PLAYLISTBOTRCOMBINEDISPLAY1</option>
+			<option value="combinelocal">PLG_JWADVANCED_VALUE_PLAYLISTBOTRCOMBINEDISPLAY2</option>
+			<option value="local">PLG_JWADVANCED_VALUE_PLAYLISTBOTRMODULEDISPLAY</option>
+		</param>
+		<param name="mod_plbotrdefaultplayer" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTBOTRDEFPLAY" description="PLG_JWADVANCED_DESC_PLAYLISTBOTRDEFPLAY" size="10" />
+		<param name="mod_plbotrapikey" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTBOTRAPIKEY" description="PLG_JWADVANCED_DESC_PLAYLISTBOTRAPIKEY" size="10" />
+		<param name="mod_plbotrsecretkey" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTBOTRSECRETKEY" description="PLG_JWADVANCED_DESC_PLAYLISTBOTRSECRETKEY" size="34" />
+		<param name="mod_plbotrtimeout" type="text" default="3600" label="PLG_JWADVANCED_LABEL_PLAYLISTBOTRTIMEOUT" description="PLG_JWADVANCED_DESC_PLAYLISTBOTRTIMEOUT" size="6" />
+		<param name="MultipleExternal" type="spacer" default="PLG_JWADVANCED_DESC_PLAYLISTRSSLINKMULTI" />
+		<param name="mod_plmultidropdowntitle" type="list" label="PLG_JWADVANCED_LABEL_PLAYLISTMULTIDROPDTI" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTMULTIDROPDTI">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+			<option value="2">PLG_JWADVANCED_VALUE_CURL</option>
+		</param>
+		<param name="mod_plmultidropdowntitlelength" type="text" default="43" label="PLG_JWADVANCED_LABEL_PLAYLISTMULTILENGTHTI" description="PLG_JWADVANCED_DESC_PLAYLISTMULTILENGTHTI" size="6" />
+		<param name="mod_plmultidropdownstyle" type="list" label="PLG_JWADVANCED_LABEL_PLAYLISTMULTIDROPDSTY" default="0" description="PLG_JWADVANCED_DESC_PLAYLISTMULTIDROPDSTY">
+			<option value="0">PLG_JWADVANCED_VALUE_DEF</option>
+			<option value="1">PLG_JWADVANCED_VALUE_CLASS</option>
+		</param>
+		<param name="mod_plmultidropdownclass" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTMULTIDROPDCLASS" description="PLG_JWADVANCED_DESC_PLAYLISTMULTIDROPDCLASS" size="20" />
+		<param name="Autogenerate" type="spacer" default="PLG_JWADVANCED_DESC_PLAYLISTAUTO" />
+		<param name="mod_plautosort" type="list" default="krsort" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOSORT" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOSORT">
+			<option value="ksort">PLG_JWADVANCED_VALUE_PLAYLISTAUTODLOHI</option>
+			<option value="krsort">PLG_JWADVANCED_VALUE_PLAYLISTAUTODHILO</option>
+			<option value="asort">PLG_JWADVANCED_VALUE_PLAYLISTAUTOALOHI</option>
+			<option value="arsort">PLG_JWADVANCED_VALUE_PLAYLISTAUTOAHILO</option>
+			<option value="shuffle">PLG_JWADVANCED_VALUE_PLAYLISTAUTORAND</option>
+		</param>
+		<param name="mod_plautothumb" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOTHUMB" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOTHUMB" size="70" />
+		<param name="mod_plautoplaylistimage" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOPLAYLISTIMAGE" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOPLAYLISTIMAGE" size="70" />
+		<param name="mod_plautoduration" type="text" default="00:30" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTODUR" description="PLG_JWADVANCED_DESC_PLAYLISTAUTODUR" size="6" />
+		<param name="mod_plautotitle" type="list" default="simple" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOTI" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOTI">
+			<option value="simple">PLG_JWADVANCED_VALUE_PLAYLISTAUTOFSIMP</option>
+			<option value="filter">PLG_JWADVANCED_VALUE_PLAYLISTAUTOUFIL</option>
+		</param>
+		<param name="mod_plautodescription" type="list" default="description" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTODESC" description="PLG_JWADVANCED_DESC_PLAYLISTAUTODESC">
+			<option value="description">PLG_JWADVANCED_VALUE_PLAYLISTAUTOTYDESC</option>
+			<option value="author,description">PLG_JWADVANCED_VALUE_PLAYLISTAUTOTYAUTDESC</option>
+			<option value="author,title,description">PLG_JWADVANCED_VALUE_PLAYLISTAUTOTYAUTTIDESC</option>
+			<option value="all">PLG_JWADVANCED_VALUE_PLAYLISTAUTOTYTRAUTTIDESC</option>
+		</param>
+		<param name="mod_plautoallowlink" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOLI" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOLI">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowjpg" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOJPG" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOJPG">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowpng" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOPNG" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOPNG">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowgif" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOGIF" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOGIF">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowflv" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOFLV" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOFLV">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowmp3" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOMP3" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOMP3">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowmp4" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOMP4" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOMP4">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowm4a" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOM4A" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOM4A">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowm4v" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOM4V" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOM4V">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowmov" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOMOV" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOMOV">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoseparator" type="text" default="_-_" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOSEP" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOSEP" size="6" />
+		<param name="mod_plautotrackposition" type="text" default="0" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOTRPOS" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOTRPOS" size="3" />
+		<param name="mod_plautotitleposition" type="text" default="3" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOTIPOS" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOTIPOS" size="3" />
+		<param name="mod_plautoauthorposition" type="text" default="1" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOAUTPOS" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOAUTPOS" size="3" />
+		<param name="mod_plautodescposition" type="text" default="2" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTODESCPOS" description="PLG_JWADVANCED_DESC_PLAYLISTAUTODESCPOS" size="3" />
+		<param name="Editor" type="spacer" default="PLG_JWADVANCED_DESC_PLAYLISTEDIT" />
+		<param name="mod_plauthor" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITCRE" description="PLG_JWADVANCED_DESC_PLAYLISTEDITCRE" />
+		<param name="mod_plimage" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITTHU" description="PLG_JWADVANCED_DESC_PLAYLISTEDITTHU" size="70" />
+		<param name="mod_pllink" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITLI" description="PLG_JWADVANCED_DESC_PLAYLISTEDITLI" size="70" />
+		<param name="mod_plstart" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITSTART" description="PLG_JWADVANCED_DESC_PLAYLISTEDITSTART" size="6" />
+		<param name="mod_plstreamer" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITSTR" description="PLG_JWADVANCED_DESC_PLAYLISTEDITSTR" size="70" />
+		<param name="mod_pltags" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITTAG" description="PLG_JWADVANCED_DESC_PLAYLISTEDITTAG" size="70" />
+		<param name="mod_plduration" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITDUR" description="PLG_JWADVANCED_DESC_PLAYLISTEDITDUR" size="6" />
+		<param name="mod_plprovider" type="list" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITFOR" description="PLG_JWADVANCED_DESC_PLAYLISTEDITFOR">
+			<option value="">PLG_JWADVANCED_VALUE_PLAYLISTEDITORAUTO</option>
+			<option value="video">PLG_JWADVANCED_VALUE_PLAYLISTEDITORVID</option>
+			<option value="sound">PLG_JWADVANCED_VALUE_PLAYLISTEDITORSOU</option>
+			<option value="image">PLG_JWADVANCED_VALUE_PLAYLISTEDITORIMG</option>
+			<option value="youtube">PLG_JWADVANCED_VALUE_PLAYLISTEDITORYOUTUBE</option>
+			<option value="vimeo">PLG_JWADVANCED_VALUE_PLAYLISTEDITORVIMEO</option>
+			<option value="rtmp">PLG_JWADVANCED_VALUE_PLAYLISTEDITORRTMP</option>
+			<option value="http">PLG_JWADVANCED_VALUE_PLAYLISTEDITORHTTP</option>
+			<option value="bitgravity">PLG_JWADVANCED_VALUE_PLAYLISTEDITORBITGRAVITY</option>
+			<option value="highwinds">PLG_JWADVANCED_VALUE_PLAYLISTEDITORHIGHWINDS</option>
+			<option value="lighttpd">PLG_JWADVANCED_VALUE_PLAYLISTEDITORLIGHTTPD</option>
+			<option value="vdox">PLG_JWADVANCED_VALUE_PLAYLISTEDITORVDOX</option>
+			<option value="edgecast">PLG_JWADVANCED_VALUE_PLAYLISTEDITOREDGECAST</option>
+			<option value="fcsubscribe">PLG_JWADVANCED_VALUE_PLAYLISTEDITORFCSUBSCRIBE</option>
+			<option value="flvseek">PLG_JWADVANCED_VALUE_PLAYLISTEDITORFLVSEEK</option>
+		</param>
+		<param name="Layout" type="spacer" default="PLG_JWADVANCED_DESC_LAYOUT" />
+		<param name="Playlistplaylist" type="list" label="PLG_JWADVANCED_LABEL_POSITION" default="none" description="PLG_JWADVANCED_DESC_POSITION">
+			<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+			<option value="top">PLG_JWADVANCED_VALUE_TOP</option>
+			<option value="bottom">PLG_JWADVANCED_VALUE_BOTTOM</option>
+			<option value="right">PLG_JWADVANCED_VALUE_RIGHT</option>
+			<option value="left">PLG_JWADVANCED_VALUE_LEFT</option>
+			<option value="over">PLG_JWADVANCED_VALUE_OVER</option>
+		</param>
+		<param name="Playlistcontrolbar" type="list" label="PLG_JWADVANCED_LABEL_CBPOSITION" default="bottom" description="PLG_JWADVANCED_DESC_CBPOSITION">
+			<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+			<option value="bottom">PLG_JWADVANCED_VALUE_BOTTOM</option>
+			<option value="top">PLG_JWADVANCED_VALUE_TOP</option>
+			<option value="over">PLG_JWADVANCED_VALUE_OVER</option>
+		</param>
+		<param name="Playlistcontrolbaridlehide" type="radio" default="0" label="PLG_JWADVANCED_LABEL_CBIDLEHIDE" description="PLG_JWADVANCED_DESC_CBIDLEHIDE">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playlistcontrolbarforcenextprev" type="radio" default="0" label="PLG_JWADVANCED_LABEL_CBFNEXTPREV" description="PLG_JWADVANCED_DESC_CBFNEXTPREV">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playlistdisplayshowmute" type="radio" default="0" label="PLG_JWADVANCED_LABEL_DISSHOMU" description="PLG_JWADVANCED_DESC_DISSHOMU">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playlistdock" type="radio" default="0" label="PLG_JWADVANCED_LABEL_DOCK" description="PLG_JWADVANCED_DESC_DOCK">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playlistplaylistsize" type="text" default="180" label="PLG_JWADVANCED_LABEL_SIZE" description="PLG_JWADVANCED_DESC_SIZE" size="4" />
+		<param name="Playlistheight" type="text" default="240" label="PLG_JWADVANCED_LABEL_HEIGHT" description="PLG_JWADVANCED_DESC_HEIGHT" size="4" />
+		<param name="Playlistwidth" type="text" default="320" label="PLG_JWADVANCED_LABEL_WIDTH" description="PLG_JWADVANCED_DESC_WIDTH" size="4" />
+		<param name="Playlisticons" type="radio" default="1" label="PLG_JWADVANCED_LABEL_ICON" description="PLG_JWADVANCED_DESC_ICON">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playlistlogo" type="text" label="PLG_JWADVANCED_LABEL_LOGO" default="" description="PLG_JWADVANCED_DESC_LOGO" size="70" />
+		<param name="Playlistlogolink" type="text" label="PLG_JWADVANCED_LABEL_LOGOLINK" default="" description="PLG_JWADVANCED_DESC_LOGOLINK" size="70" />
+		<param name="Playlistlogohide" type="radio" default="1" label="PLG_JWADVANCED_LABEL_LOGOLINKHIDE" description="PLG_JWADVANCED_DESC_LOGOLINKHIDE">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playlistlogotimeout" type="text" label="PLG_JWADVANCED_LABEL_LOGOTIMEOUT" default="3" description="PLG_JWADVANCED_DESC_LOGOTIMEOUT" size="6" />
+		<param name="Playlistlogoposition" type="list" default="bottom-left" label="PLG_JWADVANCED_LABEL_LOGOLINKPOS" description="PLG_JWADVANCED_DESC_LOGOLINKPOS">
+			<option value="bottom-left">PLG_JWADVANCED_VALUE_BOTLEF</option>
+			<option value="bottom-right">PLG_JWADVANCED_VALUE_BOTRIG</option>
+			<option value="top-left">PLG_JWADVANCED_VALUE_TOPLEF</option>
+			<option value="top-right">PLG_JWADVANCED_VALUE_TOPRIG</option>
+		</param>
+		<param name="Playlistlogolinktarget" type="list" default="_blank" label="PLG_JWADVANCED_LABEL_LOGOLINKTAG" description="PLG_JWADVANCED_DESC_LOGOLINKTAR">
+			<option value="_blank">PLG_JWADVANCED_VALUE_BLANK</option>
+			<option value="_self">PLG_JWADVANCED_VALUE_SELF</option>
+			<option value="_parent">PLG_JWADVANCED_VALUE_PARENT</option>
+			<option value="_top">PLG_JWADVANCED_VALUE_TOP</option>
+		</param>
+		<param name="Playlistlogomargin" type="text" label="PLG_JWADVANCED_LABEL_LOGOMARGIN" default="8" description="PLG_JWADVANCED_DESC_LOGOMARGIN" size="6" />
+		<param name="Playlistlogoover" type="text" label="PLG_JWADVANCED_LABEL_LOGOOVER" default="1" description="PLG_JWADVANCED_DESC_LOGOOVER" size="6" />
+		<param name="Playlistlogoout" type="text" label="PLG_JWADVANCED_LABEL_LOGOOUT" default="0.5" description="PLG_JWADVANCED_DESC_LOGOOUT" size="6" />
+		<param name="Playlistabouttext" type="text" label="PLG_JWADVANCED_LABEL_ABOUTTXT" default="" description="PLG_JWADVANCED_DESC_ABOUTTEXT" size="70" />
+		<param name="Playlistaboutlink" type="text" label="PLG_JWADVANCED_LABEL_ABOUTLINK" default="" description="PLG_JWADVANCED_DESC_ABOUTLINK" size="70" />
+		<param name="Skin" type="spacer" default="PLG_JWADVANCED_DESC_SKIN" />
+		<param name="Playlistskintype" type="radio" default="1" label="PLG_JWADVANCED_LABEL_SKINTYPE" description="PLG_JWADVANCED_DESC_SKINTYPE">
+			<option value="0">PLG_JWADVANCED_VALUE_SWFSKIN</option>
+			<option value="1">PLG_JWADVANCED_VALUE_XMLSKIN</option>
+		</param>
+		<param name="Playlistskin" type="filelist" default="-1" label="PLG_JWADVANCED_LABEL_SKINSWF" description="PLG_JWADVANCED_DESC_SKINSWF" directory="/plugins/content/plg_jwadvanced/skin/swf" filter="\.swf$" exclude="" stripext=".swf" />
+		<param name="Playlistskinxml" type="filelist" default="-1" label="PLG_JWADVANCED_LABEL_SKINXML" description="PLG_JWADVANCED_DESC_SKINXML" directory="/plugins/content/plg_jwadvanced/skin/xml" filter="\.zip$" exclude="" stripext=".zip" />
+		<param name="Color" type="spacer" default="PLG_JWADVANCED_DESC_COLOR" />
+		<param name="Playlistbackcolor" type="text" default="" label="PLG_JWADVANCED_LABEL_COLORBACK" description="PLG_JWADVANCED_DESC_COLORBACK" size="6" />
+		<param name="Playlistfrontcolor" type="text" default="" label="PLG_JWADVANCED_LABEL_COLORFRONT" description="PLG_JWADVANCED_DESC_COLORFRONT" size="6" />
+		<param name="Playlistlightcolor" type="text" default="" label="PLG_JWADVANCED_LABEL_COLORLIGHT" description="PLG_JWADVANCED_DESC_COLORLIGHT" size="6" />
+		<param name="Playlistscreencolor" type="text" default="" label="PLG_JWADVANCED_LABEL_COLORSCREEN" description="PLG_JWADVANCED_DESC_COLORSCREEN" size="6" />
+		<param name="Playlistwmode" type="list" default="opaque" label="PLG_JWADVANCED_LABEL_COLORTRANS" description="">
+			<option value="opaque">PLG_JWADVANCED_VALUE_OPAQUE</option>
+			<option value="transparent">PLG_JWADVANCED_VALUE_TRANSPARENT</option>
+		</param>
+		<param name="Behaviour" type="spacer" default="PLG_JWADVANCED_DESC_BEHAVIOUR" />
+		<param name="Playlistautostart" type="radio" default="0" label="PLG_JWADVANCED_LABEL_BEHAVIOURAUTOSTART" description="PLG_JWADVANCED_DESC_BEHAVIOURAUTOSTART">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playlistbandwidth" type="text" default="5000" label="PLG_JWADVANCED_LABEL_BEHAVIOURBW" description="PLG_JWADVANCED_DESC_BEHAVIOURBW" size="6" />
+		<param name="Playlistbufferlength" type="text" default="1" label="PLG_JWADVANCED_LABEL_BEHAVIOURBUFFER" description="PLG_JWADVANCED_DESC_BEHAVIOURBUFFER" size="6" />
+		<param name="Playlistdisplayclick" type="list" default="play" label="PLG_JWADVANCED_LABEL_BEHAVIOURDCLICK" description="PLG_JWADVANCED_DESC_BEHAVIOURDCLICK">
+			<option value="play">PLG_JWADVANCED_VALUE_PLAY</option>
+			<option value="link">PLG_JWADVANCED_VALUE_LINK</option>
+			<option value="fullscreen">PLG_JWADVANCED_VALUE_FULLSCR</option>
+			<option value="single">PLG_JWADVANCED_VALUE_NONE</option>
+			<option value="mute">PLG_JWADVANCED_VALUE_MUTE</option>
+			<option value="next">PLG_JWADVANCED_VALUE_NEXT</option>
+		</param>
+		<param name="Playlistdisplaytitle" type="radio" default="0" label="PLG_JWADVANCED_LABEL_BEHAVIOURDTITLE" description="PLG_JWADVANCED_DESC_BEHAVIOURDTITLE">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playlistmute" type="radio" default="0" label="PLG_JWADVANCED_LABEL_BEHAVIOURMUTE" description="PLG_JWADVANCED_DESC_BEHAVIOURMUTE">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playlistlinktarget" type="list" default="_blank" label="PLG_JWADVANCED_LABEL_BEHAVIOURLINKTAR" description="PLG_JWADVANCED_DESC_BEHAVIOURLINKTAR">
+			<option value="_blank">PLG_JWADVANCED_VALUE_BLANK</option>
+			<option value="_self">PLG_JWADVANCED_VALUE_SELF</option>
+		</param>
+		<param name="Playlistrepeat" type="list" default="none" label="PLG_JWADVANCED_LABEL_BEHAVIOURREPEAT" description="PLG_JWADVANCED_DESC_BEHAVIOURREPEAT">
+			<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+			<option value="list">PLG_JWADVANCED_VALUE_LIST</option>
+			<option value="always">PLG_JWADVANCED_VALUE_ALWAYS</option>
+			<option value="single">PLG_JWADVANCED_VALUE_SING</option>
+		</param>
+		<param name="Playlistresizing" type="radio" default="1" label="PLG_JWADVANCED_LABEL_BEHAVIOURRESIZE" description="PLG_JWADVANCED_DESC_BEHAVIOURRESIZE">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playlistshuffle" type="radio" default="0" label="PLG_JWADVANCED_LABEL_BEHAVIOURSHUFFLE" description="PLG_JWADVANCED_DESC_BEHAVIOURSHUFFLE">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playlistsmoothing" type="radio" default="1" label="PLG_JWADVANCED_LABEL_BEHAVIOURSMOOTH" description="PLG_JWADVANCED_DESC_BEHAVIOURSMOOTH">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playliststretching" type="list" default="uniform" label="PLG_JWADVANCED_LABEL_BEHAVIOURSTRETCH" description="PLG_JWADVANCED_DESC_BEHAVIOURSTRETCH">
+			<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+			<option value="exactfit">PLG_JWADVANCED_VALUE_EXFIT</option>
+			<option value="uniform">PLG_JWADVANCED_VALUE_UNI</option>
+			<option value="fill">PLG_JWADVANCED_VALUE_FILL</option>
+		</param>
+		<param name="Playlistvolume" type="text" default="90" label="PLG_JWADVANCED_LABEL_BEHAVIOURVOL" description="PLG_JWADVANCED_DESC_BEHAVIOURVOL" size="3" />
+		<param name="Pop-Up" type="spacer" default="PLG_JWADVANCED_DESC_POPUP" description="" />
+		<param name="Playlistpopup" type="list" label="PLG_JWADVANCED_LABEL_POPUPEN" default="none" description="PLG_JWADVANCED_DESC_POPUPEN">
+			<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+			<option value="windows">PLG_JWADVANCED_VALUE_WIND</option>
+			<option value="highslide">PLG_JWADVANCED_VALUE_HIGH</option>
+			<option value="lightbox">PLG_JWADVANCED_VALUE_JWBOX</option>
+		</param>
+		<param name="Playlistpopupsizechoice" type="list" label="PLG_JWADVANCED_LABEL_POPUPSIZECH" default="default" description="PLG_JWADVANCED_DESC_POPUPSIZECH">
+			<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+			<option value="default">PLG_JWADVANCED_VALUE_DEF</option>
+			<option value="adjust">PLG_JWADVANCED_VALUE_ADJ</option>
+		</param>
+		<param name="PlaylistpopupSize" type="text" default="180" label="PLG_JWADVANCED_LABEL_POPUPSIZE" description="PLG_JWADVANCED_DESC_POPUPSIZE" size="4" />
+		<param name="PlaylistpopupHeight" type="text" default="400" label="PLG_JWADVANCED_LABEL_POPUPHEIGHT" description="PLG_JWADVANCED_DESC_POPUPHEIGHT" size="4" />
+		<param name="PlaylistpopupWidth" type="text" default="280" label="PLG_JWADVANCED_LABEL_POPUPWIDTH" description="PLG_JWADVANCED_DESC_POPUPWIDTH" size="4" />
+		<param name="Playlistpopuplinkchoice" type="list" label="PLG_JWADVANCED_LABEL_POPUPLINKCH" default="none" description="PLG_JWADVANCED_DESC_POPUPLINKCH">
+			<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+			<option value="0">PLG_JWADVANCED_VALUE_TXT</option>
+			<option value="1">PLG_JWADVANCED_VALUE_PLAYLISTEDITORIMG</option>
+			<option value="2">PLG_JWADVANCED_VALUE_TXTIMG</option>
+			<option value="3">PLG_JWADVANCED_VALUE_TXTOVER</option>
+			<option value="4">PLG_JWADVANCED_VALUE_IMGOVER</option>
+			<option value="5">PLG_JWADVANCED_VALUE_TXTIMGOVER</option>
+		</param>
+		<param name="Playlistpopuptextlink" type="text" default="Click to watch the player in a Pop-Up" label="PLG_JWADVANCED_LABEL_POPUPTXT" description="PLG_JWADVANCED_DESC_POPUPTXT" size="70" />
+		<param name="Playlistpopupimagelink" type="text" default="" label="PLG_JWADVANCED_LABEL_POPUPIMG" description="PLG_JWADVANCED_DESC_POPUPIMG" size="70" />
+		<param name="RTMP" type="spacer" default="PLG_JWADVANCED_DESC_RTMP" />
+		<param name="Playlistrtmpprepend" type="radio" default="1" label="PLG_JWADVANCED_LABEL_RTMPPRE" description="PLG_JWADVANCED_DESC_RTMPPRE">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playlistrtmploadbalance" type="radio" default="0" label="PLG_JWADVANCED_LABEL_RTMPBAL" description="PLG_JWADVANCED_DESC_RTMPBAL">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Playlistrtmpsubscribe" type="radio" default="0" label="PLG_JWADVANCED_LABEL_RTMPSUB" description="PLG_JWADVANCED_DESC_RTMPSUB">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="HTTP" type="spacer" default="PLG_JWADVANCED_DESC_HTTP" />
+		<param name="Playlisthttpstartparam" type="list" label="PLG_JWADVANCED_LABEL_HTTPSTART" default="start" description="PLG_JWADVANCED_DESC_HTTPSTART">
+			<option value="start">PLG_JWADVANCED_VALUE_START</option>
+			<option value="starttime">PLG_JWADVANCED_VALUE_STARTTIME</option>
+			<option value="apstart">PLG_JWADVANCED_VALUE_APSTART</option>
+			<option value="ec_seek">PLG_JWADVANCED_VALUE_ECSEEK</option>
+			<option value="fs">PLG_JWADVANCED_VALUE_FS</option>
+		</param>
+		<param name="Playlisthttpdvr" type="radio" default="0" label="PLG_JWADVANCED_LABEL_HTTPDVR" description="PLG_JWADVANCED_DESC_HTTPDVR">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Plugins" type="spacer" default="PLG_JWADVANCED_DESC_PLUGIN" />
+		<param name="AdSolution" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGADS" description="" />
+		<param name="registration" type="spacer" label="" default="PLG_JWADVANCED_LABEL_PLUGADSREG" description="" />
+		<param name="AdsolutionPluginEnabled" type="radio" default="0" label="PLG_JWADVANCED_LABEL_PLUGADSEN" description="PLG_JWADVANCED_DESC_PLUGADSEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="AdsolutionChannelcode" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGADSCODE" description="PLG_JWADVANCED_DESC_PLUGADSCODE" size="16" />
+		<param name="AdSolutionPremium" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGADSPREMS" description="" />
+		<param name="AdsolutionPremiumEnabled" type="radio" default="0" label="PLG_JWADVANCED_LABEL_PLUGADSPREMSEN" description="PLG_JWADVANCED_DESC_PLUGADSPREMSEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="HD" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGHD" description="" />
+		<param name="HDPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGHDEN" default="0" description="PLG_JWADVANCED_DESC_PLUGHDEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="HDPluginversion" type="list" label="PLG_JWADVANCED_LABEL_PLUGHDVER" default="2" description="PLG_JWADVANCED_DESC_PLUGHDVER">
+			<option value="1">PLG_JWADVANCED_VALUE_VERSION_1</option>
+			<option value="2">PLG_JWADVANCED_VALUE_VERSION_2</option>
+		</param>
+		<param name="HDbitrate" type="text" default="1500" label="PLG_JWADVANCED_LABEL_PLUGHDBR" description="PLG_JWADVANCED_DESC_PLUGHDBR" size="5" />
+		<param name="HDfullscreen" type="radio" label="PLG_JWADVANCED_LABEL_PLUGHDFULL" default="0" description="PLG_JWADVANCED_DESC_PLUGHDFULL">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="HDstate" type="radio" label="PLG_JWADVANCED_LABEL_PLUGHDST" default="1" description="PLG_JWADVANCED_DESC_PLUGHDST">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Viral" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGVIRAL" description="" />
+		<param name="ViralPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGVIRALEN" default="0" description="PLG_JWADVANCED_DESC_PLUGVIRALEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param	name="ViralPluginonpause" type="radio" label="PLG_JWADVANCED_LABEL_PLUGVIRALPAUSE" default="1" description="PLG_JWADVANCED_DESC_PLUGVIRALPAUSE">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param	name="ViralPluginoncomplete" type="radio" label="PLG_JWADVANCED_LABEL_PLUGVIRALCPL" default="1" description="PLG_JWADVANCED_DESC_PLUGVIRALCPL">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="ViralPluginfunctions" type="list" label="PLG_JWADVANCED_LABEL_PLUGVIRALFUNC" default="embed,link" description="PLG_JWADVANCED_DESC_PLUGVIRALFUNC">
+			<option value="all">PLG_JWADVANCED_VALUE_ALL</option>
+			<option value="embed">PLG_JWADVANCED_VALUE_EMBED</option>
+			<option value="link">PLG_JWADVANCED_VALUE_LINK</option>
+			<option value="recommendations">PLG_JWADVANCED_VALUE_RECOM</option>
+			<option value="embed,link">PLG_JWADVANCED_VALUE_EMBEDLINK</option>
+			<option value="embed,recommendations">PLG_JWADVANCED_VALUE_EMBEDRECOM</option>
+			<option value="link,recommendations">PLG_JWADVANCED_VALUE_LINKRECOM</option>
+		</param>
+		<param name="ViralPluginrecommendations" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGVIRALREC" description="PLG_JWADVANCED_DESC_PLUGVIRALREC" size="70" />
+		<param name="ViralPluginemailsubject" type="text" default="Check out this video!" label="PLG_JWADVANCED_LABEL_PLUGVIRALSUB" description="PLG_JWADVANCED_DESC_PLUGVIRALSUB" />
+		<param name="ViralPluginemailfooter" type="text" default="www.longtailvideo.com" label="PLG_JWADVANCED_LABEL_PLUGVIRALFOOT" description="PLG_JWADVANCED_DESC_PLUGVIRALFOOT" />
+		<param	name="ViralPluginmatchplayercolors" type="radio" label="PLG_JWADVANCED_LABEL_PLUGVIRALPCOLORS" default="0" description="PLG_JWADVANCED_DESC_PLUGVIRALPCOLORS">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="ViralPluginfgcolor" type="text" default="FFFFFF" label="PLG_JWADVANCED_LABEL_PLUGVIRALFGCOLOR" description="PLG_JWADVANCED_DESC_PLUGVIRALFGCOLOR" size="6" />
+		<param name="ViralPluginbgcolor" type="text" default="333333" label="PLG_JWADVANCED_LABEL_PLUGVIRALBGCOLOR" description="PLG_JWADVANCED_DESC_PLUGVIRALBGCOLOR" size="6" />
+		<param	name="ViralPluginallowmenu" type="radio" label="PLG_JWADVANCED_LABEL_PLUGVIRALMENU" default="1" description="PLG_JWADVANCED_DESC_PLUGVIRALMENU">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param	name="ViralPluginallowdock" type="radio" label="PLG_JWADVANCED_LABEL_PLUGVIRALDOCK" default="0" description="PLG_JWADVANCED_DESC_PLUGVIRALDOCK">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param	name="ViralPluginmultidock" type="radio" label="PLG_JWADVANCED_LABEL_PLUGVIRALMDOCK" default="0" description="PLG_JWADVANCED_DESC_PLUGVIRALMDOCK">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Sharing" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGSHARING" description="" />
+		<param name="SharingPluginversion" type="list" label="PLG_JWADVANCED_LABEL_PLUGSHARINGVER" default="3" description="PLG_JWADVANCED_DESC_PLUGSHARINGVER">
+			<option value="1">PLG_JWADVANCED_VALUE_VERSION_1</option>
+			<option value="2">PLG_JWADVANCED_VALUE_VERSION_2</option>
+			<option value="3">PLG_JWADVANCED_VALUE_VERSION_3</option>
+		</param>
+		<param name="SharingPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGSHARINGEN" default="0" description="PLG_JWADVANCED_DESC_PLUGSHARINGEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="SharingPluginthumbnail" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGSHARINGTHUMB" description="PLG_JWADVANCED_DESC_PLUGSHARINGTHUMB" size="70" />
+		<param name="TipJar" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGTIPJAR" description="" />
+		<param name="TipJarPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGTIPJAREN" default="0" description="PLG_JWADVANCED_DESC_PLUGTIPJAREN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="TipJartitle" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGTIPJARTI" description="PLG_JWADVANCED_DESC_PLUGTIPJARTI" size="35" />
+		<param name="TipJartext" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGTIPJARTXT" description="PLG_JWADVANCED_DESC_PLUGTIPJARTXT" size="70" />
+		<param name="TipJarbusiness" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGTIPJARBUS" description="PLG_JWADVANCED_DESC_PLUGTIPJARBUS" />
+		<param name="TipJaramount" type="text" default="5" label="PLG_JWADVANCED_LABEL_PLUGTIPJARAMO" description="PLG_JWADVANCED_DESC_PLUGTIPJARAMO" size="6" />
+		<param name="TipJarcurrency_code" type="text" default="USD" label="PLG_JWADVANCED_LABEL_PLUGTIPJARCUR" description="PLG_JWADVANCED_DESC_PLUGTIPJARCUR" size="3" />
+		<param name="TipJarimage_url" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGTIPJARIURL" description="PLG_JWADVANCED_DESC_PLUGTIPJARIURL" size="70" />
+		<param name="TipJarreturn_url" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGTIPJARRURL" description="PLG_JWADVANCED_DESC_PLUGTIPJARRURL" size="70" />
+		<param name="GaPro" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGGAP" description="" />
+		<param name="GaProPluginversion" type="list" label="PLG_JWADVANCED_LABEL_PLUGGAPVER" default="gapro-2" description="PLG_JWADVANCED_DESC_PLUGGAPVER">
+			<option value="gapro-1">PLG_JWADVANCED_VALUE_VERSION_1</option>
+			<option value="gapro-2">PLG_JWADVANCED_VALUE_VERSION_2</option>
+		</param>
+		<param name="GaProPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGAPEN" default="0" description="PLG_JWADVANCED_DESC_PLUGGAPEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="GaProaccountid" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGGAPID" description="PLG_JWADVANCED_DESC_PLUGGAPID" size="12" />
+		<param name="GaProtrackstarts" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGAPST" default="1" description="PLG_JWADVANCED_DESC_PLUGGAPST">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="GaProtrackpercentage" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGAPPER" default="1" description="PLG_JWADVANCED_DESC_PLUGGAPPER">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="GaProtracktime" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGAPTIME" default="1" description="PLG_JWADVANCED_DESC_PLUGGAPTIME">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="GaProidstring" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGGAPIDSTRING" description="PLG_JWADVANCED_DESC_PLUGGAPIDSTRING" size="12" />
+		<param name="Revolt" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGREVOLT" description="" />
+		<param	name="RevoltPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGREVOLTEN" default="0" description="PLG_JWADVANCED_DESC_PLUGREVOLTEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="RevoltPlugingain" type="text" default="1" label="PLG_JWADVANCED_LABEL_PLUGREVOLTG" description="PLG_JWADVANCED_DESC_PLUGREVOLTG" size="3" />
+		<param name="RevoltPlugintimeout" type="text" default="10" label="PLG_JWADVANCED_LABEL_PLUGREVOLTTI" description="PLG_JWADVANCED_DESC_PLUGREVOLTTI" size="4" />
+		<param name="Captions" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGCAP" description="" />
+		<param name="CaptionsPluginversion" type="list" label="PLG_JWADVANCED_LABEL_PLUGCAPVER" default="2" description="PLG_JWADVANCED_DESC_PLUGCAPVER">
+			<option value="1">PLG_JWADVANCED_VALUE_VERSION_1</option>
+			<option value="2">PLG_JWADVANCED_VALUE_VERSION_2</option>
+		</param>
+		<param	name="CaptionsPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGCAPEN" default="0" description="PLG_JWADVANCED_DESC_PLUGCAPEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param	name="Captionsback" type="radio" label="PLG_JWADVANCED_LABEL_PLUGCAPBG" default="0" description="PLG_JWADVANCED_DESC_PLUGCAPBG">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Captionsfontsize" type="text" default="14" label="PLG_JWADVANCED_LABEL_PLUGCAPFS" description="PLG_JWADVANCED_DESC_PLUGCAPFS" size="3" />
+		<param	name="Captionsstate" type="radio" label="PLG_JWADVANCED_LABEL_PLUGCAPST" default="1" description="PLG_JWADVANCED_DESC_PLUGCAPST">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="Flow" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGFLOW" description="" />
+		<param name="FlowPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGFLOWEN" default="0" description="PLG_JWADVANCED_DESC_PLUGFLOWEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="FlowPluginversion" type="list" label="PLG_JWADVANCED_LABEL_PLUGFLOWVER" default="flow-2" description="PLG_JWADVANCED_DESC_PLUGFLOWVER">
+				<option value="flow-1">PLG_JWADVANCED_VALUE_VERSION_1</option>
+				<option value="flow-2">PLG_JWADVANCED_VALUE_VERSION_2</option>
+		</param>
+		<param name="FlowPlugincoverheight" type="text" default="100" label="PLG_JWADVANCED_LABEL_PLUGFLOWCOVH" description="PLG_JWADVANCED_DESC_PLUGFLOWCOVH" />
+		<param name="FlowPluginsize" type="text" default="100" label="PLG_JWADVANCED_LABEL_PLUGFLOWSZ" description="PLG_JWADVANCED_DESC_PLUGFLOWSZ" />
+		<param	name="FlowPluginshowtext" type="radio" label="PLG_JWADVANCED_LABEL_PLUGFLOWTXT" default="1" description="PLG_JWADVANCED_DESC_PLUGFLOWTXT">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="FlowPluginposition" type="list" label="PLG_JWADVANCED_LABEL_PLUGFLOWPOS" default="" description="PLG_JWADVANCED_DESC_PLUGFLOWPOS">
+			<option value="">PLG_JWADVANCED_VALUE_BLANK</option>
+			<option value="top">PLG_JWADVANCED_VALUE_TOP</option>
+			<option value="bottom">PLG_JWADVANCED_VALUE_BOTTOM</option>
+			<option value="left">PLG_JWADVANCED_VALUE_LEFT</option>
+			<option value="right">PLG_JWADVANCED_VALUE_RIGHT</option>
+		</param>
+		<param name="FlowPlugindefaultcover" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGFLOWDEFCOV" description="PLG_JWADVANCED_DESC_PLUGFLOWDEFCOV" />
+		<param name="FlowPlugintitleoffset" type="text" default="5" label="PLG_JWADVANCED_LABEL_PLUGFLOWTIOFF" description="PLG_JWADVANCED_DESC_PLUGFLOWTIOFF" />
+		<param name="FlowPlugindescriptionoffset" type="text" default="25" label="PLG_JWADVANCED_LABEL_PLUGFLOWDESCOFF" description="PLG_JWADVANCED_DESC_PLUGFLOWDESCOFF" />
+		<param name="FlowPluginfont" type="text" default="Arial Rounded MT Bold" label="PLG_JWADVANCED_LABEL_PLUGFLOWFONT" description="PLG_JWADVANCED_DESC_PLUGFLOWFONT" />
+		<param name="FlowPluginfontsize" type="text" default="12" label="PLG_JWADVANCED_LABEL_PLUGFLOWFONTSIZE" description="PLG_JWADVANCED_DESC_PLUGFLOWFONTSIZE" />
+		<param name="FlowPlugincolor" type="text" default="f1f1f1" label="PLG_JWADVANCED_LABEL_PLUGFLOWFONTCOLOR" description="PLG_JWADVANCED_DESC_PLUGFLOWFONTCOLOR" />
+		<param name="FlowPluginbackgroundcolor" type="text" default="000000" label="PLG_JWADVANCED_LABEL_PLUGFLOWBACKGROUNDCOLOR" description="PLG_JWADVANCED_DESC_PLUGFLOWBACKGROUNDCOLOR" />
+		<param name="FlowPlugintweentime" type="text" default="0.6" label="PLG_JWADVANCED_LABEL_PLUGFLOWTWTIME" description="PLG_JWADVANCED_DESC_PLUGFLOWTWTIME" />
+		<param name="FlowPluginautorotate" type="radio" label="PLG_JWADVANCED_LABEL_PLUGFLOWAUTORATE" default="0" description="PLG_JWADVANCED_DESC_PLUGFLOWAUTORATE">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="FlowPluginrotatedelay" type="text" default="2500" label="PLG_JWADVANCED_LABEL_PLUGFLOWROTDEL" description="PLG_JWADVANCED_DESC_PLUGFLOWROTDEL" />
+		<param name="FlowPlugincontrolbaricon" type="radio" label="PLG_JWADVANCED_LABEL_PLUGFLOWCTLICO" default="0" description="PLG_JWADVANCED_DESC_PLUGFLOWCTLICO">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="FacebookIt" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGFACE" description="" />
+		<param	name="FacePluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGFACEEN" default="0" description="PLG_JWADVANCED_DESC_PLUGFACEEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="FacePluginfbitthumbnail" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGSHARINGTHUMB" description="PLG_JWADVANCED_DESC_PLUGSHARINGTHUMB" size="70" />
+		<param name="TweetIt" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGTWEET" description="" />
+		<param	name="TweetPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGTWEETEN" default="0" description="PLG_JWADVANCED_DESC_PLUGTWEETEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="TheGrid" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGGRID" description="" />
+		<param name="GridPluginversion" type="list" label="PLG_JWADVANCED_LABEL_PLUGGRIDVER" default="grid-2" description="PLG_JWADVANCED_DESC_PLUGGRIDVER">
+			<option value="grid-1">PLG_JWADVANCED_VALUE_GRID_VERSION_1</option>
+			<option value="grid-2">PLG_JWADVANCED_VALUE_GRID_VERSION_2</option>
+			<option value="basic-1">PLG_JWADVANCED_VALUE_BASIC</option>
+			<option value="carousel-1">PLG_JWADVANCED_VALUE_CAROUSEL</option>
+		</param>
+		<param	name="GridPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDEN" default="0" description="PLG_JWADVANCED_DESC_PLUGGRIDEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="GridPluginrows" type="text" default="3" label="PLG_JWADVANCED_LABEL_PLUGGRIDROWS" description="PLG_JWADVANCED_DESC_PLUGGRIDROWS" />
+		<param name="GridPlugintilt" type="text" default="8" label="PLG_JWADVANCED_LABEL_PLUGGRIDTILT" description="PLG_JWADVANCED_DESC_PLUGGRIDTILT" />
+		<param name="GridPlugindistance" type="text" default="50" label="PLG_JWADVANCED_LABEL_PLUGGRIDDIST" description="PLG_JWADVANCED_DESC_PLUGGRIDDIST" />
+		<param name="GridPluginstart_distance" type="text" default="500" label="PLG_JWADVANCED_LABEL_PLUGGRIDSTARTDIS" description="PLG_JWADVANCED_DESC_PLUGGRIDSTARTDIS" />
+		<param name="GridPluginfocus_distance" type="text" default="200" label="PLG_JWADVANCED_LABEL_PLUGGRIDFOCUSDIS" description="PLG_JWADVANCED_DESC_PLUGGRIDFOCUSDIS" />
+		<param name="GridPluginreflections" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDREFLECTIONS" default="0" description="PLG_JWADVANCED_DESC_PLUGGRIDREFLECTIONS">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="GridPluginglow" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDGLOW" default="1" description="PLG_JWADVANCED_DESC_PLUGGRIDGLOW">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="GridPluginthumbnailwidth" type="text" default="480" label="PLG_JWADVANCED_LABEL_PLUGGRIDTHUMBWID" description="PLG_JWADVANCED_DESC_PLUGGRIDTHUMB" />
+		<param name="GridPluginthumbnailheight" type="text" default="270" label="PLG_JWADVANCED_LABEL_PLUGGRIDTHUMBHEI" description="PLG_JWADVANCED_DESC_PLUGGRIDTHUMBHEI" />
+		<param name="GridPluginhorizontalmargin" type="text" default="120" label="PLG_JWADVANCED_LABEL_PLUGGRIDHORMARG" description="PLG_JWADVANCED_DESC_PLUGGRIDHORMARG" />
+		<param name="GridPluginverticalmargin" type="text" default="120" label="PLG_JWADVANCED_LABEL_PLUGGRIDVERMARG" description="PLG_JWADVANCED_DESC_PLUGGRIDVERMARG" />
+		<param name="GridPluginoutside" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDOUTSIDE" default="0" description="PLG_JWADVANCED_DESC_PLUGGRIDOUTSIDE">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="GridPlugintitles" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDTITLE" default="1" description="PLG_JWADVANCED_DESC_PLUGGRIDTITLE">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="GridPlugintitles_position" type="list" label="PLG_JWADVANCED_LABEL_PLUGGRIDTITLEPOS" default="over" description="PLG_JWADVANCED_DESC_PLUGGRIDTITLEPOS">
+			<option value="over">PLG_JWADVANCED_VALUE_OVER</option>
+			<option value="top">PLG_JWADVANCED_VALUE_TOP</option>
+			<option value="bottom">PLG_JWADVANCED_VALUE_BOTTOM</option>
+		</param>
+		<param name="GridPlugintitles_font" type="text" default="_sans" label="PLG_JWADVANCED_LABEL_PLUGGRIDTITLEFONT" description="PLG_JWADVANCED_DESC_PLUGGRIDTITLEFONT" />
+		<param name="GridPluginfade_titles" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDTITLEFADE" default="1" description="PLG_JWADVANCED_DESC_PLUGGRIDTITLEFADE">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="GridPluginborder" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDBORDER" default="0" description="PLG_JWADVANCED_DESC_PLUGGRIDBORDER">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="GridPlugindof_blur" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDDOFBLUR" default="0" description="PLG_JWADVANCED_DESC_PLUGGRIDDOFBLUR">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="GridPlugindof_fade" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDDOFFADE" default="0" description="PLG_JWADVANCED_DESC_PLUGGRIDDOFFADE">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="adttext" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGADTTEXT" description="" />
+		<param name="adttextPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGADTTEXTEN" default="0" description="PLG_JWADVANCED_DESC_PLUGADTTEXTEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="adttextPluginconfig" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGADTTEXTCONF" description="PLG_JWADVANCED_DESC_PLUGADTTEXTCONF" size="70" />
+		<param name="adtvideo" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGADTVIDEO" description="" />
+		<param name="adtvideoPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGADTVIDEOEN" default="0" description="PLG_JWADVANCED_DESC_PLUGADTVIDEOEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="adtvideoPluginconfig" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGADTVIDEOCONF" description="PLG_JWADVANCED_DESC_PLUGADTVIDEOCONF" size="70" />
+		<param name="adtimage" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGADTIMAGE" description="" />
+		<param name="adtimagePluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGADTIMAGEEN" default="0" description="PLG_JWADVANCED_DESC_PLUGADTIMAGEEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="adtimagegraphic" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGADTIMAGEGRAPHIC" description="PLG_JWADVANCED_DESC_PLUGADTIMAGEGRAPHIC" size="70" />
+		<param name="adtimagelink" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGADTIMAGELINK" description="PLG_JWADVANCED_DESC_PLUGADTIMAGELINK" size="70" />
+		<param name="adtimagepositions" type="list" label="PLG_JWADVANCED_LABEL_PLUGADTIMAGEPOS" default="pre,post" description="PLG_JWADVANCED_DESC_PLUGADTIMAGEPOS">
+			<option value="pre,post">PLG_JWADVANCED_VALUE_PRE_POST</option>
+			<option value="pre">PLG_JWADVANCED_VALUE_PRE</option>
+			<option value="post">PLG_JWADVANCED_VALUE_POST</option>
+			<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+		</param>
+		<param name="adtimageonpause" type="radio" label="PLG_JWADVANCED_LABEL_PLUGADTIMAGEPAUSE" default="0" description="PLG_JWADVANCED_DESC_PLUGADTIMAGEPAUSE">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="ova" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGOVA" description="" />
+		<param name="ovaEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGOVAEN" default="0" description="PLG_JWADVANCED_DESC_PLUGOVAEN">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="ovajson" type="textarea" default="" label="PLG_JWADVANCED_LABEL_PLUGOVAJSON" description="PLG_JWADVANCED_DESC_PLUGOVAJSON" rows="5" cols="40" />
+		<param name="ovacompanion" type="radio" label="PLG_JWADVANCED_LABEL_PLUGOVACOMP" default="0" description="PLG_JWADVANCED_DESC_PLUGOVACOMP">
+			<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+			<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+		</param>
+		<param name="ovacompanionposition" type="radio" label="PLG_JWADVANCED_LABEL_PLUGOVACOMPPOS" default="after" description="PLG_JWADVANCED_DESC_PLUGOVACOMPPOS">
+			<option value="before">PLG_JWADVANCED_VALUE_BEFORE</option>
+			<option value="after">PLG_JWADVANCED_VALUE_AFTER</option>
+		</param>
+		<param name="ovacompanioncsssrc" type="list" label="PLG_JWADVANCED_LABEL_PLUGOVACOMCSSSRC" default="preconfigure" description="PLG_JWADVANCED_DESC_PLUGOVACOMPCSSSRC">
+			<option value="preconfigure">PLG_JWADVANCED_VALUE_OVACSSPRE</option>
+			<option value="cssfields">PLG_JWADVANCED_VALUE_OVACSSFIELDS</option>
+			<option value="cssfile">PLG_JWADVANCED_VALUE_OVACSSFILE</option>
+			<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+		</param>
+		<param name="ovacompanionbg" type="text" default="CCCCCC" label="PLG_JWADVANCED_LABEL_PLUGOVACOMPBG" description="PLG_JWADVANCED_DESC_PLUGOVACOMPBG" size="10" />
+		<param name="ovacompanionheight" type="text" default="240" label="PLG_JWADVANCED_LABEL_PLUGOVACOMPHEIGHT" description="PLG_JWADVANCED_DESC_PLUGOVACOMPHEIGHT" size="10" />
+		<param name="ovacompanionwidth" type="text" default="200" label="PLG_JWADVANCED_LABEL_PLUGOVACOMPWIDTH" description="PLG_JWADVANCED_DESC_PLUGOVACOMPWIDTH" size="10" />
+		<param name="ovacompanionfloat" type="list" label="PLG_JWADVANCED_LABEL_PLUGOVACOMPFLOAT" default="left" description="PLG_JWADVANCED_DESC_PLUGOVACOMPFLOAT">
+			<option value="left">PLG_JWADVANCED_VALUE_LEFT</option>
+			<option value="right">PLG_JWADVANCED_VALUE_RIGHT</option>
+			<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+		</param>
+		<param name="ovaplayerfloat" type="list" label="PLG_JWADVANCED_LABEL_PLUGOVAPLAFLOAT" default="left" description="PLG_JWADVANCED_DESC_PLUGOVAPLAFLOAT">
+			<option value="left">PLG_JWADVANCED_VALUE_LEFT</option>
+			<option value="right">PLG_JWADVANCED_VALUE_RIGHT</option>
+			<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+		</param>
+		<param name="ovacompanionmargin" type="text" default="5" label="PLG_JWADVANCED_LABEL_PLUGOVACOMPMARGIN" description="PLG_JWADVANCED_DESC_PLUGOVACOMPMARGIN" size="6" />
+		<param name="ovacompanionmarginpos" type="list" label="PLG_JWADVANCED_LABEL_PLUGOVACOMPMARGINPOS" default="left" description="PLG_JWADVANCED_DESC_PLUGOVAMARGINPOS">
+			<option value="left">PLG_JWADVANCED_VALUE_LEFT</option>
+			<option value="right">PLG_JWADVANCED_VALUE_RIGHT</option>
+			<option value="top">PLG_JWADVANCED_VALUE_TOP</option>
+			<option value="bottom">PLG_JWADVANCED_VALUE_BOTTOM</option>
+		</param>
+		<param name="ovaplayercss" type="textarea" default="" label="PLG_JWADVANCED_LABEL_PLUGOVAPLACSS" description="PLG_JWADVANCED_DESC_PLUGOVAPLACSS" rows="5" cols="40" />
+		<param name="ovacompanioncss" type="textarea" default="" label="PLG_JWADVANCED_LABEL_PLUGOVACOMCSS" description="PLG_JWADVANCED_DESC_PLUGOVACOMPCSS" rows="5" cols="40" />
+		<param name="EXTRAPLUGIN" type="spacer" label="" default="PLG_JWADVANCED_DESC_PLUGEXTRA" description="" />
+		<param name="extrapluginlist" type="textarea" default="" label="PLG_JWADVANCED_LABEL_PLUGEXTRA" description="PLG_JWADVANCED_DESC_PLUGEXTRALIST" rows="5" cols="40" />
+		<param name="extrapluginflashvarslist" type="textarea" default="" label="PLG_JWADVANCED_LABEL_PLUGEXTRAVARSLIST" description="PLG_JWADVANCED_DESC_PLUGEXTRAVARSLIST" rows="5" cols="40" />
+    </params>
+	
+	<!-- J1.6 of course doesn't understand the above so let it repeat once more: -->
+
+	<config>
+		<fields name="params">
+			<fieldset name="PLG_JWADVANCED_PLAYLIST_BOTR">
+				<field name="PLG_JWADVANCED_DESC_PLAYLISTBOTR" type="spacer" default="" />
+				<field name="PLG_JWADVANCED_DESC_PLAYLISTBOTRMANAGE" type="spacer" default="" />
+				<field name="mod_plbotrdisplay" type="list" default="botr" label="PLG_JWADVANCED_LABEL_PLAYLISTBOTRDISPLAY" description="PLG_JWADVANCED_DESC_PLAYLISTBOTRDISPLAY">
+					<option value="botr">PLG_JWADVANCED_VALUE_PLAYLISTBOTRBOTRDISPLAY</option>
+					<option value="combinebotr">PLG_JWADVANCED_VALUE_PLAYLISTBOTRCOMBINEDISPLAY1</option>
+					<option value="combinelocal">PLG_JWADVANCED_VALUE_PLAYLISTBOTRCOMBINEDISPLAY2</option>
+					<option value="local">PLG_JWADVANCED_VALUE_PLAYLISTBOTRMODULEDISPLAY</option>
+				</field>
+				<field name="mod_plbotrdefaultplayer" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTBOTRDEFPLAY" description="PLG_JWADVANCED_DESC_PLAYLISTBOTRDEFPLAY" size="10" />
+				<field name="mod_plbotrapikey" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTBOTRAPIKEY" description="PLG_JWADVANCED_DESC_PLAYLISTBOTRAPIKEY" size="10" />
+				<field name="mod_plbotrsecretkey" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTBOTRSECRETKEY" description="PLG_JWADVANCED_DESC_PLAYLISTBOTRSECRETKEY" size="34" />
+				<field name="mod_plbotrtimeout" type="text" default="3600" label="PLG_JWADVANCED_LABEL_PLAYLISTBOTRTIMEOUT" description="PLG_JWADVANCED_DESC_PLAYLISTBOTRTIMEOUT" size="6" />
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLAYLIST_MULTI">
+				<field name="PLG_JWADVANCED_DESC_PLAYLISTRSSLINKMULTI" type="spacer" default="" />
+				<field name="mod_plmultidropdowntitle" type="list" label="PLG_JWADVANCED_LABEL_PLAYLISTMULTIDROPDTI" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTMULTIDROPDTI">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+					<option value="2">PLG_JWADVANCED_VALUE_CURL</option>
+				</field>
+				<field name="mod_plmultidropdowntitlelength" type="text" default="43" label="PLG_JWADVANCED_LABEL_PLAYLISTMULTILENGTHTI" description="PLG_JWADVANCED_DESC_PLAYLISTMULTILENGTHTI" size="6" />
+				<field name="mod_plmultidropdownstyle" type="list" label="PLG_JWADVANCED_LABEL_PLAYLISTMULTIDROPDSTY" default="0" description="PLG_JWADVANCED_DESC_PLAYLISTMULTIDROPDSTY">
+					<option value="0">PLG_JWADVANCED_VALUE_DEF</option>
+					<option value="1">PLG_JWADVANCED_VALUE_CLASS</option>
+				</field>
+				<field name="mod_plmultidropdownclass" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTMULTIDROPDCLASS" description="PLG_JWADVANCED_DESC_PLAYLISTMULTIDROPDCLASS" size="20" />
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLAYLIST_AUTO">
+				<field name="PLG_JWADVANCED_DESC_PLAYLISTAUTO" type="spacer" default="" />
+				<field name="mod_plautosort" type="list" default="krsort" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOSORT" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOSORT">
+					<option value="ksort">PLG_JWADVANCED_VALUE_PLAYLISTAUTODLOHI</option>
+					<option value="krsort">PLG_JWADVANCED_VALUE_PLAYLISTAUTODHILO</option>
+					<option value="asort">PLG_JWADVANCED_VALUE_PLAYLISTAUTOALOHI</option>
+					<option value="arsort">PLG_JWADVANCED_VALUE_PLAYLISTAUTOAHILO</option>
+					<option value="shuffle">PLG_JWADVANCED_VALUE_PLAYLISTAUTORAND</option>
+				</field>
+				<field name="mod_plautothumb" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOTHUMB" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOTHUMB" size="70" />
+				<field name="mod_plautoplaylistimage" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOPLAYLISTIMAGE" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOPLAYLISTIMAGE" size="70" />
+				<field name="mod_plautoduration" type="text" default="00:30" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTODUR" description="PLG_JWADVANCED_DESC_PLAYLISTAUTODUR" size="6" />
+				<field name="mod_plautotitle" type="list" default="simple" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOTI" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOTI">
+					<option value="simple">PLG_JWADVANCED_VALUE_PLAYLISTAUTOFSIMP</option>
+					<option value="filter">PLG_JWADVANCED_VALUE_PLAYLISTAUTOUFIL</option>
+				</field>
+				<field name="mod_plautodescription" type="list" default="description" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTODESC" description="PLG_JWADVANCED_DESC_PLAYLISTAUTODESC">
+					<option value="description">PLG_JWADVANCED_VALUE_PLAYLISTAUTOTYDESC</option>
+					<option value="author,description">PLG_JWADVANCED_VALUE_PLAYLISTAUTOTYAUTDESC</option>
+					<option value="author,title,description">PLG_JWADVANCED_VALUE_PLAYLISTAUTOTYAUTTIDESC</option>
+					<option value="all">PLG_JWADVANCED_VALUE_PLAYLISTAUTOTYTRAUTTIDESC</option>
+				</field>
+				<field name="mod_plautoallowlink" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOLI" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOLI">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowjpg" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOJPG" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOJPG">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowpng" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOPNG" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOPNG">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowgif" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOGIF" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOGIF">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowflv" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOFLV" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOFLV">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowmp3" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOMP3" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOMP3">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowmp4" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOMP4" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOMP4">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowm4a" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOM4A" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOM4A">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowm4v" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOM4V" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOM4V">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowmov" type="radio" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOMOV" default="1" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOMOV">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoseparator" type="text" default="_-_" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOSEP" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOSEP" size="6" />
+				<field name="mod_plautotrackposition" type="text" default="0" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOTRPOS" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOTRPOS" size="3" />
+				<field name="mod_plautotitleposition" type="text" default="3" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOTIPOS" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOTIPOS" size="3" />
+				<field name="mod_plautoauthorposition" type="text" default="1" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTOAUTPOS" description="PLG_JWADVANCED_DESC_PLAYLISTAUTOAUTPOS" size="3" />
+				<field name="mod_plautodescposition" type="text" default="2" label="PLG_JWADVANCED_LABEL_PLAYLISTAUTODESCPOS" description="PLG_JWADVANCED_DESC_PLAYLISTAUTODESCPOS" size="3" />
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLAYLIST_EDITOR">
+				<field name="PLG_JWADVANCED_DESC_PLAYLISTEDIT" type="spacer" default="" />
+				<field name="mod_plauthor" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITCRE" description="PLG_JWADVANCED_DESC_PLAYLISTEDITCRE" />
+				<field name="mod_plimage" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITTHU" description="PLG_JWADVANCED_DESC_PLAYLISTEDITTHU" size="70" />
+				<field name="mod_pllink" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITLI" description="PLG_JWADVANCED_DESC_PLAYLISTEDITLI" size="70" />
+				<field name="mod_plstart" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITSTART" description="PLG_JWADVANCED_DESC_PLAYLISTEDITSTART" size="6" />
+				<field name="mod_plstreamer" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITSTR" description="PLG_JWADVANCED_DESC_PLAYLISTEDITSTR" size="70" />
+				<field name="mod_pltags" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITTAG" description="PLG_JWADVANCED_DESC_PLAYLISTEDITTAG" size="70" />
+				<field name="mod_plduration" type="text" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITDUR" description="PLG_JWADVANCED_DESC_PLAYLISTEDITDUR" size="6" />
+				<field name="mod_plprovider" type="list" default="" label="PLG_JWADVANCED_LABEL_PLAYLISTEDITFOR" description="PLG_JWADVANCED_DESC_PLAYLISTEDITFOR">
+					<option value="">PLG_JWADVANCED_VALUE_PLAYLISTEDITORAUTO</option>
+					<option value="video">PLG_JWADVANCED_VALUE_PLAYLISTEDITORVID</option>
+					<option value="sound">PLG_JWADVANCED_VALUE_PLAYLISTEDITORSOU</option>
+					<option value="image">PLG_JWADVANCED_VALUE_PLAYLISTEDITORIMG</option>
+					<option value="youtube">PLG_JWADVANCED_VALUE_PLAYLISTEDITORYOUTUBE</option>
+					<option value="vimeo">PLG_JWADVANCED_VALUE_PLAYLISTEDITORVIMEO</option>
+					<option value="rtmp">PLG_JWADVANCED_VALUE_PLAYLISTEDITORRTMP</option>
+					<option value="http">PLG_JWADVANCED_VALUE_PLAYLISTEDITORHTTP</option>
+					<option value="bitgravity">PLG_JWADVANCED_VALUE_PLAYLISTEDITORBITGRAVITY</option>
+					<option value="highwinds">PLG_JWADVANCED_VALUE_PLAYLISTEDITORHIGHWINDS</option>
+					<option value="lighttpd">PLG_JWADVANCED_VALUE_PLAYLISTEDITORLIGHTTPD</option>
+					<option value="vdox">PLG_JWADVANCED_VALUE_PLAYLISTEDITORVDOX</option>
+					<option value="edgecast">PLG_JWADVANCED_VALUE_PLAYLISTEDITOREDGECAST</option>
+					<option value="fcsubscribe">PLG_JWADVANCED_VALUE_PLAYLISTEDITORFCSUBSCRIBE</option>
+					<option value="flvseek">PLG_JWADVANCED_VALUE_PLAYLISTEDITORFLVSEEK</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_LAYOUT">
+				<field name="PLG_JWADVANCED_DESC_LAYOUT" type="spacer" default="" />
+				<field name="Playlistplaylist" type="list" label="PLG_JWADVANCED_LABEL_POSITION" default="none" description="PLG_JWADVANCED_DESC_POSITION">
+					<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+					<option value="top">PLG_JWADVANCED_VALUE_TOP</option>
+					<option value="bottom">PLG_JWADVANCED_VALUE_BOTTOM</option>
+					<option value="right">PLG_JWADVANCED_VALUE_RIGHT</option>
+					<option value="left">PLG_JWADVANCED_VALUE_LEFT</option>
+					<option value="over">PLG_JWADVANCED_VALUE_OVER</option>
+				</field>
+				<field name="Playlistcontrolbar" type="list" label="PLG_JWADVANCED_LABEL_CBPOSITION" default="bottom" description="PLG_JWADVANCED_DESC_CBPOSITION">
+					<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+					<option value="bottom">PLG_JWADVANCED_VALUE_BOTTOM</option>
+					<option value="top">PLG_JWADVANCED_VALUE_TOP</option>
+					<option value="over">PLG_JWADVANCED_VALUE_OVER</option>
+				</field>
+				<field name="Playlistcontrolbaridlehide" type="radio" default="0" label="PLG_JWADVANCED_LABEL_CBIDLEHIDE" description="PLG_JWADVANCED_DESC_CBIDLEHIDE">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playlistcontrolbarforcenextprev" type="radio" default="0" label="PLG_JWADVANCED_LABEL_CBFNEXTPREV" description="PLG_JWADVANCED_DESC_CBFNEXTPREV">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playlistdisplayshowmute" type="radio" default="0" label="PLG_JWADVANCED_LABEL_DISSHOMU" description="PLG_JWADVANCED_DESC_DISSHOMU">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playlistdock" type="radio" default="0" label="PLG_JWADVANCED_LABEL_DOCK" description="PLG_JWADVANCED_DESC_DOCK">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playlistplaylistsize" type="text" default="180" label="PLG_JWADVANCED_LABEL_SIZE" description="PLG_JWADVANCED_DESC_SIZE" size="4" />
+				<field name="Playlistheight" type="text" default="240" label="PLG_JWADVANCED_LABEL_HEIGHT" description="PLG_JWADVANCED_DESC_HEIGHT" size="4" />
+				<field name="Playlistwidth" type="text" default="320" label="PLG_JWADVANCED_LABEL_WIDTH" description="PLG_JWADVANCED_DESC_WIDTH" size="4" />
+				<field name="Playlisticons" type="radio" default="1" label="PLG_JWADVANCED_LABEL_ICON" description="PLG_JWADVANCED_DESC_ICON">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playlistlogo" type="text" label="PLG_JWADVANCED_LABEL_LOGO" default="" description="PLG_JWADVANCED_DESC_LOGO" size="70" />
+				<field name="Playlistlogolink" type="text" label="PLG_JWADVANCED_LABEL_LOGOLINK" default="" description="PLG_JWADVANCED_DESC_LOGOLINK" size="70" />
+				<field name="Playlistlogohide" type="radio" default="1" label="PLG_JWADVANCED_LABEL_LOGOLINKHIDE" description="PLG_JWADVANCED_DESC_LOGOLINKHIDE">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playlistlogotimeout" type="text" label="PLG_JWADVANCED_LABEL_LOGOTIMEOUT" default="3" description="PLG_JWADVANCED_DESC_LOGOTIMEOUT" size="6" />
+				<field name="Playlistlogoposition" type="list" default="bottom-left" label="PLG_JWADVANCED_LABEL_LOGOLINKPOS" description="PLG_JWADVANCED_DESC_LOGOLINKPOS">
+					<option value="bottom-left">PLG_JWADVANCED_VALUE_BOTLEF</option>
+					<option value="bottom-right">PLG_JWADVANCED_VALUE_BOTRIG</option>
+					<option value="top-left">PLG_JWADVANCED_VALUE_TOPLEF</option>
+					<option value="top-right">PLG_JWADVANCED_VALUE_TOPRIG</option>
+				</field>
+				<field name="Playlistlogolinktarget" type="list" default="_blank" label="PLG_JWADVANCED_LABEL_LOGOLINKTAG" description="PLG_JWADVANCED_DESC_LOGOLINKTAR">
+					<option value="_blank">PLG_JWADVANCED_VALUE_BLANK</option>
+					<option value="_self">PLG_JWADVANCED_VALUE_SELF</option>
+					<option value="_parent">PLG_JWADVANCED_VALUE_PARENT</option>
+					<option value="_top">PLG_JWADVANCED_VALUE_TOP</option>
+				</field>
+				<field name="Playlistlogomargin" type="text" label="PLG_JWADVANCED_LABEL_LOGOMARGIN" default="8" description="PLG_JWADVANCED_DESC_LOGOMARGIN" size="6" />
+				<field name="Playlistlogoover" type="text" label="PLG_JWADVANCED_LABEL_LOGOOVER" default="1" description="PLG_JWADVANCED_DESC_LOGOOVER" size="6" />
+				<field name="Playlistlogoout" type="text" label="PLG_JWADVANCED_LABEL_LOGOOUT" default="0.5" description="PLG_JWADVANCED_DESC_LOGOOUT" size="6" />
+				<field name="Playlistabouttext" type="text" label="PLG_JWADVANCED_LABEL_ABOUTTXT" default="" description="PLG_JWADVANCED_DESC_ABOUTTEXT" size="70" />
+				<field name="Playlistaboutlink" type="text" label="PLG_JWADVANCED_LABEL_ABOUTLINK" default="" description="PLG_JWADVANCED_DESC_ABOUTLINK" size="70" />
+				<field name="PLG_JWADVANCED_DESC_SKIN" type="spacer" default="" />
+				<field name="Playlistskintype" type="radio" default="1" label="PLG_JWADVANCED_LABEL_SKINTYPE" description="PLG_JWADVANCED_DESC_SKINTYPE">
+					<option value="0">PLG_JWADVANCED_VALUE_SWFSKIN</option>
+					<option value="1">PLG_JWADVANCED_VALUE_XMLSKIN</option>
+				</field>
+				<field name="Playlistskin" type="filelist" default="-1" label="PLG_JWADVANCED_LABEL_SKINSWF" description="PLG_JWADVANCED_DESC_SKINSWF" directory="/plugins/content/plg_jwadvanced/plg_jwadvanced/skin/swf" filter="\.swf$" exclude="" stripext=".swf" />
+				<field name="Playlistskinxml" type="filelist" default="-1" label="PLG_JWADVANCED_LABEL_SKINXML" description="PLG_JWADVANCED_DESC_SKINXML" directory="/plugins/content/plg_jwadvanced/plg_jwadvanced/skin/xml" filter="\.zip$" exclude="" stripext=".zip" />
+				<field name="PLG_JWADVANCED_DESC_COLOR" type="spacer" default="" />
+				<field name="Playlistbackcolor" type="text" default="" label="PLG_JWADVANCED_LABEL_COLORBACK" description="PLG_JWADVANCED_DESC_COLORBACK" size="6" />
+				<field name="Playlistfrontcolor" type="text" default="" label="PLG_JWADVANCED_LABEL_COLORFRONT" description="PLG_JWADVANCED_DESC_COLORFRONT" size="6" />
+				<field name="Playlistlightcolor" type="text" default="" label="PLG_JWADVANCED_LABEL_COLORLIGHT" description="PLG_JWADVANCED_DESC_COLORLIGHT" size="6" />
+				<field name="Playlistscreencolor" type="text" default="" label="PLG_JWADVANCED_LABEL_COLORSCREEN" description="PLG_JWADVANCED_DESC_COLORSCREEN" size="6" />
+				<field name="Playlistwmode" type="list" default="opaque" label="PLG_JWADVANCED_LABEL_COLORTRANS" description="">
+					<option value="opaque">PLG_JWADVANCED_VALUE_OPAQUE</option>
+					<option value="transparent">PLG_JWADVANCED_VALUE_TRANSPARENT</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_BEHAVIOUR">
+				<field name="PLG_JWADVANCED_DESC_BEHAVIOUR" type="spacer" default="" />
+				<field name="Playlistautostart" type="radio" default="0" label="PLG_JWADVANCED_LABEL_BEHAVIOURAUTOSTART" description="PLG_JWADVANCED_DESC_BEHAVIOURAUTOSTART">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playlistbandwidth" type="text" default="5000" label="PLG_JWADVANCED_LABEL_BEHAVIOURBW" description="PLG_JWADVANCED_DESC_BEHAVIOURBW" size="6" />
+				<field name="Playlistbufferlength" type="text" default="1" label="PLG_JWADVANCED_LABEL_BEHAVIOURBUFFER" description="PLG_JWADVANCED_DESC_BEHAVIOURBUFFER" size="6" />
+				<field name="Playlistdisplayclick" type="list" default="play" label="PLG_JWADVANCED_LABEL_BEHAVIOURDCLICK" description="PLG_JWADVANCED_DESC_BEHAVIOURDCLICK">
+					<option value="play">PLG_JWADVANCED_VALUE_PLAY</option>
+					<option value="link">PLG_JWADVANCED_VALUE_LINK</option>
+					<option value="fullscreen">PLG_JWADVANCED_VALUE_FULLSCR</option>
+					<option value="single">PLG_JWADVANCED_VALUE_NONE</option>
+					<option value="mute">PLG_JWADVANCED_VALUE_MUTE</option>
+					<option value="next">PLG_JWADVANCED_VALUE_NEXT</option>
+				</field>
+				<field name="Playlistdisplaytitle" type="radio" default="0" label="PLG_JWADVANCED_LABEL_BEHAVIOURDTITLE" description="PLG_JWADVANCED_DESC_BEHAVIOURDTITLE">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playlistmute" type="radio" default="0" label="PLG_JWADVANCED_LABEL_BEHAVIOURMUTE" description="PLG_JWADVANCED_DESC_BEHAVIOURMUTE">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playlistlinktarget" type="list" default="_blank" label="PLG_JWADVANCED_LABEL_BEHAVIOURLINKTAR" description="PLG_JWADVANCED_DESC_BEHAVIOURLINKTAR">
+					<option value="_blank">PLG_JWADVANCED_VALUE_BLANK</option>
+					<option value="_self">PLG_JWADVANCED_VALUE_SELF</option>
+				</field>
+				<field name="Playlistrepeat" type="list" default="none" label="PLG_JWADVANCED_LABEL_BEHAVIOURREPEAT" description="PLG_JWADVANCED_DESC_BEHAVIOURREPEAT">
+					<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+					<option value="list">PLG_JWADVANCED_VALUE_LIST</option>
+					<option value="always">PLG_JWADVANCED_VALUE_ALWAYS</option>
+					<option value="single">PLG_JWADVANCED_VALUE_SING</option>
+				</field>
+				<field name="Playlistresizing" type="radio" default="1" label="PLG_JWADVANCED_LABEL_BEHAVIOURRESIZE" description="PLG_JWADVANCED_DESC_BEHAVIOURRESIZE">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playlistshuffle" type="radio" default="0" label="PLG_JWADVANCED_LABEL_BEHAVIOURSHUFFLE" description="PLG_JWADVANCED_DESC_BEHAVIOURSHUFFLE">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playlistsmoothing" type="radio" default="1" label="PLG_JWADVANCED_LABEL_BEHAVIOURSMOOTH" description="PLG_JWADVANCED_DESC_BEHAVIOURSMOOTH">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playliststretching" type="list" default="uniform" label="PLG_JWADVANCED_LABEL_BEHAVIOURSTRETCH" description="PLG_JWADVANCED_DESC_BEHAVIOURSTRETCH">
+					<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+					<option value="exactfit">PLG_JWADVANCED_VALUE_EXFIT</option>
+					<option value="uniform">PLG_JWADVANCED_VALUE_UNI</option>
+					<option value="fill">PLG_JWADVANCED_VALUE_FILL</option>
+				</field>
+				<field name="Playlistvolume" type="text" default="90" label="PLG_JWADVANCED_LABEL_BEHAVIOURVOL" description="PLG_JWADVANCED_DESC_BEHAVIOURVOL" size="3" />
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_POPUP">
+				<field name="PLG_JWADVANCED_DESC_POPUP" type="spacer" default="" description="" />
+				<field name="Playlistpopup" type="list" label="PLG_JWADVANCED_LABEL_POPUPEN" default="none" description="PLG_JWADVANCED_DESC_POPUPEN">
+					<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+					<option value="windows">PLG_JWADVANCED_VALUE_WIND</option>
+					<option value="highslide">PLG_JWADVANCED_VALUE_HIGH</option>
+					<option value="lightbox">PLG_JWADVANCED_VALUE_JWBOX</option>
+				</field>
+				<field name="Playlistpopupsizechoice" type="list" label="PLG_JWADVANCED_LABEL_POPUPSIZECH" default="default" description="PLG_JWADVANCED_DESC_POPUPSIZECH">
+					<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+					<option value="default">PLG_JWADVANCED_VALUE_DEF</option>
+					<option value="adjust">PLG_JWADVANCED_VALUE_ADJ</option>
+				</field>
+				<field name="PlaylistpopupSize" type="text" default="180" label="PLG_JWADVANCED_LABEL_POPUPSIZE" description="PLG_JWADVANCED_DESC_POPUPSIZE" size="4" />
+				<field name="PlaylistpopupHeight" type="text" default="400" label="PLG_JWADVANCED_LABEL_POPUPHEIGHT" description="PLG_JWADVANCED_DESC_POPUPHEIGHT" size="4" />
+				<field name="PlaylistpopupWidth" type="text" default="280" label="PLG_JWADVANCED_LABEL_POPUPWIDTH" description="PLG_JWADVANCED_DESC_POPUPWIDTH" size="4" />
+				<field name="Playlistpopuplinkchoice" type="list" label="PLG_JWADVANCED_LABEL_POPUPLINKCH" default="none" description="PLG_JWADVANCED_DESC_POPUPLINKCH">
+					<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+					<option value="0">PLG_JWADVANCED_VALUE_TXT</option>
+					<option value="1">PLG_JWADVANCED_VALUE_PLAYLISTEDITORIMG</option>
+					<option value="2">PLG_JWADVANCED_VALUE_TXTIMG</option>
+					<option value="3">PLG_JWADVANCED_VALUE_TXTOVER</option>
+					<option value="4">PLG_JWADVANCED_VALUE_IMGOVER</option>
+					<option value="5">PLG_JWADVANCED_VALUE_TXTIMGOVER</option>
+				</field>
+				<field name="Playlistpopuptextlink" type="text" default="Click to watch the player in a Pop-Up" label="PLG_JWADVANCED_LABEL_POPUPTXT" description="PLG_JWADVANCED_DESC_POPUPTXT" size="70" />
+				<field name="Playlistpopupimagelink" type="text" default="" label="PLG_JWADVANCED_LABEL_POPUPIMG" description="PLG_JWADVANCED_DESC_POPUPIMG" size="70" />
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_RTMP">
+				<field name="PLG_JWADVANCED_DESC_RTMP" type="spacer" default="" />
+				<field name="Playlistrtmpprepend" type="radio" default="1" label="PLG_JWADVANCED_LABEL_RTMPPRE" description="PLG_JWADVANCED_DESC_RTMPPRE">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playlistrtmploadbalance" type="radio" default="0" label="PLG_JWADVANCED_LABEL_RTMPBAL" description="PLG_JWADVANCED_DESC_RTMPBAL">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playlistrtmpsubscribe" type="radio" default="0" label="PLG_JWADVANCED_LABEL_RTMPSUB" description="PLG_JWADVANCED_DESC_RTMPSUB">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_HTTP">
+				<field name="PLG_JWADVANCED_DESC_HTTP" type="spacer" default="" />
+				<field name="Playlisthttpstartparam" type="list" label="PLG_JWADVANCED_LABEL_HTTPSTART" default="start" description="PLG_JWADVANCED_DESC_HTTPSTART">
+					<option value="start">PLG_JWADVANCED_VALUE_START</option>
+					<option value="starttime">PLG_JWADVANCED_VALUE_STARTTIME</option>
+					<option value="apstart">PLG_JWADVANCED_VALUE_APSTART</option>
+					<option value="ec_seek">PLG_JWADVANCED_VALUE_ECSEEK</option>
+					<option value="fs">PLG_JWADVANCED_VALUE_FS</option>
+				</field>
+				<field name="Playlisthttpdvr" type="radio" default="0" label="PLG_JWADVANCED_LABEL_HTTPDVR" description="PLG_JWADVANCED_DESC_HTTPDVR">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+			</fieldset>	
+			<fieldset name="PLG_JWADVANCED_PLUGINS_ADSOLUTION">
+				<field name="PLG_JWADVANCED_DESC_PLUGADS" type="spacer" default="" />
+				<field name="PLG_JWADVANCED_LABEL_PLUGADSREG" type="spacer" default="" />
+				<field name="AdsolutionPluginEnabled" type="radio" default="0" label="PLG_JWADVANCED_LABEL_PLUGADSEN" description="PLG_JWADVANCED_DESC_PLUGADSEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="AdsolutionChannelcode" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGADSCODE" description="PLG_JWADVANCED_DESC_PLUGADSCODE" size="16" />
+				<field name="PLG_JWADVANCED_DESC_PLUGADSPREMS" type="spacer" default="" />
+				<field name="AdsolutionPremiumEnabled" type="radio" default="0" label="PLG_JWADVANCED_LABEL_PLUGADSPREMSEN" description="PLG_JWADVANCED_DESC_PLUGADSPREMSEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_HD">
+				<field name="PLG_JWADVANCED_DESC_PLUGHD" type="spacer" default="" />
+				<field name="HDPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGHDEN" default="0" description="PLG_JWADVANCED_DESC_PLUGHDEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="HDPluginversion" type="radio" label="PLG_JWADVANCED_LABEL_PLUGHDVER" default="2" description="PLG_JWADVANCED_DESC_PLUGHDVER">
+					<option value="1">PLG_JWADVANCED_VALUE_VERSION_1</option>
+					<option value="2">PLG_JWADVANCED_VALUE_VERSION_2</option>
+				</field>
+				<field name="HDbitrate" type="text" default="1500" label="PLG_JWADVANCED_LABEL_PLUGHDBR" description="PLG_JWADVANCED_DESC_PLUGHDBR" size="5" />
+				<field name="HDfullscreen" type="radio" label="PLG_JWADVANCED_LABEL_PLUGHDFULL" default="0" description="PLG_JWADVANCED_DESC_PLUGHDFULL">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="HDstate" type="radio" label="PLG_JWADVANCED_LABEL_PLUGHDST" default="1" description="PLG_JWADVANCED_DESC_PLUGHDST">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_VIRAL">
+				<field name="PLG_JWADVANCED_DESC_PLUGVIRAL" type="spacer" default="" />
+				<field name="ViralPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGVIRALEN" default="0" description="PLG_JWADVANCED_DESC_PLUGVIRALEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field	name="ViralPluginonpause" type="radio" label="PLG_JWADVANCED_LABEL_PLUGVIRALPAUSE" default="1" description="PLG_JWADVANCED_DESC_PLUGVIRALPAUSE">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field	name="ViralPluginoncomplete" type="radio" label="PLG_JWADVANCED_LABEL_PLUGVIRALCPL" default="1" description="PLG_JWADVANCED_DESC_PLUGVIRALCPL">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="ViralPluginfunctions" type="list" label="PLG_JWADVANCED_LABEL_PLUGVIRALFUNC" default="embed,link" description="PLG_JWADVANCED_DESC_PLUGVIRALFUNC">
+					<option value="all">PLG_JWADVANCED_VALUE_ALL</option>
+					<option value="embed">PLG_JWADVANCED_VALUE_EMBED</option>
+					<option value="link">PLG_JWADVANCED_VALUE_LINK</option>
+					<option value="recommendations">PLG_JWADVANCED_VALUE_RECOM</option>
+					<option value="embed,link">PLG_JWADVANCED_VALUE_EMBEDLINK</option>
+					<option value="embed,recommendations">PLG_JWADVANCED_VALUE_EMBEDRECOM</option>
+					<option value="link,recommendations">PLG_JWADVANCED_VALUE_LINKRECOM</option>
+				</field>
+				<field name="ViralPluginrecommendations" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGVIRALREC" description="PLG_JWADVANCED_DESC_PLUGVIRALREC" size="70" />
+				<field name="ViralPluginemailsubject" type="text" default="Check out this video!" label="PLG_JWADVANCED_LABEL_PLUGVIRALSUB" description="PLG_JWADVANCED_DESC_PLUGVIRALSUB" />
+				<field name="ViralPluginemailfooter" type="text" default="www.longtailvideo.com" label="PLG_JWADVANCED_LABEL_PLUGVIRALFOOT" description="PLG_JWADVANCED_DESC_PLUGVIRALFOOT" />
+				<field	name="ViralPluginmatchplayercolors" type="radio" label="PLG_JWADVANCED_LABEL_PLUGVIRALPCOLORS" default="0" description="PLG_JWADVANCED_DESC_PLUGVIRALPCOLORS">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="ViralPluginfgcolor" type="text" default="FFFFFF" label="PLG_JWADVANCED_LABEL_PLUGVIRALFGCOLOR" description="PLG_JWADVANCED_DESC_PLUGVIRALFGCOLOR" size="6" />
+				<field name="ViralPluginbgcolor" type="text" default="333333" label="PLG_JWADVANCED_LABEL_PLUGVIRALBGCOLOR" description="PLG_JWADVANCED_DESC_PLUGVIRALBGCOLOR" size="6" />
+				<field	name="ViralPluginallowmenu" type="radio" label="PLG_JWADVANCED_LABEL_PLUGVIRALMENU" default="1" description="PLG_JWADVANCED_DESC_PLUGVIRALMENU">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field	name="ViralPluginallowdock" type="radio" label="PLG_JWADVANCED_LABEL_PLUGVIRALDOCK" default="0" description="PLG_JWADVANCED_DESC_PLUGVIRALDOCK">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field	name="ViralPluginmultidock" type="radio" label="PLG_JWADVANCED_LABEL_PLUGVIRALMDOCK" default="0" description="PLG_JWADVANCED_DESC_PLUGVIRALMDOCK">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_SHARING">
+				<field name="PLG_JWADVANCED_DESC_PLUGSHARING" type="spacer" default="" />
+				<field name="SharingPluginversion" type="list" label="PLG_JWADVANCED_LABEL_PLUGSHARINGVER" default="3" description="PLG_JWADVANCED_DESC_PLUGSHARINGVER">
+					<option value="1">PLG_JWADVANCED_VALUE_VERSION_1</option>
+					<option value="2">PLG_JWADVANCED_VALUE_VERSION_2</option>
+					<option value="3">PLG_JWADVANCED_VALUE_VERSION_3</option>
+				</field>
+				<field name="SharingPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGSHARINGEN" default="0" description="PLG_JWADVANCED_DESC_PLUGSHARINGEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="SharingPluginthumbnail" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGSHARINGTHUMB" description="PLG_JWADVANCED_DESC_PLUGSHARINGTHUMB" size="70" />
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_TIPJAR">
+				<field name="PLG_JWADVANCED_DESC_PLUGTIPJAR" type="spacer" default="" />
+				<field name="TipJarPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGTIPJAREN" default="0" description="PLG_JWADVANCED_DESC_PLUGTIPJAREN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="TipJartitle" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGTIPJARTI" description="PLG_JWADVANCED_DESC_PLUGTIPJARTI" size="35" />
+				<field name="TipJartext" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGTIPJARTXT" description="PLG_JWADVANCED_DESC_PLUGTIPJARTXT" size="70" />
+				<field name="TipJarbusiness" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGTIPJARBUS" description="PLG_JWADVANCED_DESC_PLUGTIPJARBUS" />
+				<field name="TipJaramount" type="text" default="5" label="PLG_JWADVANCED_LABEL_PLUGTIPJARAMO" description="PLG_JWADVANCED_DESC_PLUGTIPJARAMO" size="6" />
+				<field name="TipJarcurrency_code" type="text" default="USD" label="PLG_JWADVANCED_LABEL_PLUGTIPJARCUR" description="PLG_JWADVANCED_DESC_PLUGTIPJARCUR" size="3" />
+				<field name="TipJarimage_url" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGTIPJARIURL" description="PLG_JWADVANCED_DESC_PLUGTIPJARIURL" size="70" />
+				<field name="TipJarreturn_url" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGTIPJARRURL" description="PLG_JWADVANCED_DESC_PLUGTIPJARRURL" size="70" />
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_GAP">
+				<field name="PLG_JWADVANCED_DESC_PLUGGAP" type="spacer" default="" />
+				<field name="GaProPluginversion" type="list" label="PLG_JWADVANCED_LABEL_PLUGGAPVER" default="gapro-2" description="PLG_JWADVANCED_DESC_PLUGGAPVER">
+					<option value="gapro-1">PLG_JWADVANCED_VALUE_VERSION_1</option>
+					<option value="gapro-2">PLG_JWADVANCED_VALUE_VERSION_2</option>
+				</field>
+				<field name="GaProPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGAPEN" default="0" description="PLG_JWADVANCED_DESC_PLUGGAPEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="GaProaccountid" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGGAPID" description="PLG_JWADVANCED_DESC_PLUGGAPID" size="12" />
+				<field name="GaProtrackstarts" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGAPST" default="1" description="PLG_JWADVANCED_DESC_PLUGGAPST">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="GaProtrackpercentage" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGAPPER" default="1" description="PLG_JWADVANCED_DESC_PLUGGAPPER">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="GaProtracktime" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGAPTIME" default="1" description="PLG_JWADVANCED_DESC_PLUGGAPTIME">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="GaProidstring" type="text" default="||streamer||/||file||" label="PLG_JWADVANCED_LABEL_PLUGGAPIDSTRING" description="PLG_JWADVANCED_DESC_PLUGGAPIDSTRING" size="12" />
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_REVOLT">
+				<field name="PLG_JWADVANCED_DESC_PLUGREVOLT" type="spacer" default="" />
+				<field	name="RevoltPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGREVOLTEN" default="0" description="PLG_JWADVANCED_DESC_PLUGREVOLTEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="RevoltPlugingain" type="text" default="1" label="PLG_JWADVANCED_LABEL_PLUGREVOLTG" description="PLG_JWADVANCED_DESC_PLUGREVOLTG" size="3" />
+				<field name="RevoltPlugintimeout" type="text" default="10" label="PLG_JWADVANCED_LABEL_PLUGREVOLTTI" description="PLG_JWADVANCED_DESC_PLUGREVOLTTI" size="4" />
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_CAPTIONS">
+				<field name="PLG_JWADVANCED_DESC_PLUGCAP" type="spacer" default="" />
+				<field name="CaptionsPluginversion" type="list" label="PLG_JWADVANCED_LABEL_PLUGCAPVER" default="2" description="PLG_JWADVANCED_DESC_PLUGCAPVER">
+					<option value="1">PLG_JWADVANCED_VALUE_VERSION_1</option>
+					<option value="2">PLG_JWADVANCED_VALUE_VERSION_2</option>
+				</field>
+				<field	name="CaptionsPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGCAPEN" default="0" description="PLG_JWADVANCED_DESC_PLUGCAPEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field	name="Captionsback" type="radio" label="PLG_JWADVANCED_LABEL_PLUGCAPBG" default="0" description="PLG_JWADVANCED_DESC_PLUGCAPBG">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Captionsfontsize" type="text" default="14" label="PLG_JWADVANCED_LABEL_PLUGCAPFS" description="PLG_JWADVANCED_DESC_PLUGCAPFS" size="3" />
+				<field	name="Captionsstate" type="radio" label="PLG_JWADVANCED_LABEL_PLUGCAPST" default="1" description="PLG_JWADVANCED_DESC_PLUGCAPST">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_FLOW">
+				<field name="PLG_JWADVANCED_DESC_PLUGFLOW" type="spacer" default="" />
+				<field	name="FlowPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGFLOWEN" default="0" description="PLG_JWADVANCED_DESC_PLUGFLOWEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="FlowPluginversion" type="list" label="PLG_JWADVANCED_LABEL_PLUGFLOWVER" default="flow-2" description="PLG_JWADVANCED_DESC_PLUGFLOWVER">
+					<option value="flow-1">PLG_JWADVANCED_VALUE_VERSION_1</option>
+					<option value="flow-2">PLG_JWADVANCED_VALUE_VERSION_2</option>
+				</field>
+				<field name="FlowPlugincoverheight" type="text" default="100" label="PLG_JWADVANCED_LABEL_PLUGFLOWCOVH" description="PLG_JWADVANCED_DESC_PLUGFLOWCOVH" />
+				<field name="FlowPluginsize" type="text" default="100" label="PLG_JWADVANCED_LABEL_PLUGFLOWSZ" description="PLG_JWADVANCED_DESC_PLUGFLOWSZ" />
+				<field	name="FlowPluginshowtext" type="radio" label="PLG_JWADVANCED_LABEL_PLUGFLOWTXT" default="1" description="PLG_JWADVANCED_DESC_PLUGFLOWTXT">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="FlowPluginposition" type="list" label="PLG_JWADVANCED_LABEL_PLUGFLOWPOS" default="" description="PLG_JWADVANCED_DESC_PLUGFLOWPOS">
+					<option value="">PLG_JWADVANCED_VALUE_BLANK</option>
+					<option value="top">PLG_JWADVANCED_VALUE_TOP</option>
+					<option value="bottom">PLG_JWADVANCED_VALUE_BOTTOM</option>
+					<option value="left">PLG_JWADVANCED_VALUE_LEFT</option>
+					<option value="right">PLG_JWADVANCED_VALUE_RIGHT</option>
+				</field>
+				<field name="FlowPlugindefaultcover" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGFLOWDEFCOV" description="PLG_JWADVANCED_DESC_PLUGFLOWDEFCOV" />
+				<field name="FlowPlugintitleoffset" type="text" default="5" label="PLG_JWADVANCED_LABEL_PLUGFLOWTIOFF" description="PLG_JWADVANCED_DESC_PLUGFLOWTIOFF" />
+				<field name="FlowPlugindescriptionoffset" type="text" default="25" label="PLG_JWADVANCED_LABEL_PLUGFLOWDESCOFF" description="PLG_JWADVANCED_DESC_PLUGFLOWDESCOFF" />
+				<field name="FlowPluginfont" type="text" default="Arial Rounded MT Bold" label="PLG_JWADVANCED_LABEL_PLUGFLOWFONT" description="PLG_JWADVANCED_DESC_PLUGFLOWFONT" />
+				<field name="FlowPluginfontsize" type="text" default="12" label="PLG_JWADVANCED_LABEL_PLUGFLOWFONTSIZE" description="PLG_JWADVANCED_DESC_PLUGFLOWFONTSIZE" />
+				<field name="FlowPlugincolor" type="text" default="f1f1f1" label="PLG_JWADVANCED_LABEL_PLUGFLOWFONTCOLOR" description="PLG_JWADVANCED_DESC_PLUGFLOWFONTCOLOR" />
+				<field name="FlowPluginbackgroundcolor" type="text" default="000000" label="PLG_JWADVANCED_LABEL_PLUGFLOWBACKGROUNDCOLOR" description="PLG_JWADVANCED_DESC_PLUGFLOWBACKGROUNDCOLOR" />
+				<field name="FlowPlugintweentime" type="text" default="0.6" label="PLG_JWADVANCED_LABEL_PLUGFLOWTWTIME" description="PLG_JWADVANCED_DESC_PLUGFLOWTWTIME" />
+				<field name="FlowPluginautorotate" type="radio" label="PLG_JWADVANCED_LABEL_PLUGFLOWAUTORATE" default="0" description="PLG_JWADVANCED_DESC_PLUGFLOWAUTORATE">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="FlowPluginrotatedelay" type="text" default="2500" label="PLG_JWADVANCED_LABEL_PLUGFLOWROTDEL" description="PLG_JWADVANCED_DESC_PLUGFLOWROTDEL" />
+				<field name="FlowPlugincontrolbaricon" type="radio" label="PLG_JWADVANCED_LABEL_PLUGFLOWCTLICO" default="0" description="PLG_JWADVANCED_DESC_PLUGFLOWCTLICO">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_FACEBOOK">
+				<field name="PLG_JWADVANCED_DESC_PLUGFACE" type="spacer" default="" />
+				<field	name="FacePluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGFACEEN" default="0" description="PLG_JWADVANCED_DESC_PLUGFACEEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="FacePluginfbitthumbnail" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGSHARINGTHUMB" description="PLG_JWADVANCED_DESC_PLUGSHARINGTHUMB" size="70" />
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_TWEET">
+				<field name="PLG_JWADVANCED_DESC_PLUGTWEET" type="spacer" default="" />
+				<field	name="TweetPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGTWEETEN" default="0" description="PLG_JWADVANCED_DESC_PLUGTWEETEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_DABBER">
+				<field name="PLG_JWADVANCED_DESC_PLUGGRID" type="spacer" default="" />
+				<field name="GridPluginversion" type="list" label="PLG_JWADVANCED_LABEL_PLUGGRIDVER" default="grid-2" description="PLG_JWADVANCED_DESC_PLUGGRIDVER">
+					<option value="grid-1">PLG_JWADVANCED_VALUE_GRID_VERSION_1</option>
+					<option value="grid-2">PLG_JWADVANCED_VALUE_GRID_VERSION_2</option>
+					<option value="basic-1">PLG_JWADVANCED_VALUE_BASIC</option>
+					<option value="carousel-1">PLG_JWADVANCED_VALUE_CAROUSEL</option>
+				</field>
+				<field	name="GridPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDEN" default="0" description="PLG_JWADVANCED_DESC_PLUGGRIDEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="GridPluginrows" type="text" default="4" label="PLG_JWADVANCED_LABEL_PLUGGRIDROWS" description="PLG_JWADVANCED_DESC_PLUGGRIDROWS" />
+				<field name="GridPlugintilt" type="text" default="8" label="PLG_JWADVANCED_LABEL_PLUGGRIDTILT" description="PLG_JWADVANCED_DESC_PLUGGRIDTILT" />
+				<field name="GridPlugindistance" type="text" default="50" label="PLG_JWADVANCED_LABEL_PLUGGRIDDIST" description="PLG_JWADVANCED_DESC_PLUGGRIDDIST" />
+				<field name="GridPluginstart_distance" type="text" default="500" label="PLG_JWADVANCED_LABEL_PLUGGRIDSTARTDIS" description="PLG_JWADVANCED_DESC_PLUGGRIDSTARTDIS" />
+				<field name="GridPluginfocus_distance" type="text" default="200" label="PLG_JWADVANCED_LABEL_PLUGGRIDFOCUSDIS" description="PLG_JWADVANCED_DESC_PLUGGRIDFOCUSDIS" />
+				<field name="GridPluginreflections" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDREFLECTIONS" default="0" description="PLG_JWADVANCED_DESC_PLUGGRIDREFLECTIONS">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="GridPluginglow" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDGLOW" default="1" description="PLG_JWADVANCED_DESC_PLUGGRIDGLOW">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="GridPluginthumbnailwidth" type="text" default="480" label="PLG_JWADVANCED_LABEL_PLUGGRIDTHUMBWID" description="PLG_JWADVANCED_DESC_PLUGGRIDTHUMB" />
+				<field name="GridPluginthumbnailheight" type="text" default="270" label="PLG_JWADVANCED_LABEL_PLUGGRIDTHUMBHEI" description="PLG_JWADVANCED_DESC_PLUGGRIDTHUMBHEI" />
+				<field name="GridPluginhorizontalmargin" type="text" default="100" label="PLG_JWADVANCED_LABEL_PLUGGRIDHORMARG" description="PLG_JWADVANCED_DESC_PLUGGRIDHORMARG" />
+				<field name="GridPluginverticalmargin" type="text" default="150" label="PLG_JWADVANCED_LABEL_PLUGGRIDVERMARG" description="PLG_JWADVANCED_DESC_PLUGGRIDVERMARG" />
+				<field name="GridPluginoutside" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDOUTSIDE" default="0" description="PLG_JWADVANCED_DESC_PLUGGRIDOUTSIDE">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="GridPlugintitles" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDTITLE" default="1" description="PLG_JWADVANCED_DESC_PLUGGRIDTITLE">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="GridPlugintitles_position" type="list" label="PLG_JWADVANCED_LABEL_PLUGGRIDTITLEPOS" default="over" description="PLG_JWADVANCED_DESC_PLUGGRIDTITLEPOS">
+					<option value="over">PLG_JWADVANCED_VALUE_OVER</option>
+					<option value="top">PLG_JWADVANCED_VALUE_TOP</option>
+					<option value="bottom">PLG_JWADVANCED_VALUE_BOTTOM</option>
+				</field>
+				<field name="GridPlugintitles_font" type="text" default="_sans" label="PLG_JWADVANCED_LABEL_PLUGGRIDTITLEFONT" description="PLG_JWADVANCED_DESC_PLUGGRIDTITLEFONT" />
+				<field name="GridPluginfade_titles" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDTITLEFADE" default="1" description="PLG_JWADVANCED_DESC_PLUGGRIDTITLEFADE">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="GridPluginborder" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDBORDER" default="0" description="PLG_JWADVANCED_DESC_PLUGGRIDBORDER">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="GridPlugindof_blur" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDDOFBLUR" default="0" description="PLG_JWADVANCED_DESC_PLUGGRIDDOFBLUR">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="GridPlugindof_fade" type="radio" label="PLG_JWADVANCED_LABEL_PLUGGRIDDOFFADE" default="0" description="PLG_JWADVANCED_DESC_PLUGGRIDDOFFADE">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_ADTONOMYTEXT">
+				<field name="PLG_JWADVANCED_DESC_PLUGADTTEXT" type="spacer" default="" />
+				<field name="adttextPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGADTTEXTEN" default="0" description="PLG_JWADVANCED_DESC_PLUGADTTEXTEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="adttextPluginconfig" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGADTTEXTCONF" description="PLG_JWADVANCED_DESC_PLUGADTTEXTCONF" size="70" />
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_ADTONOMYVIDEO">
+				<field name="PLG_JWADVANCED_DESC_PLUGADTVIDEO" type="spacer" default="" />
+				<field name="adtvideoPluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGADTVIDEOEN" default="0" description="PLG_JWADVANCED_DESC_PLUGADTVIDEOEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="adtvideoPluginconfig" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGADTVIDEOCONF" description="PLG_JWADVANCED_DESC_PLUGADTVIDEOCONF" size="70" />
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_ADTONOMYIMAGE">
+				<field name="PLG_JWADVANCED_DESC_PLUGADTIMAGE" type="spacer" default="" />
+				<field name="adtimagePluginEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGADTIMAGEEN" default="0" description="PLG_JWADVANCED_DESC_PLUGADTIMAGEEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="adtimagegraphic" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGADTIMAGEGRAPHIC" description="PLG_JWADVANCED_DESC_PLUGADTIMAGEGRAPHIC" size="70" />
+				<field name="adtimagelink" type="text" default="" label="PLG_JWADVANCED_LABEL_PLUGADTIMAGELINK" description="PLG_JWADVANCED_DESC_PLUGADTIMAGELINK" size="70" />
+				<field name="adtimagepositions" type="list" label="PLG_JWADVANCED_LABEL_PLUGADTIMAGEPOS" default="pre,post" description="PLG_JWADVANCED_DESC_PLUGADTIMAGEPOS">
+					<option value="pre,post">PLG_JWADVANCED_VALUE_PRE_POST</option>
+					<option value="pre">PLG_JWADVANCED_VALUE_PRE</option>
+					<option value="post">PLG_JWADVANCED_VALUE_POST</option>
+					<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+				</field>
+				<field name="adtimageonpause" type="radio" label="PLG_JWADVANCED_LABEL_PLUGADTIMAGEPAUSE" default="0" description="PLG_JWADVANCED_DESC_PLUGADTIMAGEPAUSE">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_OVA">
+				<field name="PLG_JWADVANCED_DESC_PLUGOVA" type="spacer" default="" />
+				<field name="ovaEnabled" type="radio" label="PLG_JWADVANCED_LABEL_PLUGOVAEN" default="0" description="PLG_JWADVANCED_DESC_PLUGOVAEN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="ovajson" type="textarea" default="" label="PLG_JWADVANCED_LABEL_PLUGOVAJSON" description="PLG_JWADVANCED_DESC_PLUGOVAJSON" rows="5" cols="40" />
+				<field name="ovacompanion" type="radio" label="PLG_JWADVANCED_LABEL_PLUGOVACOMP" default="0" description="PLG_JWADVANCED_DESC_PLUGOVACOMP">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="ovacompanionposition" type="radio" label="PLG_JWADVANCED_LABEL_PLUGOVACOMPPOS" default="after" description="PLG_JWADVANCED_DESC_PLUGOVACOMPPOS">
+					<option value="before">PLG_JWADVANCED_VALUE_BEFORE</option>
+					<option value="after">PLG_JWADVANCED_VALUE_AFTER</option>
+				</field>
+				<field name="ovacompanioncsssrc" type="list" label="PLG_JWADVANCED_LABEL_PLUGOVACOMCSSSRC" default="preconfigure" description="PLG_JWADVANCED_DESC_PLUGOVACOMPCSSSRC">
+					<option value="preconfigure">PLG_JWADVANCED_VALUE_OVACSSPRE</option>
+					<option value="cssfields">PLG_JWADVANCED_VALUE_OVACSSFIELDS</option>
+					<option value="cssfile">PLG_JWADVANCED_VALUE_OVACSSFILE</option>
+					<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+				</field>
+				<field name="ovacompanionbg" type="text" default="CCCCCC" label="PLG_JWADVANCED_LABEL_PLUGOVACOMPBG" description="PLG_JWADVANCED_DESC_PLUGOVACOMPBG" size="10" />
+				<field name="ovacompanionheight" type="text" default="240" label="PLG_JWADVANCED_LABEL_PLUGOVACOMPHEIGHT" description="PLG_JWADVANCED_DESC_PLUGOVACOMPHEIGHT" size="10" />
+				<field name="ovacompanionwidth" type="text" default="200" label="PLG_JWADVANCED_LABEL_PLUGOVACOMPWIDTH" description="PLG_JWADVANCED_DESC_PLUGOVACOMPWIDTH" size="10" />
+				<field name="ovacompanionfloat" type="list" label="PLG_JWADVANCED_LABEL_PLUGOVACOMPFLOAT" default="left" description="PLG_JWADVANCED_DESC_PLUGOVACOMPFLOAT">
+					<option value="left">PLG_JWADVANCED_VALUE_LEFT</option>
+					<option value="right">PLG_JWADVANCED_VALUE_RIGHT</option>
+					<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+				</field>
+				<field name="ovaplayerfloat" type="list" label="PLG_JWADVANCED_LABEL_PLUGOVAPLAFLOAT" default="left" description="PLG_JWADVANCED_DESC_PLUGOVAPLAFLOAT">
+					<option value="left">PLG_JWADVANCED_VALUE_LEFT</option>
+					<option value="right">PLG_JWADVANCED_VALUE_RIGHT</option>
+					<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+				</field>
+				<field name="ovacompanionmargin" type="text" default="5" label="PLG_JWADVANCED_LABEL_PLUGOVACOMPMARGIN" description="PLG_JWADVANCED_DESC_PLUGOVACOMPMARGIN" size="6" />
+				<field name="ovacompanionmarginpos" type="list" label="PLG_JWADVANCED_LABEL_PLUGOVACOMPMARGINPOS" default="left" description="PLG_JWADVANCED_DESC_PLUGOVAMARGINPOS">
+					<option value="left">PLG_JWADVANCED_VALUE_LEFT</option>
+					<option value="right">PLG_JWADVANCED_VALUE_RIGHT</option>
+					<option value="top">PLG_JWADVANCED_VALUE_TOP</option>
+					<option value="bottom">PLG_JWADVANCED_VALUE_BOTTOM</option>
+				</field>
+				<field name="ovaplayercss" type="textarea" default="" label="PLG_JWADVANCED_LABEL_PLUGOVAPLACSS" description="PLG_JWADVANCED_DESC_PLUGOVAPLACSS" rows="5" cols="40" />
+				<field name="ovacompanioncss" type="textarea" default="" label="PLG_JWADVANCED_LABEL_PLUGOVACOMCSS" description="PLG_JWADVANCED_DESC_PLUGOVACOMPCSS" rows="5" cols="40" />
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_PLUGINS_EXTRA">
+				<field name="PLG_JWADVANCED_DESC_PLUGEXTRA" type="spacer" default="" />
+				<field name="extrapluginlist" type="textarea" default="" label="PLG_JWADVANCED_LABEL_PLUGEXTRA" description="PLG_JWADVANCED_DESC_PLUGEXTRALIST" rows="5" cols="40" />
+				<field name="extrapluginflashvarslist" type="textarea" default="" label="PLG_JWADVANCED_LABEL_PLUGEXTRAVARSLIST" description="PLG_JWADVANCED_DESC_PLUGEXTRAVARSLIST" rows="5" cols="40" />
+			</fieldset>
+			<fieldset name="PLG_JWADVANCED_GLOBAL">
+				<field name="PLG_JWADVANCED_DESC_GLOBAL" type="spacer" default="" />
+				<field name="Playlisttrigger" type="text" label="PLG_JWADVANCED_LABEL_GLOBALTRIG" default="jwplayer" description="PLG_JWADVANCED_DESC_GLOBALTRIG" />
+				<field name="Playlistjwversion" type="list" label="PLG_JWADVANCED_LABEL_GLOBALJWV" default="JW5_HTML5" description="PLG_JWADVANCED_DESC_GLOBALJWV">
+					<option value="5">PLG_JWADVANCED_VALUE_JW5</option>
+					<option value="JW5_HTML5">PLG_JWADVANCED_VALUE_JW5_FALLBACK_HTML5</option>
+					<option value="HTML5_JW5">PLG_JWADVANCED_VALUE_HTML5_FALLBACK_JW5</option>
+					<option value="4">PLG_JWADVANCED_VALUE_JW4</option>
+				</field>
+				<field name="Playlistclass" type="text" default="" label="PLG_JWADVANCED_LABEL_GLOBALCLASS" description="PLG_JWADVANCED_DESC_GLOBALCLASS" />
+				<field name="PlaylistSwfobject" type="list" label="PLG_JWADVANCED_LABEL_GLOBALSWF" default="1" description="PLG_JWADVANCED_DESC_GLOBALSWF">
+					<option value="2">PLG_JWADVANCED_VALUE_AUTO</option>
+					<option value="0">PLG_JWADVANCED_VALUE_FORNO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_FORYES</option>
+				</field>
+				<field name="Playlistmetaload" type="list" label="PLG_JWADVANCED_LABEL_GLOBALMETA" default="2" description="PLG_JWADVANCED_DESC_GLOBALMETA">
+					<option value="2">PLG_JWADVANCED_VALUE_AUTO</option>
+					<option value="0">PLG_JWADVANCED_VALUE_FORNO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_FORYES</option>
+				</field>
+				<field name="Playlistflashinstall" type="radio" label="PLG_JWADVANCED_LABEL_GLOBALFI" default="1" description="PLG_JWADVANCED_DESC_GLOBALFI">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playlistconfig" type="text" default="" label="PLG_JWADVANCED_LABEL_GLOBALCONFIG" description="PLG_JWADVANCED_DESC_GLOBALCONFIG" size="70" />
+				<field name="Playlistdebug" type="list" default="none" label="PLG_JWADVANCED_LABEL_DEBUGCH" description="PLG_JWADVANCED_DESC_DEBUGCH">
+					<option value="none">PLG_JWADVANCED_VALUE_NONE</option>
+					<option value="trace">PLG_JWADVANCED_VALUE_TRACE</option>
+					<option value="arthropod">PLG_JWADVANCED_VALUE_ARTHROPOD</option>
+				</field>
+				<field name="PLG_JWADVANCED_DESC_EVENTS" type="spacer" default="" />
+				<field name="Playlistevents" type="textarea" default="" label="PLG_JWADVANCED_LABEL_EXTRAJSEVENTS" description="PLG_JWADVANCED_DESC_EXTRAJSEVENTS" rows="5" cols="40" />
+				<field name="extrajsname" type="text" default="" label="PLG_JWADVANCED_LABEL_EXTRAJSNAME" description="PLG_JWADVANCED_DESC_EXTRAJSNAME" />
+				<field name="PLG_JWADVANCED_DESC_HTML5" type="spacer" default="" />
+				<field name="PlaylistjwplayerLoad" type="list" label="PLG_JWADVANCED_LABEL_GLOBALJWPLAYER" default="2" description="PLG_JWADVANCED_DESC_GLOBALJWPLAYER">
+					<option value="2">PLG_JWADVANCED_VALUE_AUTO</option>
+					<option value="0">PLG_JWADVANCED_VALUE_FORNO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_FORYES</option>
+				</field>
+				<field name="Playlistfallbackdownload" type="radio" label="PLG_JWADVANCED_LABEL_GLOBALFALLBACKDOWN" default="1" description="PLG_JWADVANCED_DESC_GLOBALFALLBACKDOWN">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="PlaylistiscrollLoad" type="list" label="PLG_JWADVANCED_LABEL_GLOBALISCROLL" default="2" description="PLG_JWADVANCED_DESC_GLOBALISCROLL">
+					<option value="2">PLG_JWADVANCED_VALUE_AUTO</option>
+					<option value="0">PLG_JWADVANCED_VALUE_FORNO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_FORYES</option>
+				</field>
+				<field name="PLG_JWADVANCED_DESC_JWBOX" type="spacer" default="" />
+				<field name="PlaylistjqueryLoad" type="list" label="PLG_JWADVANCED_LABEL_GLOBALJQU" default="2" description="PLG_JWADVANCED_DESC_GLOBALJQU">
+					<option value="0">PLG_JWADVANCED_VALUE_AUTO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_FORNO</option>
+					<option value="2">PLG_JWADVANCED_VALUE_FORYES</option>
+				</field>
+				<field name="PlaylistjqueryjwboxLoad" type="list" label="PLG_JWADVANCED_LABEL_GLOBALJQUJWBOX" default="2" description="PLG_JWADVANCED_DESC_GLOBALJQUJWBOX">
+					<option value="0">PLG_JWADVANCED_VALUE_AUTO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_FORNO</option>
+					<option value="2">PLG_JWADVANCED_VALUE_FORYES</option>
+				</field>
+				<field name="Playlistjquerymootoolsconflict" type="radio" label="PLG_JWADVANCED_LABEL_GLOBALJWBMOO" default="1" description="PLG_JWADVANCED_DESC_GLOBALJWBMOO">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+				</field>
+				<field name="Playlistjwboxcontainer" type="list" label="PLG_JWADVANCED_LABEL_GLOBALJWBCON" default="span" description="PLG_JWADVANCED_DESC_GLOBALJWBCON">
+					<option value="span">PLG_JWADVANCED_VALUE_SPAN</option>
+					<option value="div">PLG_JWADVANCED_VALUE_DIV</option>
+				</field>
+				<field name="PlaylistcssLoad" type="list" label="PLG_JWADVANCED_LABEL_GLOBALCSS" default="1" description="PLG_JWADVANCED_DESC_GLOBALCSS">
+					<option value="0">PLG_JWADVANCED_VALUE_NO</option>
+					<option value="1">PLG_JWADVANCED_VALUE_YES</option>
+					<option value="cssfield">PLG_JWADVANCED_VALUE_USECSSFIELD</option>
+				</field>
+				<field name="mod_css" type="textarea" default="" label="PLG_JWADVANCED_LABEL_GLOBALCSSFIELD" description="PLG_JWADVANCED_DESC_GLOBALCSSFIELD" rows="5" cols="40" />
+			</fieldset>
+		</fields>
+	</config>	
+	
+</install>

@@ -1,0 +1,177 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/*
+ * Widgetkit Slideshow: Showcase Style
+ */
+
+
+.wk-slideshow-bookstore-single .slides-container {
+	background: url(images/background.png) no-repeat;
+	padding: 0px 25px;
+}
+
+.wk-slideshow-bookstore-single .slides-container {
+
+	font-size: 12px !important;
+	margin: 0px !important;
+}
+
+/* Slideshow: Buttons
+----------------------------------------------------------------------------------------------------*/
+
+
+.wk-slideshow-bookstore-single .slides-container { position: relative; }
+
+.wk-slideshow-bookstore-single .slides-container .next,
+.wk-slideshow-bookstore-single .slides-container .prev {
+	top: 50%;
+	width: 12px;
+	height: 32px;
+	margin-top: -25px;
+	background: url(images/buttons.png) 0 50px no-repeat;
+}
+
+.wk-slideshow-bookstore-single .slides-container .next {
+	right: 10px;
+	background-position: 0 -32px;
+}
+
+.wk-slideshow-bookstore-single .slides-container .prev {
+	left: 10px;
+	background-position: 0 -0px;
+}
+
+
+/* Content
+----------------------------------------------------------------------------------------------------*/
+
+.wk-slideshow-bookstore-single .slides > li > article { padding: 50px 20px; }
+
+
+/* Slideset: Container
+----------------------------------------------------------------------------------------------------*/
+
+.wk-slideshow-bookstore-single .wk-slideset > div {
+	padding: 0 60px;
+	border: 1px solid #ddd;
+	background: #F5F5F5;
+	background: -moz-linear-gradient(top, #F0F0F0 0%, #FDFDFD 7%);
+	background: -webkit-linear-gradient(top, #F0F0F0 0%, #FDFDFD 7%);
+	background: -o-linear-gradient(top, #F0F0F0 0%, #FDFDFD 7%);
+	border-radius: 0 0 5px 5px;
+}
+.wk-slideshow-bookstore-single .wk-slideset.no-buttons > div { padding: 0; }
+
+.wk-slideshow-bookstore-single .wk-slideset .sets { padding: 15px 0; }
+
+
+/* Slideset: Content
+----------------------------------------------------------------------------------------------------*/
+
+.wk-slideshow-bookstore-single .wk-slideset{display: none;}
+
+.wk-slideshow-bookstore-single .wk-slideset .set > li {
+	margin: 0 5px;
+	padding: 1px;
+	background: #ddd;
+    border-radius: 5px;
+	cursor: pointer;
+}
+
+.wk-slideshow-bookstore-single .wk-slideset .set > li > div {
+	padding: 7px;
+	background: #F5F5F5;
+	border-radius: 5px;
+	box-shadow: 0 1px 0 #fff inset;
+    text-shadow: 0 1px 0 #fff;
+	text-align: left;
+	white-space: nowrap; /* Firefox Width Fix */
+}
+
+.wk-slideshow-bookstore-single .wk-slideset .set > li > div > img:first-child { vertical-align: middle; }
+
+/* Hover */
+.wk-slideshow-bookstore-single .wk-slideset .set > li:hover {
+	background: #ccc;
+	background: -moz-linear-gradient(top, #ddd 0%, #bbb 100%);
+	background: -webkit-linear-gradient(top, #ddd 0%, #bbb 100%);
+	background: -o-linear-gradient(top, #ddd 0%, #bbb 100%);
+	box-shadow: 0 2px 3px rgba(0,0,0,0.10);
+}
+
+.wk-slideshow-bookstore-single .wk-slideset .set > li:hover > div {
+	background: #fff;
+	background: -moz-linear-gradient(top, #fff 0%, #ebebeb 100%);
+	background: -webkit-linear-gradient(top, #fff 0%, #ebebeb 100%);
+	background: -o-linear-gradient(top, #fff 0%, #ebebeb 100%);
+}
+
+/* Active */
+.wk-slideshow-bookstore-single .wk-slideset .set > li.active {
+	background: #bbb;
+	box-shadow: none;
+}
+
+.wk-slideshow-bookstore-single .wk-slideset .set > li.active > div {
+	background: #e6e6e6;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2) inset;
+}
+
+
+/* Slideset: Buttons
+----------------------------------------------------------------------------------------------------*/
+
+.wk-slideshow-bookstore-single .wk-slideset > div { position: relative; }
+
+.wk-slideshow-bookstore-single .wk-slideset > div .next,
+.wk-slideshow-bookstore-single .wk-slideset > div .prev {
+	top: 50%;
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+	background: url(images/navigation_buttons.png) 0 0 no-repeat;
+}
+
+.wk-slideshow-bookstore-single .wk-slideset > div .next {
+	right: 25px;
+	background-position: 0 0;
+}
+
+.wk-slideshow-bookstore-single .wk-slideset > div .prev {
+	left: 25px;
+	background-position: 0 -90px;
+}
+
+
+.wk-slideshow-bookstore-single .wk-slideset > div .next:hover { background-position: 0 -30px; }
+.wk-slideshow-bookstore-single .wk-slideset > div .next:active { background-position: 0 -60px; }
+.wk-slideshow-bookstore-single .wk-slideset > div .prev:hover { background-position: 0 -120px; }
+.wk-slideshow-bookstore-single .wk-slideset > div .prev:active { background-position: 0 -150px; }
+
+/* custom img setting
+----------------------------------------------------------------------------------------------------*/
+
+
+.wk-slideshow-bookstore-single .slides-container div
+{
+	color: black;
+}
+
+
+.wk-slideshow-bookstore-single .slides-container ul li
+{
+	float: left;
+	list-style: none;
+}
+
+.wk-slideshow-bookstore-single .slides-container ul li div img
+{
+	margin: auto 6px;
+	width: 127px;
+	height: 178px;
+	border: 1px solid #757575;
+	-moz-box-shadow:    2px 2px 3px 4px #ccc;
+  -webkit-box-shadow: 2px 2px 3px 4px #ccc;
+  box-shadow:         2px 2px 3px 4px #ccc;
+}
+

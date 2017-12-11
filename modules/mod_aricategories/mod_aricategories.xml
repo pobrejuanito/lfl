@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>mod_aricategories</name>
+	<author>Light for Life US Ministry</author>
+	<creationDate>Nov 2012</creationDate>
+	<copyright>Copyright (C) Light for Life US Ministry All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>tech@sositv.com</authorEmail>
+	<authorUrl>www.sostv.net</authorUrl>
+	<version>1.0</version>
+	<description>Displays Ari Quiz Categories As Modules</description>
+	<files>
+		<filename module="mod_aricategories">mod_aricategories.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_aricategories.xml</filename>
+	</files>	
+</extension>

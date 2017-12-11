@@ -1,0 +1,13 @@
+/*OVA*/
+#jwplayerID{
+	float:left;
+	width: 320px;
+	height: 240px;
+}
+#companionID {
+	margin-left:5px;
+	width: 200px;
+	height: 240px;
+	background: #CCCCCC;
+	float:left;
+}

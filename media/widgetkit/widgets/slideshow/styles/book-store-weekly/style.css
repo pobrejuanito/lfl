@@ -1,0 +1,167 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/*
+ * Widgetkit Slideshow: Quantum Style
+ */
+
+
+/* Navigation
+----------------------------------------------------------------------------------------------------*/
+
+.wk-slideshow-weekly .nav {
+	position: absolute;
+	z-index: 9;
+	bottom: 20px;
+	right: 30px;
+	height: 24px;
+	padding: 4px 8px 0 8px;
+	border: 1px solid rgba(255,255,255,0.35);
+	-moz-border-radius: 16px;
+	-webkit-border-radius: 16px;
+	border-radius: 16px;
+	background: rgba(255,255,255,0.15);
+	-moz-box-shadow: inset 0 0 8px rgba(255,255,255,0.25);
+	-webkit-box-shadow: inset 0 0 8px rgba(255,255,255,0.25);
+	box-shadow: inset 0 0 8px rgba(255,255,255,0.25);
+}
+
+.wk-slideshow-weekly .nav li {
+	display: inline-block;
+	margin-left: 5px;
+}
+.wk-slideshow-weekly .nav li:first-child { margin-left: 0; }
+
+.wk-slideshow-weekly .nav span {
+	width: 20px;
+	height: 20px;
+	background: url(images/nav.png) 0 0 no-repeat;
+	overflow: hidden;
+}
+.wk-slideshow-weekly .nav span:hover { background-position: 0 -40px; }
+.wk-slideshow-weekly .nav span:active { background-position: 0 -120px; }
+.wk-slideshow-weekly .nav .active span { background-position: 0 -80px; }
+
+
+/* Buttons
+----------------------------------------------------------------------------------------------------*/
+
+.wk-slideshow-weekly > div { position: relative; }
+
+.wk-slideshow-weekly > div:hover .next,
+.wk-slideshow-weekly > div:hover .prev {
+	top: 50%;
+	width: 50px;
+	height: 50px;
+	margin-top: -25px;
+	background-image: url(images/buttons.png);
+	background-repeat: no-repeat;
+}
+
+.wk-slideshow-weekly > div:hover .next { right: 30px; }
+.wk-slideshow-weekly > div:hover .prev { left: 30px; }
+
+.wk-slideshow-weekly > div:hover .next { background-position: 0 0; }
+.wk-slideshow-weekly > div:hover .next:hover { background-position: 0 -70px; }
+.wk-slideshow-weekly > div:hover .next:active { background-position: 0 -140px; }
+
+.wk-slideshow-weekly > div:hover .prev { background-position: 0 -210px; }
+.wk-slideshow-weekly > div:hover .prev:hover { background-position: 0 -280px; }
+.wk-slideshow-weekly > div:hover .prev:active { background-position: 0 -350px; }
+
+.wk-slideshow-weekly .slides {
+	background: url(images/weekly-box.png) no-repeat;
+}
+
+
+
+/* CUSTOM CLASS
+----------------------------------------------------------------------------------------------------*/
+
+
+/* recommand
+----------------------------------------------------------------------------------------------------*/
+.wk-slideshow-weekly .recommand-book-img
+{
+	background: url(images/background-weekly-book.png) no-repeat;
+	width: 264px;
+	height: 196px;
+	position: absolute;
+	top: 45px;
+	left: 5px;
+}
+.wk-slideshow-weekly .recommand-dvd-img
+{
+	background: url(images/background-weekly-dvd.png) no-repeat;
+	width: 264px;
+	height: 196px;
+	position: absolute;
+	top: 45px;
+	left: 5px;
+}
+.wk-slideshow-weekly .recommand-series-img
+{
+	background: url(images/background-weekly-series.png) no-repeat;
+	width: 264px;
+	height: 196px;
+	position: absolute;
+	top: 45px;
+	left: 5px;
+}
+.wk-slideshow-weekly .recommand-book-img canvas,
+.wk-slideshow-weekly .recommand-dvd-img canvas
+{
+	width: 120px !important;
+	height: 250px !important;
+	position: relative;
+	left: 65px;
+}
+.wk-slideshow-weekly .recommand-series-img canvas
+{
+	width: 119px !important;
+	height: 250px !important;
+	position: relative;
+	left: 72px;
+
+}
+.wk-slideshow-weekly .recommand-title
+{
+	position: absolute;
+	top:45px;
+	left: 240px;
+	font-size: 16px;
+	color: #008e75;
+	font-weight: bold;
+}
+.wk-slideshow-weekly .recommand-info
+{
+	position: absolute;
+	top: 90px;
+	left: 240px;
+	width: 385px;
+}
+
+.wk-slideshow-weekly .recommand-button
+{
+	position: absolute;
+	top:210px;
+	left: 240px;
+}
+.wk-slideshow-weekly .recommand-button a
+{
+	background: url(images/weekly-button.png) no-repeat;
+	width:91px;
+	height: 30px;
+
+	display: block;
+	font-size: 0px;
+	
+}
+
+
+
+/* IE7
+----------------------------------------------------------------------------------------------------*/
+
+.wk-ie7 .wk-slideshow-weekly .nav li,
+.wk-ie7 .wk-slideshow-weekly .nav span { display: inline; }
+.wk-ie7 .wk-slideshow-weekly .nav span { zoom: 1; }

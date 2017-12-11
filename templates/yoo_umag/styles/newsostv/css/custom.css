@@ -1,0 +1,1378 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/*
+ * Custom Style Sheet - Use this file to style your content
+ */
+
+ul.prophecy 
+{
+	margin: 0px 0px 0px 0px;
+}
+ 
+ul.prophecy li {
+ 	list-style: none;
+ 	padding: 0px;
+}
+ 
+ 
+ 
+/* backgrounds setting */ 
+#page-background
+{
+	position: absolute;
+	top: 116px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+body.background-onair #page-background{background: url(../images/background/backgound-on-air.jpg) no-repeat 50% 0%;}
+body.background-edunet #page-background{background: url(../images/background/background-edunet.png) no-repeat 50% 0;}
+body.background-born-again #page-background{background: url(../images/background/background-born-again.jpg) no-repeat 50% 0;}
+body.background-china-special #page-background{background: url(../images/background/background-china-worship.jpg) no-repeat 50% 0;}
+body.background-china-kcnw #page-background{background: url(../images/background/background-china-translate-worship.jpg) no-repeat 50% 0;}
+body.background-china-worship #page-background{background: url(../images/background/background-china-worship.jpg) no-repeat 50% 0;}
+body.background-china-special-kcns #page-background{background: url(../images/background/background-china-special-kcns.jpg) no-repeat 50% 0;}
+body.background-china-special-kcnw #page-background{background: url(../images/background/background-china-special-kcnw.jpg) no-repeat 50% 0;}
+body.background-church-history #page-background{background: url(../images/background/background-church-history.jpg) no-repeat 50% 0;}
+body.background-country #page-background{background: url(../images/background/background-country.jpg) no-repeat 50% 0;}
+body.background-faith #page-background{background: url(../images/background/background-faith.jpg) no-repeat 50% 0;}
+body.background-family #page-background{background: url(../images/background/background-family.jpg) no-repeat 50% 0;}
+body.background-freetalk #page-background{background: url(../images/background/background-freetalk.jpg) no-repeat 50% 0;}
+body.background-just5 #page-background{background: url(../images/background/background-just5.jpg) no-repeat 50% 0;}
+body.background-kingsm #page-background{background: url(../images/background/background-kingsm.jpg) no-repeat 50% 0;}
+body.background-lfl-tv #page-background{background: url(../images/background/background-lfl-tv.jpg) no-repeat 50% 0;}
+body.background-tribulation #page-background{background: url(../images/background/background-tribulation.jpg) no-repeat 50% 0;}
+body.background-news #page-background{background: url(../images/background/background-news.jpg) no-repeat 50% 0;}
+body.background-prophecy #page-background{background: url(../images/background/background-prophecy.jpg) no-repeat 50% 0;}
+body.background-sermon #page-background{background: url(../images/background/background-sermon.jpg) no-repeat 50% 0;}
+body.background-worship #page-background{background: url(../images/background/background-worship.jpg) no-repeat 50% 0;}
+body.background-cooking #page-background{background:url(../images/background/background-cooking.jpg) no-repeat 50% 0;}
+body.background-life-talk #page-background{background:url(../images/background/background-life-talk.jpg) no-repeat 50% 0;}
+body.background-ourstory #page-background{background:url(../images/background/background-our-story.jpg) no-repeat 50% 0;}
+body.background-webinar #page-background{background: url(../images/background/background-webinar.jpg) no-repeat 50% 0;}
+body.background-bible-and-theology #page-background{background: url(../images/background/background-bible-and-theology.jpg) no-repeat 50% 0%;}
+body.background-christian-dating-and-marriage #page-background{background: url(../images/background/background-christian-dating-and-marriage.jpg) no-repeat 50% 0%;}
+body.background-pastor-son-to-know-bible #page-background{background: url(../images/background/background-pastor-son-to-know-bible.jpg) no-repeat 50% 0%;}
+body.background-online-bible-college #page-background{background: url(../images/background/background-online-bible-college.jpg) no-repeat 50% 0%;}
+
+body.background-webinar .style-button {
+	position: absolute;
+	right: -710px;
+	top: -1225px;
+}
+body.sermon #page-background{background: url(../images/background/background-sermon.jpg) no-repeat 50% 0;}
+body.background-sos-special #page-background{ background: url(../images/background/background-special.jpg) no-repeat 50% 0;}
+body.background-video #page-background{ background: url(../images/background/background-video-etc.jpg) no-repeat 50% 0;} 
+
+.aboutus {
+	width: 100%;
+	height: 153px;
+	text-align: center;
+	padding-top: 25px;
+	border-bottom: 1px #c9c9c9 solid;
+}
+/** About Us Pages Styles */
+.aboutus_aboutus {
+	float: left;
+	padding: 20px 0px 0px 20px;
+	width: 168px;
+	height: 72px;
+	background: url(../images/aboutus/background_about.gif) 0px 0px no-repeat;
+}
+.whois {
+	width:136px;
+	height: 72px;
+}
+.aboutus_mustsee {
+	float: left;
+	padding: 20px 0px 0px 20px;
+	width: 182px;
+	height: 72px;
+	background: url(../images/aboutus/background_about.gif) -188px 0px no-repeat;
+}
+.mustsee {
+	width:136px;
+	height: 52px;
+
+}
+.aboutus_mustread {
+	float: left;
+	padding: 20px 0px 0px 20px;
+	width: 173px;
+	height: 72px;
+	background: url(../images/aboutus/background_about.gif) -390px 0px no-repeat;
+}
+.mustread {
+	width:136px;
+	height: 52px;
+
+}
+.aboutus_faq {
+	float: left;
+	padding: 20px 0px 0px 20px;
+	width: 176px;
+	height: 72px;
+	background: url(../images/aboutus/background_about.gif) -582px 0px no-repeat;
+}
+.faq {
+	width:136px;
+	height: 52px;
+
+}
+ /* monitor backgrounds*/
+.submit_button
+{
+	width: 85px !important;
+}
+
+.mod-onair
+{
+	margin-top: 65px;
+}
+div.monitor
+{
+	padding: 25px;
+	width: 716px;
+	height: 607px;
+	background: url(../images/monitor.png) no-repeat;
+}
+div.sermon-crucial 
+{
+	position: relative;
+	left: 280px;
+	bottom: 200px;
+	width: 197px;
+	height: 103px;
+	background: url(../images/crucial-sermon.png) no-repeat;
+}
+div.monitor-webinar
+{
+	padding: 25px;
+	width: 716px;
+	height: 607px;
+	background: url(../images/monitor-webinar.png) no-repeat;
+}
+.korea div.monitor{background: url(../images/monitor-korea.png) no-repeat;}
+.east div.monitor {background: url(../images/monitor-east.png) no-repeat;}
+.west div.monitor {background: url(../images/monitor-west.png) no-repeat;}
+.webinar div.monitor {background: url(../images/monitor-webinar.png) no-repeat;}
+
+.sermon div.monitor
+{
+	padding: 25px;
+	width: 716px;
+	height: 607px;
+	background: url(../images/monitor-sermon.png) no-repeat;
+	position: relative;
+	top: 30px;
+}
+.replay div.monitor
+{
+	padding: 25px;
+	width: 716px;
+	height: 607px;
+	background: url(../images/monitor-replay.png) no-repeat;
+	position: relative;
+	top:30px;
+}
+
+
+/*custom decoration*/
+
+.about-list
+{
+	list-style: url(../images/symbol.png);
+	font-size: 1.3 em;
+	font-weight: bold;
+}
+
+ul.order li.title
+{
+	font-weight: bold;
+	font-size: 1.2em;
+	border-top: 1px #ccc solid;
+	border-bottom: 1px #ddd solid;
+	list-style: url(../images/list-style-arrow.png);
+	padding: 5px;
+	margin: 15px 0px;
+	list-style-position: inside;
+}
+ul.order li.description
+{
+	list-style: none;
+	padding-left: 15px;
+	min-height: 150px;
+	line-height: 22px;
+	font-size: 14px;
+}
+
+
+/*contents box position */
+
+.contents-box
+{
+	position: absolute;
+	top:40px;
+}
+
+
+.sermon #sidebar-a, .sermon #sidebar-b, .sermon #maininner, .replay #sidebar-a, .replay #sidebar-b, .replay #maininner{ position: relative;}
+.sermon #sidebar-b, .replay #sidebar-b
+{
+	left: -830px;
+	width: 200px;
+}
+.sermon #maininner, .replay #maininner
+{
+	left: 70px;
+	
+}
+.sermon #sidebar-a, .replay #sidebar-a
+{
+	left: 350px;
+	width: 200px;
+}
+
+/* content category list position */
+
+.sermon #system article.item div.content div.moduletablemags-list, .replay #system article.item div.content div.moduletablemags-list
+{
+ position: relative;
+ top: -75px;
+ margin: 0 -75px;
+}
+
+/* jw category styles */
+.jw_category_title {
+
+	font-size: 32px;
+	display: block;
+}
+.jw_category_description {
+	
+	font-size: 18px;
+}
+.jw_category_active_link {
+
+	font-weight: bold;
+	color: black;
+}
+.onair_show {
+
+}
+.onair_hide {
+	visibility:hidden;
+}
+
+/* Login Module */
+.pretext_wrapper {
+	padding-top: 30px;
+	
+}
+.pretext {
+	text-align: center;
+	border-top: #e5e5e5 solid 1px;
+	padding: 10px 0px 12px 0px;
+}
+.username {
+	float: left;
+	padding: 5px 0px 5px 0px;
+	margin: 0 2px 0 3px;
+	float: left;
+	width: 90px;
+}
+.password {
+	padding: 5px 0px 5px 0px;
+	margin: 0 2px 0 3px;
+	float: left;
+	width: 90px;
+}
+.submit_button {
+	width: 45px;
+	height: 35px;
+	font-size: 14px;
+	margin-left: 150px;
+}
+.button {
+	padding: 5px 0px 5px 0px;
+}
+.remember {
+	padding-bottom: 10px;
+	position: absolute;
+	top:20px;
+	right: 0px;
+	
+}
+.logintools {
+	padding: 10px 0px;
+	text-align: left;
+	border-top: #e5e5e5 solid 1px;
+	border-bottom: #e5e5e5 solid 1px;
+}
+.regist_form
+{
+	list-style: none;
+}
+.textfield {
+	width: 90px;
+	height: 21px;
+	border-style: none;
+	background: url(../images/userpass-form.png) no-repeat; 
+}
+.textfield_large {
+	width: 217px;
+	height: 21px;
+	border-style: none;
+	background: url(../images/text-box.png) no-repeat; 
+}
+/* Schedule tabs */
+
+.schedule_month {
+	text-align: center;
+	width: 100%;
+	padding: 25px 0px 10px 0px;
+	font-size: 28px;
+	color: white;
+}
+.schedule_tbl td {
+	padding-left: 0px;
+}
+
+.schedule_tbl_detail {
+	width: 100%;
+}
+.schedule_tbl_detail tr {
+	width: 100%;
+	height: 30px;
+	border-bottom: #b2b2b2 solid 1px;
+}
+.schedule_tbl_detail td {
+	padding-left: 10px;
+}
+
+.schedule_day {
+	padding: 12px;
+}
+
+.schedule_header {
+	text-align: left;
+	padding: 10px 10px 10px 10px;
+	background-color: #f2f2f2;
+	border-top-color: #7f7f7f;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-bottom-color: #b2b2b2;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+}
+/* Logged In Styles */
+ul.logged {
+	list-style:none;
+    margin:0 !important;
+    padding:0;
+    width: 300px;
+    height:30px;
+}
+ul.logged li {
+	float:left;
+    text-indent:0;
+    padding:4px 0px 4px 0px;
+    margin:0 !important;
+    list-style-image:none !important;
+}
+ul.logged a.link1 {
+    background: url(../images/button-login-links.png) no-repeat 0px 0;
+    border-left: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    display:block;
+    height: 47px;
+    width: 61px;
+    padding:0px;
+    margin:0px;
+    position:relative;
+}
+ul.logged a.link2 {
+    background: url(../images/button-login-links.png) no-repeat -63px 0;
+    border-left: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    display:block;
+    height: 47px;
+    width: 61px;
+    padding:0px;
+    margin:0px;
+    position:relative;
+}
+ul.logged a.link3 {
+    background: url(../images/button-login-links.png) no-repeat -125px 0;
+    border-left: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    display:block;
+    height: 47px;
+    width: 61px;
+    padding:0px;
+    margin:0px;
+    position:relative;
+}
+ul.logged a.link4 {
+    background: url(../images/button-login-links.png) no-repeat -187px 0;
+    border: 1px solid #e8e8e8;
+    display:block;
+    height: 47px;
+    width: 61px;
+    padding:0px;
+    margin:0px;
+    position:relative;
+}
+/* root element for tabs  */
+ul.tabs {
+    list-style:none;
+    margin:0 !important;
+    padding:0;
+    height:30px;
+}
+
+/* single tab */
+ul.tabs li {
+    float:left;
+    text-indent:0;
+    padding:0;
+    margin:0 !important;
+    list-style-image:none !important;
+}
+
+/* link inside the tab. uses a background image */
+ul.tabs a {
+    background: url(../images/schedule/schedule-list-tab.png) no-repeat 0 0;
+    font-size:11px;
+    display:block;
+    height: 50px;
+    width: 80px;
+    text-align:center;
+    text-decoration:none;
+    color: #9b7400;
+    padding:0px;
+    margin:0px;
+    position:relative;
+    top: 5px;
+}
+
+ul.tabs .tab_left {
+    background: url(../images/schedule/button-left.png) no-repeat 0 0;
+    font-size:11px;
+    height: 50px;
+    display:block;
+    line-height: 50px;
+    width: 55px;
+    text-align:center;
+    text-decoration:none;
+    color: #333;
+    padding:0px;
+    margin:0px;
+    position:relative;
+    top: 5px;
+}
+ul.tabs .tab_right {
+    background: url(../images/schedule/button-right.png) no-repeat 0 0;
+    font-size:11px;
+    display:block;
+    height: 50px;
+    line-height: 50px;
+    width: 55px;
+    text-align:center;
+    text-decoration:none;
+    color: #333;
+    padding:0px;
+    margin:0px;
+    position:relative;
+    top: 5px;
+}
+ul.tabs a:active {
+    outline:none;
+}
+
+/* when mouse enters the tab move the background image */
+ul.tabs a:hover {
+    background-position: 0px -50px;
+    color:#fff;
+}
+
+/* active tab uses a class name "current". its highlight is also done by moving the background image. */
+ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a {
+    background-position: 0px -100px;
+    cursor:default !important;
+    color:#000 !important;
+}
+
+/* Different widths for tabs: use a class name: w1, w2, w3 or w2 */
+
+
+/* width 1 */
+ul.tabs a.s { background-position: -553px 0; width:81px; }
+ul.tabs a.s:hover { background-position: -553px -31px; }
+ul.tabs a.s.current  { background-position: -553px -62px; }
+
+/* width 2 */
+ul.tabs a.l { background-position: -248px -0px; width:174px; }
+ul.tabs a.l:hover { background-position: -248px -31px; }
+ul.tabs a.l.current { background-position: -248px -62px; }
+
+
+/* width 3 */
+ul.tabs a.xl { background-position: 0 -0px; width:248px; }
+ul.tabs a.xl:hover { background-position: 0 -31px; }
+ul.tabs a.xl.current { background-position: 0 -62px; }
+
+
+/* initially all panes are hidden */
+.panes .pane {
+    display:none;
+}
+
+/* tab pane styling */
+.panes div {
+    display:none;
+    padding:15px 10px 0px 0px;
+    border-top:0;
+    background-color:#fff;
+}
+
+tbody tr td table.schedule_tbl_detail tbody tr td strong
+{
+	color: #777;
+}
+
+#system div.jw_category_title
+{
+	font-size: 18px;
+	color: #6d6d6d;
+	font-family: NanumGothic,'나눔고딕','굴림',Gulim,AppleGothic,sans-serif;
+
+}
+/* Mailing list styles */
+.header_style {
+	font-weight: bold;
+	text-align: left; 
+	padding: 0px 0px 10px 0px;
+	width: 140px;
+}
+.mailing_list {
+	width: 220px;
+	margin-bottom: 30px;
+}
+.mailing_list tr{
+	
+}
+.mailing_list td {
+	border-bottom: #e5e5e5 solid 1px;
+	padding: 10px 0px 10px 10px;
+}
+.pagination a {
+	/*padding: 0px 5px 0px 5px;*/
+	margin: 0px 5px 0px 5px;
+}
+.custom_pager {
+	text-align: center;
+	font-size: 14px;
+}
+#searchbox input {
+	padding-left: 16px;
+}
+
+/* infomation
+----------------------------------------------------------------------------------------------------*/
+article .info
+{
+	background: #eeeeee;
+	border: 1px solid #dadada;
+	padding: 35px;
+}
+.info ul p
+{
+	margin: 0px !important;
+}
+
+.info-title
+{
+	font-size: 16px;
+	color: #008e75;
+	font-weight: bold;
+}
+.info-img
+{
+	float: right;
+	clear: right;
+    margin-left: 15px;
+	border: 1px solid #757575;
+
+    position: relative;
+
+}
+.info-img img
+{	
+	width: 129px;
+	height: 178px;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+	-moz-box-shadow:    2px 2px 3px 4px #ccc;
+  -webkit-box-shadow: 2px 2px 3px 4px #ccc;
+  box-shadow:         2px 2px 3px 4px #ccc;
+}
+
+.info-ebook
+{
+	layout-flow: vertical-ideographic;
+	background: url(../../../../../images/book-store/book-store-ebook-button.png);
+	display: block;
+	width: 129px;
+	height: 52px;
+	float: right;
+	clear: right;
+	position: relative;
+	margin-top: 10px;
+	margin-left: 15px;
+}
+.info-ebook a
+{
+	display: block;
+	height: 52px;
+	width: 129px;
+	font-size: 0px;
+	
+}
+
+.info .info-button-title
+{
+	background:url(../../../../../images/book-store/book-store-button-info.png) no-repeat;
+	width: 85px;
+	height: 24px;
+	font-size: 0px;
+	display: block;
+}
+.info .dvd-button-title
+{
+background:url(../../../../../images/book-store/book-store-button-dvd-info.png) no-repeat;
+	width: 85px;
+	height: 24px;
+	font-size: 0px;
+	display: block;
+}
+.info .info-contents-title
+{
+	background: url(../../../../../images/book-store/book-store-button-contents.png) no-repeat;
+	width: 85px;
+	height: 24px;
+	font-size: 0px;
+	display: block;
+}
+
+ul.info-content, ul.info-contents1
+{
+	list-style: none;
+	padding: 10px;
+}
+ul.info-content li.info-content
+{
+	border-right: 1px #d8d8d8 solid;
+	width: 250px;
+	padding: 0 20px;
+	margin: 0 20px 0 0;
+}
+div.info table
+{
+	width: 100%;
+}
+div.info table.info-contents1 tbody tr td
+{
+	vertical-align: text-top;
+	width: 50%;
+}
+
+div.info table.info-contents1 tbody tr td.info-contents1
+{
+ border-right: 1px #d8d8d8 solid;
+ padding: 0 20px;
+ margin: 0 20px 0 0;
+}
+div.info table.info-contents1 tbody tr td.info-contents2
+{
+	 padding: 0 20px;
+
+}
+ul.info-contents1 li.info-contents2
+{
+}
+
+div.info table.info-contents1 tbody tr td p,
+div.info ul.info-content li p
+{
+ font-size: 12px !important;
+ margin: 0px !important;
+}
+
+/*
+	Media Custom
+*/
+h3.media_title
+{
+	font-size: 22px;
+	font-weight: bolder;
+	color: black;
+}
+
+h5.media_sub_title
+{
+	font-size: 16px;
+	font-weight: 200;
+	color: 565656;
+	
+}
+a.music_download
+{
+	font-size: 0px;
+	display: block;
+	background: url(../images/button-download.png) no-repeat;
+	width: 60px;
+	height: 20px;
+}
+
+.media #system
+{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#media_frame
+{
+	margin-top: 30px;
+}
+#media_frame ul
+{
+	list-style: none;
+}
+#media_frame ul li.media_icon, #media_frame ul li.media_icon a
+{
+	width: 313px;
+	height: 252px;
+	display: block;
+	float: left;
+	margin: -1px;
+	font-size: 0px;
+}
+
+#media_frame #media_music{background: url(../images/media_button_list_1.png) 0 0 no-repeat;}
+#media_frame #media_reading{background: url(../images/media_button_list_1.png) -312px 0 no-repeat;}
+#media_frame #media_sermon_doc{background: url(../images/media_button_list_1.png) -624px 0 no-repeat;}
+
+#media_frame #media_sermon_ppt{background: url(../images/media_button_list_2.png) 0 0 no-repeat;}
+#media_frame #media_video_etc{background: url(../images/media_button_list_2.png) -312px 0 no-repeat;}
+#media_frame #media_prophecy_ppt{background: url(../images/media_button_list_2.png) -624px 0 no-repeat;}
+
+
+#media_frame #media_background{background: url(../images/media_button_list_3.png) 0 0 no-repeat;}
+#media_frame #media_smartphone{background: url(../images/media_button_list_3.png) -312px 0 no-repeat;}
+#media_frame #media_song_ppt{background: url(../images/media_button_list_3.png) -624px 0 no-repeat;}
+
+
+
+/*
+	US seminar frame
+*/
+
+#frame_box
+{
+	margin: 50px 20px 20px 20px;
+	padding: 15px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	background: #ffffff;
+}
+#frame_box h3
+{
+	font-size: 24px;
+	margin: 0 0 0 20px !important;
+	padding: 10px 20px;
+	background: url(../images/list-style-arrow-big.png) 0 50% no-repeat;
+}	
+#frame_box .zebra thead
+{
+	background: #f2f2f2;
+	border-top: 1px #666666 solid;
+}
+#frame_box .zebra td.list_title
+{
+	padding-left: 20px;
+	background: url(../images/list-style-bulet.png) 0 50% no-repeat;
+}
+
+.revivla_title_img
+{
+	position: relative;
+	top:55px;
+	left: 15px;
+}
+
+/*
+	magazine
+*/
+
+span.article_info
+{
+	float: right;
+}
+#frame_box table.zebra tbody tr td.description div p img{
+
+-moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  }
+  
+  /*
+  search bar
+  
+  */
+  
+#search
+{
+	width: 139px;
+}  
+  
+  /*
+  	Search Resault
+  */
+  
+  
+#searchForm
+{
+	height: 270px;
+}
+
+.seperator
+{
+	width: 100%;
+	height: 26px;
+	background: url(../images/seperator.png) 50% 50% no-repeat;
+	margin-bottom: 10px;
+}
+div.search_input_box
+{
+ 	text-align: center;
+ 	width: 100%;
+ 	margin: 50px 0px 20px 0; 
+  
+}
+.inputbox#search_searchword
+{
+	width: 360px;
+	height: 25px;
+	border: 5px #ea355f solid;
+	font-size: 14px;
+}
+
+.button#search_button
+{
+background: #fa6e8f; /* Old browsers */
+background: -moz-linear-gradient(top,  #fa6e8f 0%, #ca0734 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fa6e8f), color-stop(100%,#ca0734)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fa6e8f 0%,#ca0734 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fa6e8f 0%,#ca0734 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fa6e8f 0%,#ca0734 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fa6e8f 0%,#ca0734 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa6e8f', endColorstr='#ca0734',GradientType=0 ); /* IE6-9 */
+width: 63px;
+height: 39px;
+margin: 0px !important;
+padding: 0px !important;
+border: 2px #d50032	solid;
+font-weight: bold;
+font-family: NanumGothic,'나눔고딕','굴림',Gulim,AppleGothic,sans-serif;
+font-size: 14px;
+color: white;
+}
+ul.search_phrase
+{
+	width: 33%;
+	height: 75px;
+	border-right: 1px #bfbfbf solid;
+	padding: 10px;
+	float: left;
+	list-style: none;
+}
+ul.search_phrase li
+{
+	padding: 0 50px 0 150px;
+}
+ul.search_active
+{
+	width: 26%;
+	height: 75px;
+	border-right: 1px #bfbfbf solid;
+	padding: 10px;
+	float: left;
+	list-style: none;
+}
+ul.search_active li
+{
+	float: left;
+	width: 75px;
+	padding: 0px 20px;
+}
+ul.search_ordering
+{
+	float: left;
+	width: 30%;
+	list-style: none;
+}
+ul.search_ordering li
+{
+	padding: 10px;
+}
+div.search_result_head
+{
+	clear: left;
+}
+div.search_result_head div
+{
+	float: left;
+}
+div.search_result_head div.filter
+{
+	float: right;
+}
+div.search_result_head
+{
+	border-top: 1px #969696 solid;
+	border-bottom: 1px #d7d7d7 solid;
+	background: #f2f2f2;
+	height: 20px;
+	padding: 10px;
+	position: relative;
+	top:40px;
+}
+
+.share_copy {
+	background-color: #000000;
+	color: #FFFFFF;
+	font-size: 11px;
+	margin-left: 5px;
+	font-weight: bold;
+	padding: 3px 10px 3px 10px;
+}
+/* SOS Bible Study */
+.study-box {
+	padding: 10px 8px 10px 0px;
+	float: left;
+}
+.study-top-left {
+	padding: 80px 5px 10px 0px;
+	width: 280;
+}
+.study-top-right {
+	background: url(../../../../../images/bible-study/bible-college-splash.png) -60px 0 no-repeat;
+	width: 620px;
+	height: 480px;
+}
+.study-intro-title {
+	font-size: 30px;
+	font-weight: bold;
+}
+.study-intro-title-highlight {
+	
+}
+.study-intro-subtitle {
+	font-size: 24px;
+	color: #7b7a7a;
+	font-weight: bold;
+	padding: 15px 0px 5px 2px;
+}
+.study-intro-body {
+	padding: 15px 0px 15px 2px;
+	font-size: 13px;
+	color: #7b7a7a;
+	line-height: 18px;
+	letter-spacing: -1px;
+}
+.study_title {
+	width: 162px;
+	height: 15px;
+	padding: 25px 0px 0px 0px;
+	background: url(../../../../../images/bible-study/sos_study_title.png) 0px 0px no-repeat;
+}
+/* Common Dimention for TitleBox */
+.title_box {
+	width: 670px;
+	height: 230px;	
+}
+.title_box_howto {
+	background: url(../../../../../images/bible-study/title_back_howto.png) 405px 0px no-repeat;
+}
+.title_box_intro {
+	background: url(../../../../../images/bible-study/title_back_intro.png) 405px 0px no-repeat;
+}
+.title_box_revelation {
+	background: url(../../../../../images/bible-study/title_back_revelation.png) 460px 0px no-repeat;
+}
+.title_box_daniel {
+	background: url(../../../../../images/bible-study/title_back_daniel.png) 460px 0px no-repeat;
+}
+.title_box_life {
+	background: url(../../../../../images/bible-study/title_back_life.png) 460px 0px no-repeat;
+}
+.title_box_doctrine {
+	background: url(../../../../../images/bible-study/title_back_doctrine.png) 405px 0px no-repeat;
+}
+.title_box_foundation {
+	background: url(../../../../../images/bible-study/title_back_foundation.png) 405px 0px no-repeat;
+}
+.title_head {
+	width: 460px;
+	height: 230px;
+}
+.title_gray {
+	position: absolute;
+	background-color: #626262;
+}
+.title_brown {
+	position: absolute;
+	background-color: #c89f5f;
+}
+.title_green {
+	position: absolute;
+	background-color: #83b04d;
+}
+.title_pink {
+	position: absolute;
+	background-color: #f1807a;
+}
+.title_forest {
+	position: absolute;
+	background-color: #4db095;
+}
+.title_bluegray {
+	position: absolute;
+	background-color: #7e9db2;
+}
+.title_howto {
+	width: 301px;
+	height: 70px;
+	position: relative;
+	left: 70px;
+	top: 40px;
+	background: url(../../../../../images/bible-study/title_howto.png) 0px 0px no-repeat;
+}
+.title_intro {
+	width: 340px;
+	height: 70px;
+	position: relative;
+	left: 70px;
+	top: 40px;
+	background: url(../../../../../images/bible-study/title_intro.png) 0px 0px no-repeat;
+}
+.title_revelation {
+	width: 268px;
+	height: 55px;
+	position: relative;
+	left: 90px;
+	top: 30px;
+	background: url(../../../../../images/bible-study/title_revelation.png) 0px 0px no-repeat;
+}
+.title_daniel {
+	width: 228px;
+	height: 55px;
+	position: relative;
+	left: 110px;
+	top: 30px;
+	background: url(../../../../../images/bible-study/title_daniel.png) 0px 0px no-repeat;
+}
+.title_life {
+	width: 153px;
+	height: 57px;
+	position: relative;
+	left: 155px;
+	top: 30px;
+	background: url(../../../../../images/bible-study/title_life.png) 0px 0px no-repeat;
+}
+.title_doctrine {
+	width: 139px;
+	height: 55px;
+	position: relative;
+	left: 155px;
+	top: 30px;
+	background: url(../../../../../images/bible-study/title_doctrine.png) 0px 0px no-repeat;
+}
+.title_foundation {
+	width: 143px;
+	height: 55px;
+	position: relative;
+	left: 155px;
+	top: 30px;
+	background: url(../../../../../images/bible-study/title_foundation.png) 0px 0px no-repeat;
+}
+.title_desc {
+	color: white;
+	position: relative;
+	top: 80px;
+	padding: 0px 10px 0px 10px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 18px;
+}
+.solid_black_line {
+	width: 670px;
+	font-size: 12px;
+	font-weight: bolder;
+	letter-spacing: -1px;
+	padding: 40px 0px 5px 3px;
+	border-bottom: solid black 1px;
+}
+.howto_row {
+	width: 583px;
+	height: 53px;
+	padding: 18px 0px 15px 85px;
+	border-bottom: solid #e3e3e3 1px;
+	line-height: 18px;
+	letter-spacing: -1px;
+	font-size: 12px;
+}
+
+
+.intro_row {
+	width: 670px;
+	padding: 18px 0px 35px 15px;
+	border-bottom: solid #e3e3e3 1px;
+	
+}
+.intro_row_text {
+	padding-left: 19px;
+	line-height: 18px;
+}
+.intro_bullets {
+	width:14px;
+	height:14px;
+	float: left;
+	padding-right: 5px;
+}
+
+#in1 {
+	background: url(../../../../../images/bible-study/bullets_lessons.png) 0px 0px no-repeat;
+}
+#in2 {
+	background: url(../../../../../images/bible-study/bullets_lessons.png) 0px -15px no-repeat;
+}
+#in3 {
+	background: url(../../../../../images/bible-study/bullets_lessons.png) 0px -33px no-repeat;
+}
+#in4 {
+	background: url(../../../../../images/bible-study/bullets_lessons.png) 0px -50px no-repeat;
+}
+#in5 {
+	background: url(../../../../../images/bible-study/bullets_lessons.png) 0px -67px no-repeat;
+}
+
+#s1 {
+	background: url(../../../../../images/bible-study/number_steps.png) 10px 25px no-repeat;
+}
+#s2 {
+	background: url(../../../../../images/bible-study/number_steps.png) 10px -138px no-repeat;
+}
+#s3 {
+	background: url(../../../../../images/bible-study/number_steps.png) 10px -313px no-repeat;
+}
+#s4 {
+	background: url(../../../../../images/bible-study/number_steps.png) 10px -488px no-repeat;
+}
+#s5 {
+	background: url(../../../../../images/bible-study/number_steps.png) 10px -658px no-repeat;
+}
+#s6 {
+	background: url(../../../../../images/bible-study/number_steps.png) 10px -835px no-repeat;
+}
+#s7 {
+	background: url(../../../../../images/bible-study/number_steps.png) 10px -994px no-repeat;
+}
+
+.status_box {
+	border: solid #e3e3e3 1px;
+	padding: 15px 0px 15px 15px;
+	width: 208px;
+	height: 55px;
+	float: left;
+}
+.status_box_mini {
+	padding: 30px 0px 5px 0px;
+	width: 95px;
+	float: left;
+}
+.status_icons {
+	width: 20px;
+	height: 40px;
+	float: left;
+	margin-right: 5px;
+}
+.status_icons_table {
+	width: 20px;
+	height: 19px;
+}
+#si1 {
+	background: url(../../../../../images/bible-study/status_icons.png) 0px 0px no-repeat;
+}
+#si2 {
+	background: url(../../../../../images/bible-study/status_icons.png) -24px 0px no-repeat;
+}
+#si3 {
+	background: url(../../../../../images/bible-study/status_icons.png) -48px 0px no-repeat;
+}
+#si4 {
+	background: url(../../../../../images/bible-study/status_icons.png) -72px 0px no-repeat;
+}
+#si5 {
+	background: url(../../../../../images/bible-study/status_icons.png) -95px 0px no-repeat;
+}
+#si6 {
+	background: url(../../../../../images/bible-study/status_icons.png) -119px 0px no-repeat;
+}
+.z_howto{
+	z-index: 1;
+}
+.lesson_menu_side {
+	position: relative;
+	top: 45px;
+	z-index: 99;
+}
+.lesson_menu_title {
+	width: 250px;
+	height: 59px;
+	background: url(../../../../../images/bible-study/lessonmenu_title.png) 0px 0px no-repeat;
+}
+.lesson_menu_item {
+	width: 250px;
+	height: 34px;
+	background: url(../../../../../images/bible-study/lessonmenu_background.png) 0px 0px no-repeat;
+}
+.lesson_menu_item_content {
+	padding: 13px 10px 10px 15px;
+}
+.lesson_menu_item_text {
+	position: relative;
+	top: -2px;
+	left: 4px;
+}
+.lesson_menu_bullets {
+	width: 10px;
+	height: 10px;
+	float: left;
+}
+
+.how_to_start {
+	position: relative;
+	top: 70px;
+}
+#lm1 {
+	background: url(../../../../../images/bible-study/bullets_lessonmenu.png) 0 0px no-repeat;
+}
+#lm2 {
+	background: url(../../../../../images/bible-study/bullets_lessonmenu.png) 0 -33px no-repeat;
+}
+#lm3 {
+	background: url(../../../../../images/bible-study/bullets_lessonmenu.png) 0 -67px no-repeat;
+}
+#lm4 {
+	background: url(../../../../../images/bible-study/bullets_lessonmenu.png) 0 -101px no-repeat;
+}
+#lm5 {
+	background: url(../../../../../images/bible-study/bullets_lessonmenu.png) 0 -135px no-repeat;
+}
+#QuizList {
+	width: 670px;
+}
+#QuizList thead {
+	background-color: #ededed;
+	font-weight: bold;
+	border-top: 1px black solid;
+	border-bottom: 1px #d7d7d7 solid;
+}
+#QuizList thead td {
+	padding: 6px 10px 6px 10px;
+	text-align: center;
+}
+#QuizList tbody td {
+	padding: 6px 10px 6px 10px;
+	border-bottom: 1px #d7d7d7 solid;
+}
+/* QUIZ TEXT FORMATS */
+.quiz_category {
+	padding: 8px 0 53px 0px;
+}
+.quiz_content {
+	width: 670px;
+	
+}
+.quiz_body {
+	line-height: 1.6;
+	color: #5f5f5f;
+}
+.quiz_title_banner {
+	width: 672px;
+	height: 154px;
+	background: url(../../../../../images/bible-study/lessons/title_banner.png) 0 0 no-repeat;
+}
+.quiz_title_container {
+	width:670px;
+	padding: 20px 0px 0px 220px;
+}
+.quiz_title {
+	font-size: 25px;
+	width: 260px;
+	text-align: center;
+}
+.quiz_title_0 {
+	font-weight: bold;
+	font-size: 16px;
+	padding-top: 18px;
+}
+
+.quiz_title_1 {
+	font-weight: bold;
+	font-size: 14px;
+	padding-top: 18px;
+}
+.quiz_bullet_ol {
+	padding-left: 30px;
+	line-height: 1.6;
+	color: #5f5f5f;
+}
+.quiz_bullet_ul {
+	padding-left: 30px;
+	line-height: 1.6;
+	color: #5f5f5f;
+}
+.quiz_bullet_ul_korean {
+	padding-top: 10px;
+	padding-left: 30px;
+	line-height: 1.6;
+	color: #5f5f5f;
+	list-style-type: none;
+}
+.quiz_image_caption {
+	padding-top: 15px;
+	color: #007bff;
+	font-size: 16px;
+	font-weight: bold;
+
+}
+.quiz_lesson_end_notice {
+	text-align: center;
+	color: red;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+#hr {
+	border: none;
+	height: 2px;
+	background: #fff url(../../../../../images/bible-study/lessons/hr.png) no-repeat;
+}

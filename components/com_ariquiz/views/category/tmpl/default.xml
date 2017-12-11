@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Quiz Category Layout">
+		<message>
+			<![CDATA[QUIZ_CATEGORY_LAYOUT_DESC]]>
+		</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request"
+			addfieldpath="/administrator/components/com_ariquiz/fields">
+
+			<field name="categoryId" type="category"
+				default="0"
+				label="SELECT_CATEGORY"
+				required="true"
+				description="QUIZ_CATEGORY"
+			/>
+			<field name="task" type="hidden"
+				label=""
+				default="cat_quiz_list"
+				description=""
+			/>
+		</fieldset>
+	</fields>
+	<state>
+		<name>Quiz Category Layout</name>
+		<description>QUIZ_CATEGORY_LAYOUT_DESC</description>
+		<url addpath="/administrator/components/com_ariquiz/elements">
+			<param name="categoryId" type="category" default="0" label="SELECT_CATEGORY" description="QUIZ_CATEGORY" />
+			<param name="task" type="hidden" default="cat_quiz_list" label="" description="" />
+		</url>
+		<params>
+		</params>
+	</state>
+</metadata>

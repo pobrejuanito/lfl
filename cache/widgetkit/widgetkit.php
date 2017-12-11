@@ -1,0 +1,1 @@
+{"update_check":"e9988147428b4042e66aa0b01df7ac44","update_data":"{\"status\":\"update-available\",\"message\":\"New version available! <a href=\\\"http:\\\/\\\/www.yootheme.com\\\/widgetkit\\\/downloads\\\" target=\\\"_blank\\\">Download Widgetkit 1.5.10<\\\/a>\",\"version\":\"1.5.10\"}"}

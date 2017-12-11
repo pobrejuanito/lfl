@@ -1,0 +1,55 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/*
+ * RTL Style Sheet
+ */
+
+.wk-slideshow-list-copy .nav {
+	right: 1px;
+	border-right: none;
+	border-left: 1px solid #ddd;
+	background: #F5F5F5;
+	background: -moz-linear-gradient(left, #FDFDFD 97%, #F0F0F0 100%);
+	background: -webkit-linear-gradient(left, #FDFDFD 97%, #F0F0F0 100%);
+	background: -o-linear-gradient(left, #FDFDFD 97%, #F0F0F0 100%);
+	border-radius: 0 5px 5px 0;
+}
+
+.wk-slideshow-list-copy .nav li {
+	margin-left: 0;
+	margin-right: -1px;
+}
+
+.wk-slideshow-list-copy .nav li.active:first-child { border-radius: 0 5px 0 0; }
+
+
+/* Content
+----------------------------------------------------------------------------------------------------*/
+
+.wk-slideshow-list-copy .slides-container {
+	margin-right: 0;
+	margin-left: 200px;
+}
+
+
+/* Navigation Width
+----------------------------------------------------------------------------------------------------*/
+
+
+.wk-slideshow-list-copy .nav-100 + .slides-container {
+	margin-right: 0;
+	margin-left: 100px;
+}
+
+
+.wk-slideshow-list-copy .nav-150 + .slides-container {
+	margin-right: 0;
+	margin-left: 150px;
+}
+
+
+.wk-slideshow-list-copy .nav-250 + .slides-container {
+	margin-right: 0;
+	margin-left: 250px;
+}
+

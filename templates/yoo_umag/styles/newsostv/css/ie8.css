@@ -1,0 +1,52 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+/*
+ * IE8 Style Sheet - Only loaded by Internet Explorer 8
+ */
+
+
+/* Base
+----------------------------------------------------------------------------------------------------*/
+
+.wk-ie8 hr
+{
+	margin: 22px 0;
+}
+
+/* Layout
+----------------------------------------------------------------------------------------------------*/
+.mags #system li div img
+{
+	zoom: 1;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999')";
+}
+
+
+.wk-ie8 .wk-slideshow.wk-slideshow-revista-tabs-copy 
+{
+	top:-26px;
+}
+
+
+/* Menus
+----------------------------------------------------------------------------------------------------*/
+
+
+/* Modules
+----------------------------------------------------------------------------------------------------*/
+.wk-ie8 .menu-sidebar a.level1 > span, .menu-sidebar span.level1 > span
+{
+	height: 20px;
+}
+
+/* Tools
+----------------------------------------------------------------------------------------------------*/
+
+/* Fluid images */
+.size-auto { width: auto; }
+
+
+/* System
+----------------------------------------------------------------------------------------------------*/
+

@@ -1,0 +1,98 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+@import url(../../../warp/css/modules.css);
+
+
+/* Module Badges
+----------------------------------------------------------------------------------------------------*/
+
+.module .badge {
+	top: 17px;
+	right: -4px;
+	width: 50px;
+	height: 27px;
+	background: url(../images/module_badges.png) 0 0 no-repeat;
+}
+ 
+.module .badge-hot { background-position: 0 0; }
+.module .badge-top { background-position: 0 -30px; }
+.module .badge-free { background-position: 0 -60px; }
+.module .badge-new { background-position: 0 -90px; }
+
+
+/* Module Icons
+----------------------------------------------------------------------------------------------------*/
+
+.module .module-title .icon { background: url(../../../images/module_icons.png) 0 0 no-repeat; }
+
+.module .module-title .icon-download { background-position: 0 0; }
+.module .module-title .icon-twitter { background-position: 0 -30px; }
+.module .module-title .icon-mail { background-position: 0 -60px; }
+.module .module-title .icon-bubble { background-position: 0 -90px; }
+.module .module-title .icon-login { background-position: 0 -120px; }
+.module .module-title .icon-cart { background-position: 0 -150px; }
+
+
+/* Module Headings
+----------------------------------------------------------------------------------------------------*/
+
+.module .module-title { text-transform: uppercase; }
+
+
+/* title */
+
+.module .module-title
+{
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0px;
+	padding: 10px 0px 3px 0px;
+	color: black;
+}
+.mod-box .module-title
+{
+	border-bottom: 1px #969696 solid;
+}
+/* Module Type: Line
+----------------------------------------------------------------------------------------------------*/
+
+.mod-line, .mod-box {
+	padding: 8px;
+
+	border:none;
+}
+.grid-h .mod-line { border-width: 1px 0 1px 0; }
+.grid-v .mod-line { border-width: 1px 0 1px 0; position: relative; top: -30px}
+
+.grid-h:first-child > .mod-line,
+.grid-v:first-child > .mod-line { border: none; }
+
+.grid-v .mod-line { /*z-index: 1; */}
+
+
+/* Module Type: box
+----------------------------------------------------------------------------------------------------*/
+
+.style-button
+{
+	margin-top: 65px;
+}
+
+
+/*Module category list*/
+
+li.list
+{
+ height: 29px;
+ border-bottom: 1px #d7d7d7 solid;
+ line-height: 25px;
+ list-style: url(../images/list-style-bulet.png) inside;
+ padding-left: 10px;
+ padding-top: 5px;
+ color: #7e7e7e;
+}
+li.list:hover
+{
+	color:black;
+}
+.adjustment{margin-top: 30px}

@@ -1,0 +1,1861 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+*Jw Player Module Advanced : mod_playerjr_ad
+* @version $Id$
+* @package mod_playerjr_ad
+* @subpackage mod_playerjr_ad.xml
+* @author joomlarulez.
+* @copyright (C) www.joomlarulez.com
+* @license Limited  http://www.gnu.org/licenses/gpl.html
+* @final 2.14.0
+*/
+-->
+<install type="module" version="1.5.0" client="site" method="upgrade">
+    <name>JW Player Module Advanced</name>
+	<author>JoomlaRuleZ.com</author>
+	<creationDate>2012-04-02</creationDate>
+	<copyright>(C) 2009-2012 JoomlaRuleZ.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>webmaster@joomlarulez.com</authorEmail>
+	<authorUrl>www.joomlarulez.com</authorUrl>
+	<version>2.14.0</version>
+	<description>MOD_PLAYERJR_AD_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_playerjr_ad">mod_playerjr_ad.php</filename>
+		<filename>index.html</filename>
+        <filename>helper.php</filename>
+		<filename>CHANGELOG.php</filename>
+		<filename>LICENSES.php</filename>
+		<filename>CREDITS.php</filename>
+		<filename>yt.swf</filename>
+		<filename>vimeo.swf</filename>
+		<filename>playlist.php</filename>
+		<filename>playlist5.php</filename>
+		<filename>autogenerate_playlist.php</filename>
+		<filename>autogenerate_playlist5.php</filename>
+		<filename>readme.html</filename>
+		<filename>Box-JW-Player-Module-Advanced.png</filename>
+		<filename>player-licensed.swf</filename>
+		<filename>player-licensed5.swf</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+		<folder>script</folder>
+		<folder>css</folder>
+		<folder>skin</folder>
+		<folder>includes</folder>
+    </files>
+    <languages>
+    	<language tag="en-GB">language/en-GB/en-GB.mod_playerjr_ad.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_playerjr_ad.sys.ini</language>
+  	</languages>
+
+    <params group="advanced">
+		<param name="Layout" type="spacer" default="MOD_PLAYERJR_AD_DESC_LAYOUT" />
+		<param name="Playlistplaylist" type="list" label="MOD_PLAYERJR_AD_LABEL_POSITION" default="bottom" description="MOD_PLAYERJR_AD_DESC_POSITION">
+			<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+			<option value="top">MOD_PLAYERJR_AD_VALUE_TOP</option>
+			<option value="bottom">MOD_PLAYERJR_AD_VALUE_BOTTOM</option>
+			<option value="right">MOD_PLAYERJR_AD_VALUE_RIGHT</option>
+			<option value="left">MOD_PLAYERJR_AD_VALUE_LEFT</option>
+			<option value="over">MOD_PLAYERJR_AD_VALUE_OVER</option>
+		</param>
+		<param name="PlaylistControlbar" type="list" label="MOD_PLAYERJR_AD_LABEL_CBPOSITION" default="bottom" description="MOD_PLAYERJR_AD_DESC_CBPOSITION">
+			<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+			<option value="bottom">MOD_PLAYERJR_AD_VALUE_BOTTOM</option>
+			<option value="top">MOD_PLAYERJR_AD_VALUE_TOP</option>
+			<option value="over">MOD_PLAYERJR_AD_VALUE_OVER</option>
+		</param>
+		<param name="Playlistcontrolbaridlehide" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_CBIDLEHIDE" description="MOD_PLAYERJR_AD_DESC_CBIDLEHIDE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Playlistcontrolbarforcenextprev" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_CBFNEXTPREV" description="MOD_PLAYERJR_AD_DESC_CBFNEXTPREV">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Playlistdisplayshowmute" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_DISSHOMU" description="MOD_PLAYERJR_AD_DESC_DISSHOMU">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Playlistdock" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_DOCK" description="MOD_PLAYERJR_AD_DESC_DOCK">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="PlaylistSize" type="text" default="180" label="MOD_PLAYERJR_AD_LABEL_SIZE" description="MOD_PLAYERJR_AD_DESC_SIZE" size="4" />
+		<param name="PlaylistHeight" type="text" default="400" label="MOD_PLAYERJR_AD_LABEL_HEIGHT" description="MOD_PLAYERJR_AD_DESC_HEIGHT" size="4" />
+		<param name="PlaylistWidth" type="text" default="280" label="MOD_PLAYERJR_AD_LABEL_WIDTH" description="MOD_PLAYERJR_AD_DESC_WIDTH" size="4" />
+		<param name="PlaylistIcons" type="radio" default="1" label="MOD_PLAYERJR_AD_LABEL_ICON" description="MOD_PLAYERJR_AD_DESC_ICON">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="PlaylistLogo" type="text" label="MOD_PLAYERJR_AD_LABEL_LOGO" default="" description="MOD_PLAYERJR_AD_DESC_LOGO" size="70" />
+		<param name="Playlistlogolink" type="text" label="MOD_PLAYERJR_AD_LABEL_LOGOLINK" default="" description="MOD_PLAYERJR_AD_DESC_LOGOLINK" size="70" />
+		<param name="Playlistlogohide" type="radio" default="1" label="MOD_PLAYERJR_AD_LABEL_LOGOLINKHIDE" description="MOD_PLAYERJR_AD_DESC_LOGOLINKHIDE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Playlistlogotimeout" type="text" label="MOD_PLAYERJR_AD_LABEL_LOGOTIMEOUT" default="3" description="MOD_PLAYERJR_AD_DESC_LOGOTIMEOUT" size="6" />
+		<param name="Playlistlogoposition" type="list" default="bottom-left" label="MOD_PLAYERJR_AD_LABEL_LOGOLINKPOS" description="MOD_PLAYERJR_AD_DESC_LOGOLINKPOS">
+			<option value="bottom-left">MOD_PLAYERJR_AD_VALUE_BOTLEF</option>
+			<option value="bottom-right">MOD_PLAYERJR_AD_VALUE_BOTRIG</option>
+			<option value="top-left">MOD_PLAYERJR_AD_VALUE_TOPLEF</option>
+			<option value="top-right">MOD_PLAYERJR_AD_VALUE_TOPRIG</option>
+		</param>
+		<param name="Playlistlogolinktarget" type="list" default="_blank" label="MOD_PLAYERJR_AD_LABEL_LOGOLINKTAG" description="MOD_PLAYERJR_AD_DESC_LOGOLINKTAR">
+			<option value="_blank">MOD_PLAYERJR_AD_VALUE_BLANK</option>
+			<option value="_self">MOD_PLAYERJR_AD_VALUE_SELF</option>
+			<option value="_parent">MOD_PLAYERJR_AD_VALUE_PARENT</option>
+			<option value="_top">MOD_PLAYERJR_AD_VALUE_TOP</option>
+		</param>
+		<param name="Playlistlogomargin" type="text" label="MOD_PLAYERJR_AD_LABEL_LOGOMARGIN" default="8" description="MOD_PLAYERJR_AD_DESC_LOGOMARGIN" size="6" />
+		<param name="Playlistlogoover" type="text" label="MOD_PLAYERJR_AD_LABEL_LOGOOVER" default="1" description="MOD_PLAYERJR_AD_DESC_LOGOOVER" size="6" />
+		<param name="Playlistlogoout" type="text" label="MOD_PLAYERJR_AD_LABEL_LOGOOUT" default="0.5" description="MOD_PLAYERJR_AD_DESC_LOGOOUT" size="6" />
+		<param name="Playlistabouttext" type="text" label="MOD_PLAYERJR_AD_LABEL_ABOUTTXT" default="" description="MOD_PLAYERJR_AD_DESC_ABOUTTEXT" size="70" />
+		<param name="Playlistaboutlink" type="text" label="MOD_PLAYERJR_AD_LABEL_ABOUTLINK" default="" description="MOD_PLAYERJR_AD_DESC_ABOUTLINK" size="70" />
+		<param name="Skin" type="spacer" default="MOD_PLAYERJR_AD_DESC_SKIN" />
+		<param name="PlaylistSkintype" type="radio" default="1" label="MOD_PLAYERJR_AD_LABEL_SKINTYPE" description="MOD_PLAYERJR_AD_DESC_SKINTYPE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_SWFSKIN</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_XMLSKIN</option>
+		</param>
+		<param name="PlaylistSkin" type="filelist" default="-1" label="MOD_PLAYERJR_AD_LABEL_SKINSWF" description="MOD_PLAYERJR_AD_DESC_SKINSWF" directory="/modules/mod_playerjr_ad/skin/swf" filter="\.swf$" exclude="" stripext=".swf" />
+		<param name="PlaylistSkinxml" type="filelist" default="-1" label="MOD_PLAYERJR_AD_LABEL_SKINXML" description="MOD_PLAYERJR_AD_DESC_SKINXML" directory="/modules/mod_playerjr_ad/skin/xml" filter="\.zip$" exclude="" stripext=".zip" />
+		<param name="Color" type="spacer" default="MOD_PLAYERJR_AD_DESC_COLOR" />
+		<param name="PlaylistBackcolor" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_COLORBACK" description="MOD_PLAYERJR_AD_DESC_COLORBACK" size="6" />
+		<param name="PlaylistFrontcolor" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_COLORFRONT" description="MOD_PLAYERJR_AD_DESC_COLORFRONT" size="6" />
+		<param name="PlaylistLightcolor" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_COLORLIGHT" description="MOD_PLAYERJR_AD_DESC_COLORLIGHT" size="6" />
+		<param name="PlaylistScreencolor" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_COLORSCREEN" description="MOD_PLAYERJR_AD_DESC_COLORSCREEN" size="6" />
+		<param name="Playlistwmode" type="list" default="opaque" label="MOD_PLAYERJR_AD_LABEL_COLORTRANS" description="">
+			<option value="opaque">MOD_PLAYERJR_AD_VALUE_OPAQUE</option>
+			<option value="transparent">MOD_PLAYERJR_AD_VALUE_TRANSPARENT</option>
+		</param>
+		<param name="Behaviour" type="spacer" default="MOD_PLAYERJR_AD_DESC_BEHAVIOUR" />
+		<param name="PlaylistAutostart" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURAUTOSTART" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURAUTOSTART">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Playlistbandwidth" type="text" default="5000" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURBW" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURBW" size="6" />
+		<param name="PlaylistBufferlength" type="text" default="1" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURBUFFER" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURBUFFER" size="6" />
+		<param name="Playlistdisplayclick" type="list" default="play" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURDCLICK" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURDCLICK">
+			<option value="play">MOD_PLAYERJR_AD_VALUE_PLAY</option>
+			<option value="link">MOD_PLAYERJR_AD_VALUE_LINK</option>
+			<option value="fullscreen">MOD_PLAYERJR_AD_VALUE_FULLSCR</option>
+			<option value="single">MOD_PLAYERJR_AD_VALUE_NONE</option>
+			<option value="mute">MOD_PLAYERJR_AD_VALUE_MUTE</option>
+			<option value="next">MOD_PLAYERJR_AD_VALUE_NEXT</option>
+		</param>
+		<param name="Playlistdisplaytitle" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURDTITLE" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURDTITLE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Playlistmute" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURMUTE" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURMUTE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Playlistlinktarget" type="list" default="_blank" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURLINKTAR" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURLINKTAR">
+			<option value="_blank">MOD_PLAYERJR_AD_VALUE_BLANK</option>
+			<option value="_self">MOD_PLAYERJR_AD_VALUE_SELF</option>
+		</param>
+		<param name="PlaylistRepeat" type="list" default="none" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURREPEAT" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURREPEAT">
+			<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+			<option value="list">MOD_PLAYERJR_AD_VALUE_LIST</option>
+			<option value="always">MOD_PLAYERJR_AD_VALUE_ALWAYS</option>
+			<option value="single">MOD_PLAYERJR_AD_VALUE_SING</option>
+		</param>
+		<param name="PlaylistResizing" type="radio" default="1" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURRESIZE" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURRESIZE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="PlaylistShuffle" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURSHUFFLE" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURSHUFFLE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="PlaylistSmoothing" type="radio" default="1" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURSMOOTH" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURSMOOTH">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="PlaylistStretching" type="list" default="uniform" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURSTRETCH" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURSTRETCH">
+			<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+			<option value="exactfit">MOD_PLAYERJR_AD_VALUE_EXFIT</option>
+			<option value="uniform">MOD_PLAYERJR_AD_VALUE_UNI</option>
+			<option value="fill">MOD_PLAYERJR_AD_VALUE_FILL</option>
+		</param>
+		<param name="PlaylistVolume" type="text" default="90" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURVOL" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURVOL" size="3" />
+		<param name="Pop-Up" type="spacer" default="MOD_PLAYERJR_AD_DESC_POPUP" description="" />
+		<param name="Playlistpopupenabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_POPUPEN" default="0" description="MOD_PLAYERJR_AD_DESC_POPUPEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Playlistpopupsizechoice" type="radio" label="MOD_PLAYERJR_AD_LABEL_POPUPSIZECH" default="0" description="MOD_PLAYERJR_AD_DESC_POPUPSIZECH">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_DEF</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_ADJ</option>
+		</param>
+		<param name="PlaylistpopupSize" type="text" default="180" label="MOD_PLAYERJR_AD_LABEL_POPUPSIZE" description="MOD_PLAYERJR_AD_DESC_POPUPSIZE" size="4" />
+		<param name="PlaylistpopupHeight" type="text" default="400" label="MOD_PLAYERJR_AD_LABEL_POPUPHEIGHT" description="MOD_PLAYERJR_AD_DESC_POPUPHEIGHT" size="4" />
+		<param name="PlaylistpopupWidth" type="text" default="280" label="MOD_PLAYERJR_AD_LABEL_POPUPWIDTH" description="MOD_PLAYERJR_AD_DESC_POPUPWIDTH" size="4" />
+		<param name="Playlistpopuplinkchoice" type="list" label="MOD_PLAYERJR_AD_LABEL_POPUPLINKCH" default="0" description="MOD_PLAYERJR_AD_DESC_POPUPLINKCH">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_TXT</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORIMG</option>
+			<option value="2">MOD_PLAYERJR_AD_VALUE_TXTIMG</option>
+			<option value="3">MOD_PLAYERJR_AD_VALUE_TXTOVER</option>
+			<option value="4">MOD_PLAYERJR_AD_VALUE_IMGOVER</option>
+			<option value="5">MOD_PLAYERJR_AD_VALUE_TXTIMGOVER</option>
+		</param>
+		<param name="Playlistpopuptextlink" type="text" default="Click to watch the player in a Pop-Up" label="MOD_PLAYERJR_AD_LABEL_POPUPTXT" description="MOD_PLAYERJR_AD_DESC_POPUPTXT" size="70" />
+		<param name="Playlistpopupimagelink" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_POPUPIMG" description="MOD_PLAYERJR_AD_DESC_POPUPIMG" size="70" />
+		<param name="Playlistpopuphighslide" type="list" label="MOD_PLAYERJR_AD_LABEL_POPUPHIGHSLIDE" default="0" description="MOD_PLAYERJR_AD_DESC_POPUPHIGHSLIDE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_HIGH</option>
+			<option value="2">MOD_PLAYERJR_AD_VALUE_JWBOX</option>
+		</param>
+		<param name="RTMP" type="spacer" default="MOD_PLAYERJR_AD_DESC_RTMP" />
+		<param name="Playlistrtmpprepend" type="radio" default="1" label="MOD_PLAYERJR_AD_LABEL_RTMPPRE" description="MOD_PLAYERJR_AD_DESC_RTMPPRE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Playlistrtmploadbalance" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_RTMPBAL" description="MOD_PLAYERJR_AD_DESC_RTMPBAL">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Playlistrtmpsubscribe" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_RTMPSUB" description="MOD_PLAYERJR_AD_DESC_RTMPSUB">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="HTTP" type="spacer" default="MOD_PLAYERJR_AD_DESC_HTTP" />
+		<param name="Playlisthttpstartparam" type="list" label="MOD_PLAYERJR_AD_LABEL_HTTPSTART" default="start" description="MOD_PLAYERJR_AD_DESC_HTTPSTART">
+			<option value="start">MOD_PLAYERJR_AD_VALUE_START</option>
+			<option value="starttime">MOD_PLAYERJR_AD_VALUE_STARTTIME</option>
+			<option value="apstart">MOD_PLAYERJR_AD_VALUE_APSTART</option>
+			<option value="ec_seek">MOD_PLAYERJR_AD_VALUE_ECSEEK</option>
+			<option value="fs">MOD_PLAYERJR_AD_VALUE_FS</option>
+		</param>
+		<param name="Playlisthttpdvr" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_HTTPDVR" description="MOD_PLAYERJR_AD_DESC_HTTPDVR">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Plugins" type="spacer" default="MOD_PLAYERJR_AD_DESC_PLUGIN" />
+		<param name="AdSolution" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGADS" description="" />
+		<param name="registration" type="spacer" label="" default="MOD_PLAYERJR_AD_LABEL_PLUGADSREG" description="" />
+		<param name="AdsolutionPluginEnabled" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_PLUGADSEN" description="MOD_PLAYERJR_AD_DESC_PLUGADSEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="AdsolutionChannelcode" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGADSCODE" description="MOD_PLAYERJR_AD_DESC_PLUGADSCODE" size="16" />
+		<param name="AdSolutionPremium" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGADSPREMS" description="" />
+		<param name="AdsolutionPremiumEnabled" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_PLUGADSPREMSEN" description="MOD_PLAYERJR_AD_DESC_PLUGADSPREMSEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="HD" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGHD" description="" />
+		<param name="HDPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGHDEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGHDEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="HDPluginversion" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGHDVER" default="2" description="MOD_PLAYERJR_AD_DESC_PLUGHDVER">
+			<option value="1">MOD_PLAYERJR_AD_VALUE_VERSION_1</option>
+			<option value="2">MOD_PLAYERJR_AD_VALUE_VERSION_2</option>
+		</param>
+		<param name="HDbitrate" type="text" default="1500" label="MOD_PLAYERJR_AD_LABEL_PLUGHDBR" description="MOD_PLAYERJR_AD_DESC_PLUGHDBR" size="5" />
+		<param name="HDfullscreen" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGHDFULL" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGHDFULL">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="HDstate" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGHDST" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGHDST">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Viral" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGVIRAL" description="" />
+		<param name="ViralPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param	name="ViralPluginonpause" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALPAUSE" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALPAUSE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param	name="ViralPluginoncomplete" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALCPL" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALCPL">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="ViralPluginfunctions" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALFUNC" default="embed,link" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALFUNC">
+			<option value="all">MOD_PLAYERJR_AD_VALUE_ALL</option>
+			<option value="embed">MOD_PLAYERJR_AD_VALUE_EMBED</option>
+			<option value="link">MOD_PLAYERJR_AD_VALUE_LINK</option>
+			<option value="recommendations">MOD_PLAYERJR_AD_VALUE_RECOM</option>
+			<option value="embed,link">MOD_PLAYERJR_AD_VALUE_EMBEDLINK</option>
+			<option value="embed,recommendations">MOD_PLAYERJR_AD_VALUE_EMBEDRECOM</option>
+			<option value="link,recommendations">MOD_PLAYERJR_AD_VALUE_LINKRECOM</option>
+		</param>
+		<param name="ViralPluginrecommendations" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALREC" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALREC" size="70" />
+		<param name="ViralPluginemailsubject" type="text" default="Check out this video!" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALSUB" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALSUB" />
+		<param name="ViralPluginemailfooter" type="text" default="www.longtailvideo.com" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALFOOT" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALFOOT" />
+		<param	name="ViralPluginmatchplayercolors" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALPCOLORS" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALPCOLORS">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="ViralPluginfgcolor" type="text" default="FFFFFF" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALFGCOLOR" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALFGCOLOR" size="6" />
+		<param name="ViralPluginbgcolor" type="text" default="333333" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALBGCOLOR" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALBGCOLOR" size="6" />
+		<param	name="ViralPluginallowmenu" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALMENU" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALMENU">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param	name="ViralPluginallowdock" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALDOCK" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALDOCK">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param	name="ViralPluginmultidock" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALMDOCK" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALMDOCK">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Sharing" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGSHARING" description="" />
+		<param name="SharingPluginversion" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGSHARINGVER" default="3" description="MOD_PLAYERJR_AD_DESC_PLUGSHARINGVER">
+			<option value="1">MOD_PLAYERJR_AD_VALUE_VERSION_1</option>
+			<option value="2">MOD_PLAYERJR_AD_VALUE_VERSION_2</option>
+			<option value="3">MOD_PLAYERJR_AD_VALUE_VERSION_3</option>
+		</param>
+		<param name="SharingPluginembedEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGSHARINGEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGSHARINGEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="SharingPluginlinkEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGSHARINGLEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGSHARINGLEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="SharingPluginlink" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGSHARINGLINK" description="MOD_PLAYERJR_AD_DESC_PLUGSHARINGLINK" size="70" />
+		<param name="SharingPluginthumbnail" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGSHARINGTHUMB" description="MOD_PLAYERJR_AD_DESC_PLUGSHARINGTHUMB" size="70" />
+		<param name="TipJar" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGTIPJAR" description="" />
+		<param name="TipJarPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJAREN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJAREN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="TipJartitle" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJARTI" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJARTI" size="35" />
+		<param name="TipJartext" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJARTXT" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJARTXT" size="70" />
+		<param name="TipJarbusiness" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJARBUS" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJARBUS" />
+		<param name="TipJaramount" type="text" default="5" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJARAMO" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJARAMO" size="6" />
+		<param name="TipJarcurrency_code" type="text" default="EUR" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJARCUR" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJARCUR" size="3" />
+		<param name="TipJarimage_url" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJARIURL" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJARIURL" size="70" />
+		<param name="TipJarreturn_url" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJARRURL" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJARRURL" size="70" />
+		<param name="GaPro" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGGAP" description="" />
+		<param name="GaProPluginversion" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGGAPVER" default="gapro-2" description="MOD_PLAYERJR_AD_DESC_PLUGGAPVER">
+			<option value="gapro-1">MOD_PLAYERJR_AD_VALUE_VERSION_1</option>
+			<option value="gapro-2">MOD_PLAYERJR_AD_VALUE_VERSION_2</option>
+		</param>
+		<param name="GaProPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGAPEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGGAPEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="GaProaccountid" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGGAPID" description="MOD_PLAYERJR_AD_DESC_PLUGGAPID" size="12" />
+		<param name="GaProtrackstarts" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGAPST" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGGAPST">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="GaProtrackpercentage" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGAPPER" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGGAPPER">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="GaProtracktime" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGAPTIME" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGGAPTIME">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="GaProidstring" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGGAPIDSTRING" description="MOD_PLAYERJR_AD_DESC_PLUGGAPIDSTRING" size="12" />
+		<param name="Revolt" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGREVOLT" description="" />
+		<param	name="RevoltPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGREVOLTEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGREVOLTEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="RevoltPlugingain" type="text" default="1" label="MOD_PLAYERJR_AD_LABEL_PLUGREVOLTG" description="MOD_PLAYERJR_AD_DESC_PLUGREVOLTG" size="3" />
+		<param name="RevoltPlugintimeout" type="text" default="10" label="MOD_PLAYERJR_AD_LABEL_PLUGREVOLTTI" description="MOD_PLAYERJR_AD_DESC_PLUGREVOLTTI" size="4" />
+		<param name="Captions" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGCAP" description="" />
+		<param name="CaptionsPluginversion" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGCAPVER" default="2" description="MOD_PLAYERJR_AD_DESC_PLUGCAPVER">
+			<option value="1">MOD_PLAYERJR_AD_VALUE_VERSION_1</option>
+			<option value="2">MOD_PLAYERJR_AD_VALUE_VERSION_2</option>
+		</param>
+		<param	name="CaptionsPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGCAPEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGCAPEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param	name="Captionsback" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGCAPBG" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGCAPBG">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Captionsfontsize" type="text" default="14" label="MOD_PLAYERJR_AD_LABEL_PLUGCAPFS" description="MOD_PLAYERJR_AD_DESC_PLUGCAPFS" size="3" />
+		<param	name="Captionsstate" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGCAPST" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGCAPST">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Flow" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGFLOW" description="" />
+		<param name="FlowPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="FlowPluginversion" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWVER" default="flow-2" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWVER">
+				<option value="flow-1">MOD_PLAYERJR_AD_VALUE_VERSION_1</option>
+				<option value="flow-2">MOD_PLAYERJR_AD_VALUE_VERSION_2</option>
+		</param>
+		<param name="FlowPlugincoverheight" type="text" default="100" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWCOVH" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWCOVH" />
+		<param name="FlowPluginsize" type="text" default="100" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWSZ" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWSZ" />
+		<param name="FlowPluginshowtext" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWTXT" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWTXT">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="FlowPluginposition" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWPOS" default="" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWPOS">
+			<option value="">MOD_PLAYERJR_AD_VALUE_BLANK</option>
+			<option value="top">MOD_PLAYERJR_AD_VALUE_TOP</option>
+			<option value="bottom">MOD_PLAYERJR_AD_VALUE_BOTTOM</option>
+			<option value="left">MOD_PLAYERJR_AD_VALUE_LEFT</option>
+			<option value="right">MOD_PLAYERJR_AD_VALUE_RIGHT</option>
+		</param>
+		<param name="FlowPlugindefaultcover" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWDEFCOV" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWDEFCOV" />
+		<param name="FlowPlugintitleoffset" type="text" default="5" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWTIOFF" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWTIOFF" />
+		<param name="FlowPlugindescriptionoffset" type="text" default="25" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWDESCOFF" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWDESCOFF" />
+		<param name="FlowPluginfont" type="text" default="Arial Rounded MT Bold" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWFONT" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWFONT" />
+		<param name="FlowPluginfontsize" type="text" default="12" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWFONTSIZE" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWFONTSIZE" />
+		<param name="FlowPlugincolor" type="text" default="f1f1f1" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWFONTCOLOR" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWFONTCOLOR" />
+		<param name="FlowPluginbackgroundcolor" type="text" default="000000" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWBACKGROUNDCOLOR" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWBACKGROUNDCOLOR" />
+		<param name="FlowPlugintweentime" type="text" default="0.6" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWTWTIME" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWTWTIME" />
+		<param name="FlowPluginautorotate" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWAUTORATE" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWAUTORATE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="FlowPluginrotatedelay" type="text" default="2500" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWROTDEL" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWROTDEL" />
+		<param name="FlowPlugincontrolbaricon" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWCTLICO" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWCTLICO">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="FacebookIt" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGFACE" description="" />
+		<param	name="FacePluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGFACEEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGFACEEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="FacePluginfbitlink" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGFACELINK" description="MOD_PLAYERJR_AD_DESC_PLUGFACELINK" size="70" />
+		<param name="FacePluginfbitthumbnail" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGSHARINGTHUMB" description="MOD_PLAYERJR_AD_DESC_PLUGSHARINGTHUMB" size="70" />
+		<param name="TweetIt" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGTWEET" description="" />
+		<param	name="TweetPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGTWEETEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGTWEETEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="TweetPlugintweetitlink" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGTWEETLINK" description="MOD_PLAYERJR_AD_DESC_PLUGTWEETLINK" size="70" />
+		<param name="TheGrid" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGGRID" description="" />
+		<param name="GridPluginversion" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDVER" default="grid-2" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDVER">
+			<option value="grid-1">MOD_PLAYERJR_AD_VALUE_GRID_VERSION_1</option>
+			<option value="grid-2">MOD_PLAYERJR_AD_VALUE_GRID_VERSION_2</option>
+			<option value="basic-1">MOD_PLAYERJR_AD_VALUE_BASIC</option>
+			<option value="carousel-1">MOD_PLAYERJR_AD_VALUE_CAROUSEL</option>
+		</param>
+		<param	name="GridPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="GridPluginrows" type="text" default="4" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDROWS" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDROWS" />
+		<param name="GridPlugintilt" type="text" default="8" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDTILT" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDTILT" />
+		<param name="GridPlugindistance" type="text" default="50" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDDIST" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDDIST" />
+		<param name="GridPluginstart_distance" type="text" default="500" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDSTARTDIS" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDSTARTDIS" />
+		<param name="GridPluginfocus_distance" type="text" default="200" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDFOCUSDIS" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDFOCUSDIS" />
+		<param name="GridPluginreflections" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDREFLECTIONS" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDREFLECTIONS">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="GridPluginglow" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDGLOW" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDGLOW">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="GridPluginthumbnailwidth" type="text" default="480" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDTHUMBWID" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDTHUMB" />
+		<param name="GridPluginthumbnailheight" type="text" default="270" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDTHUMBHEI" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDTHUMBHEI" />
+		<param name="GridPluginhorizontalmargin" type="text" default="100" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDHORMARG" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDHORMARG" />
+		<param name="GridPluginverticalmargin" type="text" default="150" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDVERMARG" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDVERMARG" />
+		<param name="GridPluginoutside" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDOUTSIDE" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDOUTSIDE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="GridPlugintitles" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDTITLE" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDTITLE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="GridPlugintitles_position" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDTITLEPOS" default="over" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDTITLEPOS">
+			<option value="over">MOD_PLAYERJR_AD_VALUE_OVER</option>
+			<option value="top">MOD_PLAYERJR_AD_VALUE_TOP</option>
+			<option value="bottom">MOD_PLAYERJR_AD_VALUE_BOTTOM</option>
+		</param>
+		<param name="GridPlugintitles_font" type="text" default="_sans" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDTITLEFONT" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDTITLEFONT" />
+		<param name="GridPluginfade_titles" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDTITLEFADE" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDTITLEFADE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="GridPluginborder" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDBORDER" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDBORDER">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="GridPlugindof_blur" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDDOFBLUR" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDDOFBLUR">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="GridPlugindof_fade" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDDOFFADE" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDDOFFADE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="adttext" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGADTTEXT" description="" />
+		<param name="adttextEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGADTTEXTEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGADTTEXTEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="adttextconfig" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGADTTEXTCONF" description="MOD_PLAYERJR_AD_DESC_PLUGADTTEXTCONF" size="70" />
+		<param name="adtvideo" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGADTVIDEO" description="" />
+		<param name="adtvideoEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGADTVIDEOEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGADTVIDEOEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="adtvideoconfig" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGADTVIDEOCONF" description="MOD_PLAYERJR_AD_DESC_PLUGADTVIDEOCONF" size="70" />
+		<param name="adtimage" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGADTIMAGE" description="" />
+		<param name="adtimageEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGADTIMAGEEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGADTIMAGEEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="adtimagegraphic" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGADTIMAGEGRAPHIC" description="MOD_PLAYERJR_AD_DESC_PLUGADTIMAGEGRAPHIC" size="70" />
+		<param name="adtimagelink" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGADTIMAGELINK" description="MOD_PLAYERJR_AD_DESC_PLUGADTIMAGELINK" size="70" />
+		<param name="adtimagepositions" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGADTIMAGEPOS" default="pre,post" description="MOD_PLAYERJR_AD_DESC_PLUGADTIMAGEPOS">
+			<option value="pre,post">MOD_PLAYERJR_AD_VALUE_PRE_POST</option>
+			<option value="pre">MOD_PLAYERJR_AD_VALUE_PRE</option>
+			<option value="post">MOD_PLAYERJR_AD_VALUE_POST</option>
+			<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+		</param>
+		<param name="adtimageonpause" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGADTIMAGEPAUSE" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGADTIMAGEPAUSE">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="ova" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGOVA" description="" />
+		<param name="ovaEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGOVAEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGOVAEN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="ovajson" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGOVAJSON" description="MOD_PLAYERJR_AD_DESC_PLUGOVAJSON" rows="5" cols="40" />
+		<param name="ovacompanion" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMP" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMP">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="ovacompanionposition" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMPPOS" default="after" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPPOS">
+			<option value="before">MOD_PLAYERJR_AD_VALUE_BEFORE</option>
+			<option value="after">MOD_PLAYERJR_AD_VALUE_AFTER</option>
+		</param>
+		<param name="ovacompanioncsssrc" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMCSSSRC" default="preconfigure" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPCSSSRC">
+			<option value="preconfigure">MOD_PLAYERJR_AD_VALUE_OVACSSPRE</option>
+			<option value="cssfields">MOD_PLAYERJR_AD_VALUE_OVACSSFIELDS</option>
+			<option value="cssfile">MOD_PLAYERJR_AD_VALUE_OVACSSFILE</option>
+			<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+		</param>
+		<param name="ovacompanionbg" type="text" default="CCCCCC" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMPBG" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPBG" size="10" />
+		<param name="ovacompanionheight" type="text" default="240" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMPHEIGHT" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPHEIGHT" size="10" />
+		<param name="ovacompanionwidth" type="text" default="200" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMPWIDTH" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPWIDTH" size="10" />
+		<param name="ovacompanionfloat" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMPFLOAT" default="left" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPFLOAT">
+			<option value="left">MOD_PLAYERJR_AD_VALUE_LEFT</option>
+			<option value="right">MOD_PLAYERJR_AD_VALUE_RIGHT</option>
+			<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+		</param>
+		<param name="ovaplayerfloat" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGOVAPLAFLOAT" default="left" description="MOD_PLAYERJR_AD_DESC_PLUGOVAPLAFLOAT">
+			<option value="left">MOD_PLAYERJR_AD_VALUE_LEFT</option>
+			<option value="right">MOD_PLAYERJR_AD_VALUE_RIGHT</option>
+			<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+		</param>
+		<param name="ovacompanionmargin" type="text" default="5" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMPMARGIN" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPMARGIN" size="6" />
+		<param name="ovacompanionmarginpos" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMPMARGINPOS" default="left" description="MOD_PLAYERJR_AD_DESC_PLUGOVAMARGINPOS">
+			<option value="left">MOD_PLAYERJR_AD_VALUE_LEFT</option>
+			<option value="right">MOD_PLAYERJR_AD_VALUE_RIGHT</option>
+			<option value="top">MOD_PLAYERJR_AD_VALUE_TOP</option>
+			<option value="bottom">MOD_PLAYERJR_AD_VALUE_BOTTOM</option>
+		</param>
+		<param name="ovaplayercss" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGOVAPLACSS" description="MOD_PLAYERJR_AD_DESC_PLUGOVAPLACSS" rows="5" cols="40" />
+		<param name="ovacompanioncss" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMCSS" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPCSS" rows="5" cols="40" />
+		<param name="EXTRAPLUGIN" type="spacer" label="" default="MOD_PLAYERJR_AD_DESC_PLUGEXTRA" description="" />
+		<param name="extrapluginlist" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGEXTRA" description="MOD_PLAYERJR_AD_DESC_PLUGEXTRALIST" rows="5" cols="40" />
+		<param name="extrapluginflashvarslist" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGEXTRAVARSLIST" description="MOD_PLAYERJR_AD_DESC_PLUGEXTRAVARSLIST" rows="5" cols="40" />
+	</params>
+	<params group="other">
+		<param name="Global" type="spacer" default="MOD_PLAYERJR_AD_DESC_GLOBAL" />
+		<param name="PlaylistJWVersion" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALJWV" default="JW5_HTML5" description="MOD_PLAYERJR_AD_DESC_GLOBALJWV">
+			<option value="5">MOD_PLAYERJR_AD_VALUE_JW5</option>
+			<option value="JW5_HTML5">MOD_PLAYERJR_AD_VALUE_JW5_FALLBACK_HTML5</option>
+			<option value="HTML5_JW5">MOD_PLAYERJR_AD_VALUE_HTML5_FALLBACK_JW5</option>
+			<option value="4">MOD_PLAYERJR_AD_VALUE_JW4</option>
+		</param>
+		<param name="moduleclass_sfx" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_GLOBALCLASS" description="MOD_PLAYERJR_AD_DESC_GLOBALCLASS" />
+		<param name="PlaylistSwfobject" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALSWF" default="1" description="MOD_PLAYERJR_AD_DESC_GLOBALSWF">
+			<option value="2">MOD_PLAYERJR_AD_VALUE_AUTO</option>
+			<option value="0">MOD_PLAYERJR_AD_VALUE_FORNO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_FORYES</option>
+		</param>
+		<param name="Playlistmetaload" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALMETA" default="2" description="MOD_PLAYERJR_AD_DESC_GLOBALMETA">
+			<option value="2">MOD_PLAYERJR_AD_VALUE_AUTO</option>
+			<option value="0">MOD_PLAYERJR_AD_VALUE_FORNO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_FORYES</option>
+		</param>
+		<param name="PlaylistFlashinstall" type="radio" label="MOD_PLAYERJR_AD_LABEL_GLOBALFI" default="1" description="MOD_PLAYERJR_AD_DESC_GLOBALFI">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Playlistconfig" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_GLOBALCONFIG" description="MOD_PLAYERJR_AD_DESC_GLOBALCONFIG" size="70" />
+		<param name="javascriptevent" type="spacer" default="MOD_PLAYERJR_AD_DESC_EVENT" />
+		<param name="Playlistevents" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_EXTRAJSEVENTS" description="MOD_PLAYERJR_AD_DESC_EXTRAJSEVENTS" rows="5" cols="40" />
+		<param name="extrajsname" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_EXTRAJSNAME" description="MOD_PLAYERJR_AD_DESC_EXTRAJSNAME" />
+		<param name="HTML5" type="spacer" default="MOD_PLAYERJR_AD_DESC_HTML5" />
+		<param name="PlaylistjwplayerLoad" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALJWPLAYER" default="2" description="MOD_PLAYERJR_AD_DESC_GLOBALJWPLAYER">
+			<option value="2">MOD_PLAYERJR_AD_VALUE_AUTO</option>
+			<option value="0">MOD_PLAYERJR_AD_VALUE_FORNO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_FORYES</option>
+		</param>
+		<param name="Playlistfallbackdownload" type="radio" label="MOD_PLAYERJR_AD_LABEL_GLOBALFALLBACKDOWN" default="1" description="MOD_PLAYERJR_AD_DESC_GLOBALFALLBACKDOWN">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="PlaylistiscrollLoad" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALISCROLL" default="2" description="MOD_PLAYERJR_AD_DESC_GLOBALISCROLL">
+			<option value="2">MOD_PLAYERJR_AD_VALUE_AUTO</option>
+			<option value="0">MOD_PLAYERJR_AD_VALUE_FORNO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_FORYES</option>
+		</param>
+		<param name="jwbox" type="spacer" default="MOD_PLAYERJR_AD_DESC_JWBOX" />
+		<param name="PlaylistjqueryLoad" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALJQU" default="2" description="MOD_PLAYERJR_AD_DESC_GLOBALJQU">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_AUTO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_FORNO</option>
+			<option value="2">MOD_PLAYERJR_AD_VALUE_FORYES</option>
+		</param>
+		<param name="PlaylistjqueryjwboxLoad" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALJQUJWBOX" default="2" description="MOD_PLAYERJR_AD_DESC_GLOBALJQUJWBOX">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_AUTO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_FORNO</option>
+			<option value="2">MOD_PLAYERJR_AD_VALUE_FORYES</option>
+		</param>
+		<param name="Playlistjquerymootoolsconflict" type="radio" label="MOD_PLAYERJR_AD_LABEL_GLOBALJWBMOO" default="1" description="MOD_PLAYERJR_AD_DESC_GLOBALJWBMOO">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="Playlistjwboxcontainer" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALJWBCON" default="0" description="MOD_PLAYERJR_AD_DESC_GLOBALJWBCON">
+			<option value="span">MOD_PLAYERJR_AD_VALUE_SPAN</option>
+			<option value="div">MOD_PLAYERJR_AD_VALUE_DIV</option>
+		</param>
+		<param name="PlaylistcssLoad" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALCSS" default="1" description="MOD_PLAYERJR_AD_DESC_GLOBALCSS">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+			<option value="2">MOD_PLAYERJR_AD_VALUE_USECSSFIELD</option>
+		</param>
+		<param name="mod_css" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_GLOBALCSSFIELD" description="MOD_PLAYERJR_AD_DESC_GLOBALCSSFIELD" rows="5" cols="40" />
+		<param name="cachemenu" type="spacer" default="MOD_PLAYERJR_AD_DESC_CACHE" />
+        <param name="cache" type="list" default="0" label="MOD_PLAYERJR_AD_LABEL_GLOBALCH" description="MOD_PLAYERJR_AD_DESC_GLOBALCH">
+            <option value="1">MOD_PLAYERJR_AD_VALUE_UGLOB</option>
+            <option value="0">MOD_PLAYERJR_AD_VALUE_NCH</option>
+        </param>
+        <param name="cache_time" type="text" default="900" label="MOD_PLAYERJR_AD_LABEL_GLOBALCHTI" description="MOD_PLAYERJR_AD_DESC_GLOBALCHTI" />
+
+		<param name="debugmenu" type="spacer" default="MOD_PLAYERJR_AD_DESC_DEBUG" />
+        <param name="Playlistdebug" type="list" default="none" label="MOD_PLAYERJR_AD_LABEL_DEBUGCH" description="MOD_PLAYERJR_AD_DESC_DEBUGCH">
+            <option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+            <option value="trace">MOD_PLAYERJR_AD_VALUE_TRACE</option>
+			<option value="arthropod">MOD_PLAYERJR_AD_VALUE_ARTHROPOD</option>
+        </param>
+    </params>
+    <params>
+		<param name="Playlist" type="spacer" default="MOD_PLAYERJR_AD_DESC_PLAYLIST" />
+		<param name="mod_plselect" type="list" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTORI" description="MOD_PLAYERJR_AD_DESC_PLAYLISTORI">
+		<option value="4">MOD_PLAYERJR_AD_VALUE_PLAYLISTSELBOTR</option>
+		<option value="0">MOD_PLAYERJR_AD_VALUE_PLAYLISTSELRSSLI</option>
+		<option value="3">MOD_PLAYERJR_AD_VALUE_PLAYLISTSELRSSLIMULTI</option>
+		<option value="2">MOD_PLAYERJR_AD_VALUE_PLAYLISTSELAUTO</option>
+		<option value="1">MOD_PLAYERJR_AD_VALUE_PLAYLISTSELPE</option>
+		<option value="5">MOD_PLAYERJR_AD_VALUE_PLAYLISTSELJSON</option>
+		</param>
+		<param name="Bits On The Run" type="spacer" default="MOD_PLAYERJR_AD_DESC_PLAYLISTBOTR" />
+		<param name="BitsOnTherunmanage" type="spacer" default="MOD_PLAYERJR_AD_DESC_PLAYLISTBOTRMANAGE" />
+		<param name="mod_plbotrfile" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTBOTRFILE" description="MOD_PLAYERJR_AD_DESC_PLAYLISTBOTRFILE" size="70" />
+		<param name="mod_plbotrdisplay" type="list" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTBOTRDISPLAY" description="MOD_PLAYERJR_AD_DESC_PLAYLISTBOTRDISPLAY">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_PLAYLISTBOTRBOTRDISPLAY</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_PLAYLISTBOTRCOMBINEDISPLAY1</option>
+			<option value="2">MOD_PLAYERJR_AD_VALUE_PLAYLISTBOTRCOMBINEDISPLAY2</option>
+			<option value="3">MOD_PLAYERJR_AD_VALUE_PLAYLISTBOTRMODULEDISPLAY</option>
+		</param>
+		<param name="mod_plbotrapikey" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTBOTRAPIKEY" description="MOD_PLAYERJR_AD_DESC_PLAYLISTBOTRAPIKEY" size="10" />
+		<param name="mod_plbotrsecretkey" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTBOTRSECRETKEY" description="MOD_PLAYERJR_AD_DESC_PLAYLISTBOTRSECRETKEY" size="34" />
+		<param name="mod_plbotrtimeout" type="text" default="3600" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTBOTRTIMEOUT" description="MOD_PLAYERJR_AD_DESC_PLAYLISTBOTRTIMEOUT" size="6" />
+		<param name="External" type="spacer" default="MOD_PLAYERJR_AD_DESC_PLAYLISTRSSLINK" />
+		<param name="mod_plfile" type="text" default="http://www.joomlarulez.com/images/stories/playlist/big_buck_bunny/big_buck_bunny.xml" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTRSSFL" description="MOD_PLAYERJR_AD_DESC_PLAYLISTRSSFL" size="70" />
+		<param name="mod_plfilecontentID" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTRSSID" description="MOD_PLAYERJR_AD_DESC_PLAYLISTRSSID" size="70" />
+		<param name="MultipleExternal" type="spacer" default="MOD_PLAYERJR_AD_DESC_PLAYLISTRSSLINKMULTI" />
+		<param name="mod_plfilemulti" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTRSSFLMULTI" description="MOD_PLAYERJR_AD_DESC_PLAYLISTRSSFLMULTI" rows="5" cols="40" />
+		<param name="mod_plfilecontentIDmulti" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTRSSIDMULTI" description="MOD_PLAYERJR_AD_DESC_PLAYLISTRSSIDMULTI" size="70" />
+		<param name="mod_plmultidropdownlist" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTMULTIDROPDLI" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTMULTIDROPDLI">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="mod_plmultidropdowntitle" type="list" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTMULTIDROPDTI" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTMULTIDROPDTI">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+			<option value="2">MOD_PLAYERJR_AD_VALUE_CURL</option>
+		</param>
+		<param name="mod_plmultidropdowntitlelength" type="text" default="43" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTMULTILENGTHTI" description="MOD_PLAYERJR_AD_DESC_PLAYLISTMULTILENGTHTI" size="6" />
+		<param name="mod_plmultidropdownstyle" type="list" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTMULTIDROPDSTY" default="0" description="MOD_PLAYERJR_AD_DESC_PLAYLISTMULTIDROPDSTY">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_DEF</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_CLASS</option>
+		</param>
+		<param name="mod_plmultidropdownclass" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTMULTIDROPDCLASS" description="MOD_PLAYERJR_AD_DESC_PLAYLISTMULTIDROPDCLASS" size="20" />
+		<param name="Autogenerate" type="spacer" default="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTO" />
+		<param name="mod_plauto" type="text" default="images/stories/" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTODIR" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTODIR" />
+		<param name="mod_plautosort" type="list" default="krsort" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOSORT" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOSORT">
+			<option value="ksort">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTODLOHI</option>
+			<option value="krsort">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTODHILO</option>
+			<option value="asort">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOALOHI</option>
+			<option value="arsort">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOAHILO</option>
+			<option value="shuffle">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTORAND</option>
+		</param>
+		<param name="mod_plautocontentID" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOID" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOID" size="70" />
+		<param name="mod_plautodefthumb" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOTHUMB" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOTHUMB" size="70" />
+		<param name="mod_plautoplaylistimage" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOPLAYLISTIMAGE" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOPLAYLISTIMAGE" size="70" />
+		<param name="mod_plautoduration" type="text" default="00:30" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTODUR" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTODUR" size="6" />
+		<param name="mod_plautotypetitle" type="list" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOTI" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOTI">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOFSIMP</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOUFIL</option>
+		</param>
+		<param name="mod_plautotypedescription" type="list" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTODESC" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTODESC">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOTYDESC</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOTYAUTDESC</option>
+			<option value="2">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOTYAUTTIDESC</option>
+			<option value="3">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOTYTRAUTTIDESC</option>
+		</param>
+		<param name="mod_plautoallowlink" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOLI" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOLI">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowjpg" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOJPG" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOJPG">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowpng" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOPNG" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOPNG">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowgif" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOGIF" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOGIF">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowflv" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOFLV" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOFLV">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowmp3" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOMP3" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOMP3">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowmp4" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOMP4" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOMP4">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowm4a" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOM4A" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOM4A">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowm4v" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOM4V" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOM4V">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoallowmov" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOMOV" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOMOV">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+		</param>
+		<param name="mod_plautoseparator" type="text" default="_-_" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOSEP" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOSEP" size="6" />
+		<param name="mod_plautotrackposition" type="text" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOTRPOS" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOTRPOS" size="3" />
+		<param name="mod_plautotitleposition" type="text" default="3" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOTIPOS" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOTIPOS" size="3" />
+		<param name="mod_plautoauthorposition" type="text" default="1" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOAUTPOS" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOAUTPOS" size="3" />
+		<param name="mod_plautodescposition" type="text" default="2" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTODESCPOS" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTODESCPOS" size="3" />
+		<param name="Editor" type="spacer" default="MOD_PLAYERJR_AD_DESC_PLAYLISTEDIT" />
+		<param name="mod_plfile1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFILE1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFILE1" size="70" />
+		<param name="mod_plhdfile1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGHDFILE1" description="MOD_PLAYERJR_AD_DESC_PLUGHDFILE1" size="70" />
+		<param name="mod_plfilecontentID1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITID1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITID1" size="70" />
+		<param name="mod_pltitle1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTI1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTI1" />
+		<param name="mod_pldesc1" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDESC1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDESC1" rows="5" cols="40" />
+		<param name="mod_plcredit1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCRE1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCRE1" />
+		<param name="mod_plthumbnail1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTHU1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTHU1" size="70" />
+		<param name="mod_plcaption1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCAP1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCAP1" size="70" />
+		<param name="mod_pllink1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITLI1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITLI1" size="70" />
+		<param name="mod_plstart1" type="text" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTART1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTART1" size="6" />
+		<param name="mod_plstreamer1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTR1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTR1" size="70" />
+		<param name="mod_pltag1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTAG1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTAG1" size="70" />
+		<param name="mod_plduration1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDUR1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDUR1" size="6" />
+		<param name="mod_plformat1" type="list" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFOR1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFOR1">
+			<option value="">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORAUTO</option>
+			<option value="video">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVID</option>
+			<option value="sound">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORSOU</option>
+			<option value="image">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORIMG</option>
+			<option value="youtube">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORYOUTUBE</option>
+			<option value="vimeo">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVIMEO</option>
+			<option value="rtmp">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORRTMP</option>
+			<option value="http">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHTTP</option>
+			<option value="bitgravity">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORBITGRAVITY</option>
+			<option value="highwinds">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHIGHWINDS</option>
+			<option value="lighttpd">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORLIGHTTPD</option>
+			<option value="vdox">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVDOX</option>
+			<option value="edgecast">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITOREDGECAST</option>
+			<option value="fcsubscribe">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFCSUBSCRIBE</option>
+			<option value="flvseek">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFLVSEEK</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="mod_plfile2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFILE2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFILE2" size="70" />
+		<param name="mod_plhdfile2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGHDFILE2" description="MOD_PLAYERJR_AD_DESC_PLUGHDFILE2" size="70" />
+		<param name="mod_plfilecontentID2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITID2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITID2" size="70" />
+		<param name="mod_pltitle2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTI2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTI2" />
+		<param name="mod_pldesc2" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDESC2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDESC2" rows="5" cols="40" />
+		<param name="mod_plcredit2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCRE2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCRE2" />
+		<param name="mod_plthumbnail2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTHU2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTHU2" size="70" />
+		<param name="mod_plcaption2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCAP2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCAP2" size="70" />
+		<param name="mod_pllink2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITLI2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITLI2" size="70" />
+		<param name="mod_plstart2" type="text" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTART2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTART2" size="6" />
+		<param name="mod_plstreamer2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTR2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTR2" size="70" />
+		<param name="mod_pltag2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTAG2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTAG2" size="70" />
+		<param name="mod_plduration2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDUR2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDUR2" size="6" />
+		<param name="mod_plformat2" type="list" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFOR2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFOR2">
+			<option value="">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORAUTO</option>
+			<option value="video">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVID</option>
+			<option value="sound">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORSOU</option>
+			<option value="image">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORIMG</option>
+			<option value="youtube">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORYOUTUBE</option>
+			<option value="vimeo">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVIMEO</option>
+			<option value="rtmp">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORRTMP</option>
+			<option value="http">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHTTP</option>
+			<option value="bitgravity">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORBITGRAVITY</option>
+			<option value="highwinds">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHIGHWINDS</option>
+			<option value="lighttpd">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORLIGHTTPD</option>
+			<option value="vdox">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVDOX</option>
+			<option value="edgecast">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITOREDGECAST</option>
+			<option value="fcsubscribe">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFCSUBSCRIBE</option>
+			<option value="flvseek">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFLVSEEK</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="mod_plfile3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFILE3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFILE3" size="70" />
+		<param name="mod_plhdfile3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGHDFILE3" description="MOD_PLAYERJR_AD_DESC_PLUGHDFILE3" size="70" />
+		<param name="mod_plfilecontentID3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITID3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITID3" size="70" />
+		<param name="mod_pltitle3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTI3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTI3" />
+		<param name="mod_pldesc3" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDESC3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDESC3" rows="5" cols="40" />
+		<param name="mod_plcredit3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCRE3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCRE3" />
+		<param name="mod_plthumbnail3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTHU3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTHU3" size="70" />
+		<param name="mod_plcaption3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCAP3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCAP3" size="70" />
+		<param name="mod_pllink3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITLI3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITLI3" size="70" />
+		<param name="mod_plstart3" type="text" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTART3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTART3" size="6" />
+		<param name="mod_plstreamer3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTR3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTR3" size="70" />
+		<param name="mod_pltag3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTAG3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTAG3" size="70" />
+		<param name="mod_plduration3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDUR3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDUR3" size="6" />
+		<param name="mod_plformat3" type="list" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFOR3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFOR3">
+			<option value="">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORAUTO</option>
+			<option value="video">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVID</option>
+			<option value="sound">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORSOU</option>
+			<option value="image">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORIMG</option>
+			<option value="youtube">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORYOUTUBE</option>
+			<option value="vimeo">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVIMEO</option>
+			<option value="rtmp">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORRTMP</option>
+			<option value="http">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHTTP</option>
+			<option value="bitgravity">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORBITGRAVITY</option>
+			<option value="highwinds">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHIGHWINDS</option>
+			<option value="lighttpd">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORLIGHTTPD</option>
+			<option value="vdox">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVDOX</option>
+			<option value="edgecast">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITOREDGECAST</option>
+			<option value="fcsubscribe">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFCSUBSCRIBE</option>
+			<option value="flvseek">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFLVSEEK</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="mod_plfile4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFILE4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFILE4" size="70" />
+		<param name="mod_plhdfile4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGHDFILE4" description="MOD_PLAYERJR_AD_DESC_PLUGHDFILE4" size="70" />
+		<param name="mod_plfilecontentID4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITID4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITID4" size="70" />
+		<param name="mod_pltitle4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTI4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTI4" />
+		<param name="mod_pldesc4" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDESC4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDESC4" rows="5" cols="40" />
+		<param name="mod_plcredit4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCRE4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCRE4" />
+		<param name="mod_plthumbnail4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTHU4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTHU4" size="70" />
+		<param name="mod_plcaption4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCAP4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCAP4" size="70" />
+		<param name="mod_pllink4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITLI4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITLI4" size="70" />
+		<param name="mod_plstart4" type="text" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTART4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTART4" size="6" />
+		<param name="mod_plstreamer4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTR4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTR4" size="70" />
+		<param name="mod_pltag4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTAG4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTAG4" size="70" />
+		<param name="mod_plduration4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDUR4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDUR4" size="6" />
+		<param name="mod_plformat4" type="list" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFOR4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFOR4">
+			<option value="">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORAUTO</option>
+			<option value="video">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVID</option>
+			<option value="sound">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORSOU</option>
+			<option value="image">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORIMG</option>
+			<option value="youtube">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORYOUTUBE</option>
+			<option value="vimeo">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVIMEO</option>
+			<option value="rtmp">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORRTMP</option>
+			<option value="http">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHTTP</option>
+			<option value="bitgravity">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORBITGRAVITY</option>
+			<option value="highwinds">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHIGHWINDS</option>
+			<option value="lighttpd">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORLIGHTTPD</option>
+			<option value="vdox">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVDOX</option>
+			<option value="edgecast">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITOREDGECAST</option>
+			<option value="fcsubscribe">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFCSUBSCRIBE</option>
+			<option value="flvseek">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFLVSEEK</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="mod_plfile5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFILE5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFILE5" size="70" />
+		<param name="mod_plhdfile5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGHDFILE5" description="MOD_PLAYERJR_AD_DESC_PLUGHDFILE5" size="70" />
+		<param name="mod_plfilecontentID5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITID5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITID5" size="70" />
+		<param name="mod_pltitle5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTI5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTI5" />
+		<param name="mod_pldesc5" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDESC5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDESC5" rows="5" cols="40" />
+		<param name="mod_plcredit5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCRE5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCRE5" />
+		<param name="mod_plthumbnail5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTHU5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTHU5" size="70" />
+		<param name="mod_plcaption5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCAP5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCAP5" size="70" />
+		<param name="mod_pllink5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITLI5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITLI5" size="70" />
+		<param name="mod_plstart5" type="text" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTART5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTART5" size="6" />
+		<param name="mod_plstreamer5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTR5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTR5" size="70" />
+		<param name="mod_pltag5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTAG5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTAG5" size="70" />
+		<param name="mod_plduration5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDUR5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDUR5" size="6" />
+		<param name="mod_plformat5" type="list" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFOR5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFOR5">
+			<option value="">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORAUTO</option>
+			<option value="video">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVID</option>
+			<option value="sound">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORSOU</option>
+			<option value="image">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORIMG</option>
+			<option value="youtube">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORYOUTUBE</option>
+			<option value="vimeo">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVIMEO</option>
+			<option value="rtmp">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORRTMP</option>
+			<option value="http">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHTTP</option>
+			<option value="bitgravity">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORBITGRAVITY</option>
+			<option value="highwinds">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHIGHWINDS</option>
+			<option value="lighttpd">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORLIGHTTPD</option>
+			<option value="vdox">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVDOX</option>
+			<option value="edgecast">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITOREDGECAST</option>
+			<option value="fcsubscribe">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFCSUBSCRIBE</option>
+			<option value="flvseek">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFLVSEEK</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="json" type="spacer" default="MOD_PLAYERJR_AD_DESC_PLAYLISTJSONSET" />
+		<param name="mod_plfilesrc" type="list" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTJSONSRC" default="0" description="MOD_PLAYERJR_AD_DESC_PLAYLISTJSONSRC">
+			<option value="0">MOD_PLAYERJR_AD_VALUE_JSON_FIELD</option>
+			<option value="1">MOD_PLAYERJR_AD_VALUE_JSON_FILE</option>
+		</param>
+		<param name="mod_plfilejson" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTJSON" description="MOD_PLAYERJR_AD_DESC_PLAYLISTJSON" rows="5" cols="40" />
+		<param name="mod_plfileextjson" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTJSONFILE" description="MOD_PLAYERJR_AD_DESC_PLAYLISTJSONFILE" size="70" />
+    </params>
+
+	<!-- J1.6 of course doesn't understand the above so let it repeat once more: -->
+
+	<config>
+		<fields name="params">
+			<fieldset name="PLAYERJR_AD_PLAYLIST">
+				<field name="MOD_PLAYERJR_AD_DESC_PLAYLIST" type="spacer" default="" />
+				<field name="mod_plselect" type="list" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTORI" description="MOD_PLAYERJR_AD_DESC_PLAYLISTORI">
+					<option value="4">MOD_PLAYERJR_AD_VALUE_PLAYLISTSELBOTR</option>
+					<option value="0">MOD_PLAYERJR_AD_VALUE_PLAYLISTSELRSSLI</option>
+					<option value="3">MOD_PLAYERJR_AD_VALUE_PLAYLISTSELRSSLIMULTI</option>
+					<option value="2">MOD_PLAYERJR_AD_VALUE_PLAYLISTSELAUTO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_PLAYLISTSELPE</option>
+					<option value="5">MOD_PLAYERJR_AD_VALUE_PLAYLISTSELJSON</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLAYLIST_BOTR">
+				<field name="MOD_PLAYERJR_AD_DESC_PLAYLISTBOTR" type="spacer" default="" />
+				<field name="MOD_PLAYERJR_AD_DESC_PLAYLISTBOTRMANAGE" type="spacer" default="" />
+				<field name="mod_plbotrfile" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTBOTRFILE" description="MOD_PLAYERJR_AD_DESC_PLAYLISTBOTRFILE" size="70" />
+				<field name="mod_plbotrdisplay" type="list" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTBOTRDISPLAY" description="MOD_PLAYERJR_AD_DESC_PLAYLISTBOTRDISPLAY">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_PLAYLISTBOTRBOTRDISPLAY</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_PLAYLISTBOTRCOMBINEDISPLAY1</option>
+					<option value="2">MOD_PLAYERJR_AD_VALUE_PLAYLISTBOTRCOMBINEDISPLAY2</option>
+					<option value="3">MOD_PLAYERJR_AD_VALUE_PLAYLISTBOTRMODULEDISPLAY</option>
+				</field>
+				<field name="mod_plbotrapikey" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTBOTRAPIKEY" description="MOD_PLAYERJR_AD_DESC_PLAYLISTBOTRAPIKEY" size="10" />
+				<field name="mod_plbotrsecretkey" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTBOTRSECRETKEY" description="MOD_PLAYERJR_AD_DESC_PLAYLISTBOTRSECRETKEY" size="34" />
+				<field name="mod_plbotrtimeout" type="text" default="3600" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTBOTRTIMEOUT" description="MOD_PLAYERJR_AD_DESC_PLAYLISTBOTRTIMEOUT" size="6" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLAYLIST_RSSLINK">
+				<field name="MOD_PLAYERJR_AD_DESC_PLAYLISTRSSLINK" type="spacer" default="" />
+				<field name="mod_plfile" type="text" default="http://www.joomlarulez.com/images/stories/playlist/big_buck_bunny/big_buck_bunny.xml" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTRSSFL" description="MOD_PLAYERJR_AD_DESC_PLAYLISTRSSFL" size="70" />
+				<field name="mod_plfilecontentID" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTRSSID" description="MOD_PLAYERJR_AD_DESC_PLAYLISTRSSID" size="70" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLAYLIST_MULTI">
+				<field name="MOD_PLAYERJR_AD_DESC_PLAYLISTRSSLINKMULTI" type="spacer" default="" />
+				<field name="mod_plfilemulti" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTRSSFLMULTI" description="MOD_PLAYERJR_AD_DESC_PLAYLISTRSSFLMULTI" rows="5" cols="40" />>
+				<field name="mod_plfilecontentIDmulti" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTRSSIDMULTI" description="MOD_PLAYERJR_AD_DESC_PLAYLISTRSSIDMULTI" size="70" />
+				<field name="mod_plmultidropdownlist" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTMULTIDROPDLI" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTMULTIDROPDLI">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="mod_plmultidropdowntitle" type="list" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTMULTIDROPDTI" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTMULTIDROPDTI">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+					<option value="2">MOD_PLAYERJR_AD_VALUE_CURL</option>
+				</field>
+				<field name="mod_plmultidropdowntitlelength" type="text" default="43" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTMULTILENGTHTI" description="MOD_PLAYERJR_AD_DESC_PLAYLISTMULTILENGTHTI" size="6" />
+				<field name="mod_plmultidropdownstyle" type="list" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTMULTIDROPDSTY" default="0" description="MOD_PLAYERJR_AD_DESC_PLAYLISTMULTIDROPDSTY">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_DEF</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_CLASS</option>
+				</field>
+				<field name="mod_plmultidropdownclass" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTMULTIDROPDCLASS" description="MOD_PLAYERJR_AD_DESC_PLAYLISTMULTIDROPDCLASS" size="20" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLAYLIST_AUTO">
+				<field name="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTO" type="spacer" default="" />
+				<field name="mod_plauto" type="text" default="images/" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTODIR" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTODIR" />
+				<field name="mod_plautosort" type="list" default="krsort" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOSORT" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOSORT">
+					<option value="ksort">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTODLOHI</option>
+					<option value="krsort">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTODHILO</option>
+					<option value="asort">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOALOHI</option>
+					<option value="arsort">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOAHILO</option>
+					<option value="shuffle">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTORAND</option>
+				</field>
+				<field name="mod_plautocontentID" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOID" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOID" size="70" />
+				<field name="mod_plautodefthumb" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOTHUMB" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOTHUMB" size="70" />
+				<field name="mod_plautoplaylistimage" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOPLAYLISTIMAGE" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOPLAYLISTIMAGE" size="70" />
+				<field name="mod_plautoduration" type="text" default="00:30" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTODUR" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTODUR" size="6" />
+				<field name="mod_plautotypetitle" type="list" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOTI" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOTI">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOFSIMP</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOUFIL</option>
+				</field>
+				<field name="mod_plautotypedescription" type="list" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTODESC" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTODESC">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOTYDESC</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOTYAUTDESC</option>
+					<option value="2">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOTYAUTTIDESC</option>
+					<option value="3">MOD_PLAYERJR_AD_VALUE_PLAYLISTAUTOTYTRAUTTIDESC</option>
+				</field>
+				<field name="mod_plautoallowlink" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOLI" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOLI">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowjpg" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOJPG" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOJPG">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowpng" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOPNG" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOPNG">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowgif" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOGIF" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOGIF">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowflv" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOFLV" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOFLV">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowmp3" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOMP3" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOMP3">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowmp4" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOMP4" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOMP4">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowm4a" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOM4A" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOM4A">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowm4v" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOM4V" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOM4V">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoallowmov" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOMOV" default="1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOMOV">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="mod_plautoseparator" type="text" default="_-_" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOSEP" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOSEP" size="6" />
+				<field name="mod_plautotrackposition" type="text" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOTRPOS" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOTRPOS" size="3" />
+				<field name="mod_plautotitleposition" type="text" default="3" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOTIPOS" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOTIPOS" size="3" />
+				<field name="mod_plautoauthorposition" type="text" default="1" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTOAUTPOS" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTOAUTPOS" size="3" />
+				<field name="mod_plautodescposition" type="text" default="2" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTAUTODESCPOS" description="MOD_PLAYERJR_AD_DESC_PLAYLISTAUTODESCPOS" size="3" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLAYLIST_EDITOR">
+				<field name="MOD_PLAYERJR_AD_DESC_PLAYLISTEDIT" type="spacer" default="" />
+				<field name="mod_plfile1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFILE1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFILE1" size="70" />
+				<field name="mod_plhdfile1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGHDFILE1" description="MOD_PLAYERJR_AD_DESC_PLUGHDFILE1" size="70" />
+				<field name="mod_plfilecontentID1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITID1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITID1" size="70" />
+				<field name="mod_pltitle1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTI1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTI1" />
+				<field name="mod_pldesc1" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDESC1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDESC1" rows="5" cols="40" />
+				<field name="mod_plcredit1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCRE1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCRE1" />
+				<field name="mod_plthumbnail1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTHU1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTHU1" size="70" />
+				<field name="mod_plcaption1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCAP1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCAP1" size="70" />
+				<field name="mod_pllink1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITLI1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITLI1" size="70" />
+				<field name="mod_plstart1" type="text" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTART1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTART1" size="6" />
+				<field name="mod_plstreamer1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTR1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTR1" size="70" />
+				<field name="mod_pltag1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTAG1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTAG1" size="70" />
+				<field name="mod_plduration1" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDUR1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDUR1" size="6" />
+				<field name="mod_plformat1" type="list" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFOR1" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFOR1">
+					<option value="">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORAUTO</option>
+					<option value="video">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVID</option>
+					<option value="sound">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORSOU</option>
+					<option value="image">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORIMG</option>
+					<option value="youtube">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORYOUTUBE</option>
+					<option value="vimeo">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVIMEO</option>
+					<option value="rtmp">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORRTMP</option>
+					<option value="http">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHTTP</option>
+					<option value="bitgravity">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORBITGRAVITY</option>
+					<option value="highwinds">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHIGHWINDS</option>
+					<option value="lighttpd">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORLIGHTTPD</option>
+					<option value="vdox">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVDOX</option>
+					<option value="edgecast">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITOREDGECAST</option>
+					<option value="fcsubscribe">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFCSUBSCRIBE</option>
+					<option value="flvseek">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFLVSEEK</option>
+				</field>
+				<field name="spacer1" type="spacer" default="" label="&lt;hr /&gt;" description=""/>
+				<field name="mod_plfile2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFILE2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFILE2" size="70" />
+				<field name="mod_plhdfile2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGHDFILE2" description="MOD_PLAYERJR_AD_DESC_PLUGHDFILE2" size="70" />
+				<field name="mod_plfilecontentID2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITID2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITID2" size="70" />
+				<field name="mod_pltitle2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTI2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTI2" />
+				<field name="mod_pldesc2" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDESC2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDESC2" rows="5" cols="40" />
+				<field name="mod_plcredit2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCRE2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCRE2" />
+				<field name="mod_plthumbnail2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTHU2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTHU2" size="70" />
+				<field name="mod_plcaption2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCAP2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCAP2" size="70" />
+				<field name="mod_pllink2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITLI2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITLI2" size="70" />
+				<field name="mod_plstart2" type="text" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTART2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTART2" size="6" />
+				<field name="mod_plstreamer2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTR2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTR2" size="70" />
+				<field name="mod_pltag2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTAG2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTAG2" size="70" />
+				<field name="mod_plduration2" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDUR2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDUR2" size="6" />
+				<field name="mod_plformat2" type="list" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFOR2" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFOR2">
+					<option value="">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORAUTO</option>
+					<option value="video">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVID</option>
+					<option value="sound">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORSOU</option>
+					<option value="image">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORIMG</option>
+					<option value="youtube">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORYOUTUBE</option>
+					<option value="vimeo">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVIMEO</option>
+					<option value="rtmp">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORRTMP</option>
+					<option value="http">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHTTP</option>
+					<option value="bitgravity">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORBITGRAVITY</option>
+					<option value="highwinds">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHIGHWINDS</option>
+					<option value="lighttpd">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORLIGHTTPD</option>
+					<option value="vdox">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVDOX</option>
+					<option value="edgecast">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITOREDGECAST</option>
+					<option value="fcsubscribe">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFCSUBSCRIBE</option>
+					<option value="flvseek">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFLVSEEK</option>
+				</field>
+				<field name="spacer2" type="spacer" default="" label="&lt;hr /&gt;" description=""/>
+				<field name="mod_plfile3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFILE3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFILE3" size="70" />
+				<field name="mod_plhdfile3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGHDFILE3" description="MOD_PLAYERJR_AD_DESC_PLUGHDFILE3" size="70" />
+				<field name="mod_plfilecontentID3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITID3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITID3" size="70" />
+				<field name="mod_pltitle3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTI3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTI3" />
+				<field name="mod_pldesc3" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDESC3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDESC3" rows="5" cols="40" />
+				<field name="mod_plcredit3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCRE3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCRE3" />
+				<field name="mod_plthumbnail3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTHU3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTHU3" size="70" />
+				<field name="mod_plcaption3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCAP3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCAP3" size="70" />
+				<field name="mod_pllink3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITLI3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITLI3" size="70" />
+				<field name="mod_plstart3" type="text" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTART3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTART3" size="6" />
+				<field name="mod_plstreamer3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTR3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTR3" size="70" />
+				<field name="mod_pltag3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTAG3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTAG3" size="70" />
+				<field name="mod_plduration3" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDUR3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDUR3" size="6" />
+				<field name="mod_plformat3" type="list" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFOR3" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFOR3">
+					<option value="">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORAUTO</option>
+					<option value="video">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVID</option>
+					<option value="sound">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORSOU</option>
+					<option value="image">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORIMG</option>
+					<option value="youtube">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORYOUTUBE</option>
+					<option value="vimeo">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVIMEO</option>
+					<option value="rtmp">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORRTMP</option>
+					<option value="http">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHTTP</option>
+					<option value="bitgravity">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORBITGRAVITY</option>
+					<option value="highwinds">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHIGHWINDS</option>
+					<option value="lighttpd">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORLIGHTTPD</option>
+					<option value="vdox">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVDOX</option>
+					<option value="edgecast">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITOREDGECAST</option>
+					<option value="fcsubscribe">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFCSUBSCRIBE</option>
+					<option value="flvseek">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFLVSEEK</option>
+				</field>
+				<field name="spacer3" type="spacer" default="" label="&lt;hr /&gt;" description=""/>
+				<field name="mod_plfile4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFILE4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFILE4" size="70" />
+				<field name="mod_plhdfile4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGHDFILE4" description="MOD_PLAYERJR_AD_DESC_PLUGHDFILE4" size="70" />
+				<field name="mod_plfilecontentID4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITID4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITID4" size="70" />
+				<field name="mod_pltitle4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTI4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTI4" />
+				<field name="mod_pldesc4" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDESC4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDESC4" rows="5" cols="40" />
+				<field name="mod_plcredit4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCRE4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCRE4" />
+				<field name="mod_plthumbnail4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTHU4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTHU4" size="70" />
+				<field name="mod_plcaption4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCAP4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCAP4" size="70" />
+				<field name="mod_pllink4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITLI4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITLI4" size="70" />
+				<field name="mod_plstart4" type="text" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTART4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTART4" size="6" />
+				<field name="mod_plstreamer4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTR4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTR4" size="70" />
+				<field name="mod_pltag4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTAG4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTAG4" size="70" />
+				<field name="mod_plduration4" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDUR4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDUR4" size="6" />
+				<field name="mod_plformat4" type="list" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFOR4" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFOR4">
+					<option value="">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORAUTO</option>
+					<option value="video">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVID</option>
+					<option value="sound">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORSOU</option>
+					<option value="image">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORIMG</option>
+					<option value="youtube">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORYOUTUBE</option>
+					<option value="vimeo">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVIMEO</option>
+					<option value="rtmp">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORRTMP</option>
+					<option value="http">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHTTP</option>
+					<option value="bitgravity">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORBITGRAVITY</option>
+					<option value="highwinds">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHIGHWINDS</option>
+					<option value="lighttpd">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORLIGHTTPD</option>
+					<option value="vdox">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVDOX</option>
+					<option value="edgecast">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITOREDGECAST</option>
+					<option value="fcsubscribe">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFCSUBSCRIBE</option>
+					<option value="flvseek">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFLVSEEK</option>
+				</field>
+				<field name="spacer4" type="spacer" default="" label="&lt;hr /&gt;" description=""/>
+				<field name="mod_plfile5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFILE5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFILE5" size="70" />
+				<field name="mod_plhdfile5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGHDFILE5" description="MOD_PLAYERJR_AD_DESC_PLUGHDFILE5" size="70" />
+				<field name="mod_plfilecontentID5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITID5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITID5" size="70" />
+				<field name="mod_pltitle5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTI5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTI5" />
+				<field name="mod_pldesc5" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDESC5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDESC5" rows="5" cols="40" />
+				<field name="mod_plcredit5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCRE5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCRE5" />
+				<field name="mod_plthumbnail5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTHU5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTHU5" size="70" />
+				<field name="mod_plcaption5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITCAP5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITCAP5" size="70" />
+				<field name="mod_pllink5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITLI5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITLI5" size="70" />
+				<field name="mod_plstart5" type="text" default="0" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTART5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTART5" size="6" />
+				<field name="mod_plstreamer5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITSTR5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITSTR5" size="70" />
+				<field name="mod_pltag5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITTAG5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITTAG5" size="70" />
+				<field name="mod_plduration5" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITDUR5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITDUR5" size="6" />
+				<field name="mod_plformat5" type="list" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTEDITFOR5" description="MOD_PLAYERJR_AD_DESC_PLAYLISTEDITFOR5">
+					<option value="">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORAUTO</option>
+					<option value="video">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVID</option>
+					<option value="sound">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORSOU</option>
+					<option value="image">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORIMG</option>
+					<option value="youtube">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORYOUTUBE</option>
+					<option value="vimeo">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVIMEO</option>
+					<option value="rtmp">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORRTMP</option>
+					<option value="http">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHTTP</option>
+					<option value="bitgravity">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORBITGRAVITY</option>
+					<option value="highwinds">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORHIGHWINDS</option>
+					<option value="lighttpd">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORLIGHTTPD</option>
+					<option value="vdox">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORVDOX</option>
+					<option value="edgecast">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITOREDGECAST</option>
+					<option value="fcsubscribe">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFCSUBSCRIBE</option>
+					<option value="flvseek">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORFLVSEEK</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLAYLIST_JSON">
+				<field name="MOD_PLAYERJR_AD_DESC_PLAYLISTJSONSET" type="spacer" default="" />
+				<field name="mod_plfilesrc" type="list" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTJSONSRC" default="0" description="MOD_PLAYERJR_AD_DESC_PLAYLISTJSONSRC">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_JSON_FIELD</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_JSON_FILE</option>
+				</field>
+				<field name="mod_plfilejson" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTJSON" description="MOD_PLAYERJR_AD_DESC_PLAYLISTJSON" rows="5" cols="40" />
+				<field name="mod_plfileextjson" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLAYLISTJSONFILE" description="MOD_PLAYERJR_AD_DESC_PLAYLISTJSONFILE" size="70" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_LAYOUT">
+				<field name="MOD_PLAYERJR_AD_DESC_LAYOUT" type="spacer" default="" />
+				<field name="Playlistplaylist" type="list" label="MOD_PLAYERJR_AD_LABEL_POSITION" default="bottom" description="MOD_PLAYERJR_AD_DESC_POSITION">
+					<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+					<option value="top">MOD_PLAYERJR_AD_VALUE_TOP</option>
+					<option value="bottom">MOD_PLAYERJR_AD_VALUE_BOTTOM</option>
+					<option value="right">MOD_PLAYERJR_AD_VALUE_RIGHT</option>
+					<option value="left">MOD_PLAYERJR_AD_VALUE_LEFT</option>
+					<option value="over">MOD_PLAYERJR_AD_VALUE_OVER</option>
+				</field>
+				<field name="PlaylistControlbar" type="list" label="MOD_PLAYERJR_AD_LABEL_CBPOSITION" default="bottom" description="MOD_PLAYERJR_AD_DESC_CBPOSITION">
+					<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+					<option value="bottom">MOD_PLAYERJR_AD_VALUE_BOTTOM</option>
+					<option value="top">MOD_PLAYERJR_AD_VALUE_TOP</option>
+					<option value="over">MOD_PLAYERJR_AD_VALUE_OVER</option>
+				</field>
+				<field name="Playlistcontrolbaridlehide" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_CBIDLEHIDE" description="MOD_PLAYERJR_AD_DESC_CBIDLEHIDE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="Playlistcontrolbarforcenextprev" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_CBFNEXTPREV" description="MOD_PLAYERJR_AD_DESC_CBFNEXTPREV">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="Playlistdisplayshowmute" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_DISSHOMU" description="MOD_PLAYERJR_AD_DESC_DISSHOMU">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="Playlistdock" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_DOCK" description="MOD_PLAYERJR_AD_DESC_DOCK">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="PlaylistSize" type="text" default="180" label="MOD_PLAYERJR_AD_LABEL_SIZE" description="MOD_PLAYERJR_AD_DESC_SIZE" size="4" />
+				<field name="PlaylistHeight" type="text" default="400" label="MOD_PLAYERJR_AD_LABEL_HEIGHT" description="MOD_PLAYERJR_AD_DESC_HEIGHT" size="4" />
+				<field name="PlaylistWidth" type="text" default="280" label="MOD_PLAYERJR_AD_LABEL_WIDTH" description="MOD_PLAYERJR_AD_DESC_WIDTH" size="4" />
+				<field name="PlaylistIcons" type="radio" default="1" label="MOD_PLAYERJR_AD_LABEL_ICON" description="MOD_PLAYERJR_AD_DESC_ICON">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="PlaylistLogo" type="text" label="MOD_PLAYERJR_AD_LABEL_LOGO" default="" description="MOD_PLAYERJR_AD_DESC_LOGO" size="70" />
+				<field name="Playlistlogolink" type="text" label="MOD_PLAYERJR_AD_LABEL_LOGOLINK" default="" description="MOD_PLAYERJR_AD_DESC_LOGOLINK" size="70" />
+				<field name="Playlistlogohide" type="radio" default="1" label="MOD_PLAYERJR_AD_LABEL_LOGOLINKHIDE" description="MOD_PLAYERJR_AD_DESC_LOGOLINKHIDE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="Playlistlogotimeout" type="text" label="MOD_PLAYERJR_AD_LABEL_LOGOTIMEOUT" default="3" description="MOD_PLAYERJR_AD_DESC_LOGOTIMEOUT" size="6" />
+				<field name="Playlistlogoposition" type="list" default="bottom-left" label="MOD_PLAYERJR_AD_LABEL_LOGOLINKPOS" description="MOD_PLAYERJR_AD_DESC_LOGOLINKPOS">
+					<option value="bottom-left">MOD_PLAYERJR_AD_VALUE_BOTLEF</option>
+					<option value="bottom-right">MOD_PLAYERJR_AD_VALUE_BOTRIG</option>
+					<option value="top-left">MOD_PLAYERJR_AD_VALUE_TOPLEF</option>
+					<option value="top-right">MOD_PLAYERJR_AD_VALUE_TOPRIG</option>
+				</field>
+				<field name="Playlistlogolinktarget" type="list" default="_blank" label="MOD_PLAYERJR_AD_LABEL_LOGOLINKTAG" description="MOD_PLAYERJR_AD_DESC_LOGOLINKTAR">
+					<option value="_blank">MOD_PLAYERJR_AD_VALUE_BLANK</option>
+					<option value="_self">MOD_PLAYERJR_AD_VALUE_SELF</option>
+					<option value="_parent">MOD_PLAYERJR_AD_VALUE_PARENT</option>
+					<option value="_top">MOD_PLAYERJR_AD_VALUE_TOP</option>
+				</field>
+				<field name="Playlistlogomargin" type="text" label="MOD_PLAYERJR_AD_LABEL_LOGOMARGIN" default="8" description="MOD_PLAYERJR_AD_DESC_LOGOMARGIN" size="6" />
+				<field name="Playlistlogoover" type="text" label="MOD_PLAYERJR_AD_LABEL_LOGOOVER" default="1" description="MOD_PLAYERJR_AD_DESC_LOGOOVER" size="6" />
+				<field name="Playlistlogoout" type="text" label="MOD_PLAYERJR_AD_LABEL_LOGOOUT" default="0.5" description="MOD_PLAYERJR_AD_DESC_LOGOOUT" size="6" />
+				<field name="Playlistabouttext" type="text" label="MOD_PLAYERJR_AD_LABEL_ABOUTTXT" default="" description="MOD_PLAYERJR_AD_DESC_ABOUTTEXT" size="70" />
+				<field name="Playlistaboutlink" type="text" label="MOD_PLAYERJR_AD_LABEL_ABOUTLINK" default="" description="MOD_PLAYERJR_AD_DESC_ABOUTLINK" size="70" />
+				<field name="MOD_PLAYERJR_AD_DESC_SKIN" type="spacer" default="" />
+				<field name="PlaylistSkintype" type="radio" default="1" label="MOD_PLAYERJR_AD_LABEL_SKINTYPE" description="MOD_PLAYERJR_AD_DESC_SKINTYPE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_SWFSKIN</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_XMLSKIN</option>
+				</field>
+				<field name="PlaylistSkin" type="filelist" default="-1" label="MOD_PLAYERJR_AD_LABEL_SKINSWF" description="MOD_PLAYERJR_AD_DESC_SKINSWF" directory="/modules/mod_playerjr_ad/skin/swf" filter="\.swf$" exclude="" stripext=".swf" />
+				<field name="PlaylistSkinxml" type="filelist" default="-1" label="MOD_PLAYERJR_AD_LABEL_SKINXML" description="MOD_PLAYERJR_AD_DESC_SKINXML" directory="/modules/mod_playerjr_ad/skin/xml" filter ="\.zip$" exclude="" stripext=".zip" />
+				<field name="MOD_PLAYERJR_AD_DESC_COLOR" type="spacer" default="" />
+				<field name="PlaylistBackcolor" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_COLORBACK" description="MOD_PLAYERJR_AD_DESC_COLORBACK" size="6" />
+				<field name="PlaylistFrontcolor" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_COLORFRONT" description="MOD_PLAYERJR_AD_DESC_COLORFRONT" size="6" />
+				<field name="PlaylistLightcolor" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_COLORLIGHT" description="MOD_PLAYERJR_AD_DESC_COLORLIGHT" size="6" />
+				<field name="PlaylistScreencolor" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_COLORSCREEN" description="MOD_PLAYERJR_AD_DESC_COLORSCREEN" size="6" />
+				<field name="Playlistwmode" type="list" default="opaque" label="MOD_PLAYERJR_AD_LABEL_COLORTRANS" description="">
+					<option value="opaque">MOD_PLAYERJR_AD_VALUE_OPAQUE</option>
+					<option value="transparent">MOD_PLAYERJR_AD_VALUE_TRANSPARENT</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_BEHAVIOUR">
+				<field name="MOD_PLAYERJR_AD_DESC_BEHAVIOUR" type="spacer" default="" />
+				<field name="PlaylistAutostart" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURAUTOSTART" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURAUTOSTART">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="Playlistbandwidth" type="text" default="5000" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURBW" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURBW" size="6" />
+				<field name="PlaylistBufferlength" type="text" default="1" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURBUFFER" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURBUFFER" size="6" />
+				<field name="Playlistdisplayclick" type="list" default="play" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURDCLICK" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURDCLICK">
+					<option value="play">MOD_PLAYERJR_AD_VALUE_PLAY</option>
+					<option value="link">MOD_PLAYERJR_AD_VALUE_LINK</option>
+					<option value="fullscreen">MOD_PLAYERJR_AD_VALUE_FULLSCR</option>
+					<option value="single">MOD_PLAYERJR_AD_VALUE_NONE</option>
+					<option value="mute">MOD_PLAYERJR_AD_VALUE_MUTE</option>
+					<option value="next">MOD_PLAYERJR_AD_VALUE_NEXT</option>
+				</field>
+				<field name="Playlistdisplaytitle" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURDTITLE" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURDTITLE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="Playlistlinktarget" type="list" default="_blank" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURLINKTAR" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURLINKTAR">
+					<option value="_blank">MOD_PLAYERJR_AD_VALUE_BLANK</option>
+					<option value="_self">MOD_PLAYERJR_AD_VALUE_SELF</option>
+				</field>
+				<field name="Playlistmute" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURMUTE" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURMUTE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="PlaylistRepeat" type="list" default="none" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURREPEAT" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURREPEAT">
+					<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+					<option value="list">MOD_PLAYERJR_AD_VALUE_LIST</option>
+					<option value="always">MOD_PLAYERJR_AD_VALUE_ALWAYS</option>
+					<option value="single">MOD_PLAYERJR_AD_VALUE_SING</option>
+				</field>
+				<field name="PlaylistResizing" type="radio" default="1" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURRESIZE" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURRESIZE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="PlaylistShuffle" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURSHUFFLE" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURSHUFFLE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="PlaylistSmoothing" type="radio" default="1" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURSMOOTH" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURSMOOTH">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="PlaylistStretching" type="list" default="uniform" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURSTRETCH" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURSTRETCH">
+					<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+					<option value="exactfit">MOD_PLAYERJR_AD_VALUE_EXFIT</option>
+					<option value="uniform">MOD_PLAYERJR_AD_VALUE_UNI</option>
+					<option value="fill">MOD_PLAYERJR_AD_VALUE_FILL</option>
+				</field>
+				<field name="PlaylistVolume" type="text" default="90" label="MOD_PLAYERJR_AD_LABEL_BEHAVIOURVOL" description="MOD_PLAYERJR_AD_DESC_BEHAVIOURVOL" size="3" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_POPUP">
+				<field name="MOD_PLAYERJR_AD_DESC_POPUP" type="spacer" default="" description="" />
+				<field name="Playlistpopupenabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_POPUPEN" default="0" description="MOD_PLAYERJR_AD_DESC_POPUPEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="Playlistpopupsizechoice" type="radio" label="MOD_PLAYERJR_AD_LABEL_POPUPSIZECH" default="0" description="MOD_PLAYERJR_AD_DESC_POPUPSIZECH">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_DEF</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_ADJ</option>
+				</field>
+				<field name="PlaylistpopupSize" type="text" default="180" label="MOD_PLAYERJR_AD_LABEL_POPUPSIZE" description="MOD_PLAYERJR_AD_DESC_POPUPSIZE" size="4" />
+				<field name="PlaylistpopupHeight" type="text" default="400" label="MOD_PLAYERJR_AD_LABEL_POPUPHEIGHT" description="MOD_PLAYERJR_AD_DESC_POPUPHEIGHT" size="4" />
+				<field name="PlaylistpopupWidth" type="text" default="280" label="MOD_PLAYERJR_AD_LABEL_POPUPWIDTH" description="MOD_PLAYERJR_AD_DESC_POPUPWIDTH" size="4" />
+				<field name="Playlistpopuplinkchoice" type="list" label="MOD_PLAYERJR_AD_LABEL_POPUPLINKCH" default="0" description="MOD_PLAYERJR_AD_DESC_POPUPLINKCH">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_TXT</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_PLAYLISTEDITORIMG</option>
+					<option value="2">MOD_PLAYERJR_AD_VALUE_TXTIMG</option>
+					<option value="3">MOD_PLAYERJR_AD_VALUE_TXTOVER</option>
+					<option value="4">MOD_PLAYERJR_AD_VALUE_IMGOVER</option>
+					<option value="5">MOD_PLAYERJR_AD_VALUE_TXTIMGOVER</option>
+				</field>
+				<field name="Playlistpopuptextlink" type="text" default="Click to watch the player in a Pop-Up" label="MOD_PLAYERJR_AD_LABEL_POPUPTXT" description="MOD_PLAYERJR_AD_DESC_POPUPTXT" size="70" />
+				<field name="Playlistpopupimagelink" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_POPUPIMG" description="MOD_PLAYERJR_AD_DESC_POPUPIMG" size="70" />
+				<field name="Playlistpopuphighslide" type="list" label="MOD_PLAYERJR_AD_LABEL_POPUPHIGHSLIDE" default="0" description="MOD_PLAYERJR_AD_DESC_POPUPHIGHSLIDE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_HIGH</option>
+					<option value="2">MOD_PLAYERJR_AD_VALUE_JWBOX</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_RTMP">
+				<field name="MOD_PLAYERJR_AD_DESC_RTMP" type="spacer" default="" />
+				<field name="Playlistrtmpprepend" type="radio" default="1" label="MOD_PLAYERJR_AD_LABEL_RTMPPRE" description="MOD_PLAYERJR_AD_DESC_RTMPPRE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="Playlistrtmploadbalance" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_RTMPBAL" description="MOD_PLAYERJR_AD_DESC_RTMPBAL">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="Playlistrtmpsubscribe" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_RTMPSUB" description="MOD_PLAYERJR_AD_DESC_RTMPSUB">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_HTTP">
+				<field name="MOD_PLAYERJR_AD_DESC_HTTP" type="spacer" default="" />
+				<field name="Playlisthttpstartparam" type="list" label="MOD_PLAYERJR_AD_LABEL_HTTPSTART" default="start" description="MOD_PLAYERJR_AD_DESC_HTTPSTART">
+					<option value="start">MOD_PLAYERJR_AD_VALUE_START</option>
+					<option value="starttime">MOD_PLAYERJR_AD_VALUE_STARTTIME</option>
+					<option value="apstart">MOD_PLAYERJR_AD_VALUE_APSTART</option>
+					<option value="ec_seek">MOD_PLAYERJR_AD_VALUE_ECSEEK</option>
+					<option value="fs">MOD_PLAYERJR_AD_VALUE_FS</option>
+				</field>
+				<field name="Playlisthttpdvr" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_HTTPDVR" description="MOD_PLAYERJR_AD_DESC_HTTPDVR">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+			</fieldset>	
+			<fieldset name="PLAYERJR_AD_PLUGINS_ADSOLUTION">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGADS" type="spacer" default="" />
+				<field name="MOD_PLAYERJR_AD_LABEL_PLUGADSREG" type="spacer" default="" />
+				<field name="AdsolutionPluginEnabled" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_PLUGADSEN" description="MOD_PLAYERJR_AD_DESC_PLUGADSEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="AdsolutionChannelcode" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGADSCODE" description="MOD_PLAYERJR_AD_DESC_PLUGADSCODE" size="16" />
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGADSPREMS" type="spacer" default="" />
+				<field name="AdsolutionPremiumEnabled" type="radio" default="0" label="MOD_PLAYERJR_AD_LABEL_PLUGADSPREMSEN" description="MOD_PLAYERJR_AD_DESC_PLUGADSPREMSEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_HD">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGHD" type="spacer" default="" />
+				<field name="HDPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGHDEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGHDEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="HDPluginversion" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGHDVER" default="2" description="MOD_PLAYERJR_AD_DESC_PLUGHDVER">
+					<option value="1">MOD_PLAYERJR_AD_VALUE_VERSION_1</option>
+					<option value="2">MOD_PLAYERJR_AD_VALUE_VERSION_2</option>
+				</field>
+				<field name="HDbitrate" type="text" default="1500" label="MOD_PLAYERJR_AD_LABEL_PLUGHDBR" description="MOD_PLAYERJR_AD_DESC_PLUGHDBR" size="5" />
+				<field name="HDfullscreen" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGHDFULL" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGHDFULL">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="HDstate" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGHDST" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGHDST">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_VIRAL">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGVIRAL" type="spacer" default="" />
+				<field name="ViralPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field	name="ViralPluginonpause" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALPAUSE" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALPAUSE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field	name="ViralPluginoncomplete" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALCPL" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALCPL">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="ViralPluginfunctions" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALFUNC" default="embed,link" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALFUNC">
+					<option value="all">MOD_PLAYERJR_AD_VALUE_ALL</option>
+					<option value="embed">MOD_PLAYERJR_AD_VALUE_EMBED</option>
+					<option value="link">MOD_PLAYERJR_AD_VALUE_LINK</option>
+					<option value="recommendations">MOD_PLAYERJR_AD_VALUE_RECOM</option>
+					<option value="embed,link">MOD_PLAYERJR_AD_VALUE_EMBEDLINK</option>
+					<option value="embed,recommendations">MOD_PLAYERJR_AD_VALUE_EMBEDRECOM</option>
+					<option value="link,recommendations">MOD_PLAYERJR_AD_VALUE_LINKRECOM</option>
+				</field>
+				<field name="ViralPluginrecommendations" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALREC" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALREC" size="70" />
+				<field name="ViralPluginemailsubject" type="text" default="Check out this video!" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALSUB" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALSUB" />
+				<field name="ViralPluginemailfooter" type="text" default="www.longtailvideo.com" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALFOOT" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALFOOT" />
+				<field	name="ViralPluginmatchplayercolors" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALPCOLORS" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALPCOLORS">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="ViralPluginfgcolor" type="text" default="FFFFFF" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALFGCOLOR" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALFGCOLOR" size="6" />
+				<field name="ViralPluginbgcolor" type="text" default="333333" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALBGCOLOR" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALBGCOLOR" size="6" />
+				<field	name="ViralPluginallowmenu" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALMENU" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALMENU">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field	name="ViralPluginallowdock" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALDOCK" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALDOCK">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field	name="ViralPluginmultidock" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGVIRALMDOCK" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGVIRALMDOCK">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_SHARING">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGSHARING" type="spacer" default="" />
+				<field name="SharingPluginversion" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGSHARINGVER" default="3" description="MOD_PLAYERJR_AD_DESC_PLUGSHARINGVER">
+					<option value="1">MOD_PLAYERJR_AD_VALUE_VERSION_1</option>
+					<option value="2">MOD_PLAYERJR_AD_VALUE_VERSION_2</option>
+					<option value="3">MOD_PLAYERJR_AD_VALUE_VERSION_3</option>
+				</field>
+				<field name="SharingPluginembedEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGSHARINGEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGSHARINGEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="SharingPluginlinkEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGSHARINGLEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGSHARINGLEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="SharingPluginlink" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGSHARINGLINK" description="MOD_PLAYERJR_AD_DESC_PLUGSHARINGLINK" size="70" />
+				<field name="SharingPluginthumbnail" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGSHARINGTHUMB" description="MOD_PLAYERJR_AD_DESC_PLUGSHARINGTHUMB" size="70" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_TIPJAR">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGTIPJAR" type="spacer" default="" />
+				<field name="TipJarPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJAREN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJAREN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="TipJartitle" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJARTI" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJARTI" size="35" />
+				<field name="TipJartext" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJARTXT" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJARTXT" size="70" />
+				<field name="TipJarbusiness" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJARBUS" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJARBUS" />
+				<field name="TipJaramount" type="text" default="5" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJARAMO" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJARAMO" size="6" />
+				<field name="TipJarcurrency_code" type="text" default="EUR" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJARCUR" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJARCUR" size="3" />
+				<field name="TipJarimage_url" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJARIURL" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJARIURL" size="70" />
+				<field name="TipJarreturn_url" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGTIPJARRURL" description="MOD_PLAYERJR_AD_DESC_PLUGTIPJARRURL" size="70" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_GAP">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGGAP" type="spacer" default="" />
+				<field name="GaProPluginversion" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGGAPVER" default="gapro-2" description="MOD_PLAYERJR_AD_DESC_PLUGGAPVER">
+					<option value="gapro-1">MOD_PLAYERJR_AD_VALUE_VERSION_1</option>
+					<option value="gapro-2">MOD_PLAYERJR_AD_VALUE_VERSION_2</option>
+				</field>
+				<field name="GaProPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGAPEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGGAPEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="GaProaccountid" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGGAPID" description="MOD_PLAYERJR_AD_DESC_PLUGGAPID" size="12" />
+				<field name="GaProtrackstarts" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGAPST" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGGAPST">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="GaProtrackpercentage" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGAPPER" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGGAPPER">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="GaProtracktime" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGAPTIME" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGGAPTIME">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="GaProidstring" type="text" default="||streamer||/||file||" label="MOD_PLAYERJR_AD_LABEL_PLUGGAPIDSTRING" description="MOD_PLAYERJR_AD_DESC_PLUGGAPIDSTRING" size="12" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_REVOLT">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGREVOLT" type="spacer" default="" />
+				<field	name="RevoltPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGREVOLTEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGREVOLTEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="RevoltPlugingain" type="text" default="1" label="MOD_PLAYERJR_AD_LABEL_PLUGREVOLTG" description="MOD_PLAYERJR_AD_DESC_PLUGREVOLTG" size="3" />
+				<field name="RevoltPlugintimeout" type="text" default="10" label="MOD_PLAYERJR_AD_LABEL_PLUGREVOLTTI" description="MOD_PLAYERJR_AD_DESC_PLUGREVOLTTI" size="4" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_CAPTIONS">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGCAP" type="spacer" default="" />
+				<field name="CaptionsPluginversion" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGCAPVER" default="2" description="MOD_PLAYERJR_AD_DESC_PLUGCAPVER">
+					<option value="1">MOD_PLAYERJR_AD_VALUE_VERSION_1</option>
+					<option value="2">MOD_PLAYERJR_AD_VALUE_VERSION_2</option>
+				</field>
+				<field	name="CaptionsPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGCAPEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGCAPEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field	name="Captionsback" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGCAPBG" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGCAPBG">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="Captionsfontsize" type="text" default="14" label="MOD_PLAYERJR_AD_LABEL_PLUGCAPFS" description="MOD_PLAYERJR_AD_DESC_PLUGCAPFS" size="3" />
+				<field	name="Captionsstate" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGCAPST" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGCAPST">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_FLOW">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGFLOW" type="spacer" default="" />
+				<field name="FlowPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="FlowPluginversion" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWVER" default="flow-2" description="MOD_PLAYERJR_AD_LABEL_PLUGFLOWVER">
+						<option value="flow-1">MOD_PLAYERJR_AD_VALUE_VERSION_1</option>
+						<option value="flow-2">MOD_PLAYERJR_AD_VALUE_VERSION_2</option>
+				</field>
+				<field name="FlowPlugincoverheight" type="text" default="100" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWCOVH" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWCOVH" />
+				<field name="FlowPluginsize" type="text" default="100" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWSZ" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWSZ" />
+				<field	name="FlowPluginshowtext" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWTXT" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWTXT">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="FlowPluginposition" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWPOS" default="" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWPOS">
+					<option value="">MOD_PLAYERJR_AD_VALUE_BLANK</option>
+					<option value="top">MOD_PLAYERJR_AD_VALUE_TOP</option>
+					<option value="bottom">MOD_PLAYERJR_AD_VALUE_BOTTOM</option>
+					<option value="left">MOD_PLAYERJR_AD_VALUE_LEFT</option>
+					<option value="right">MOD_PLAYERJR_AD_VALUE_RIGHT</option>
+				</field>
+				<field name="FlowPlugindefaultcover" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWDEFCOV" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWDEFCOV" />
+				<field name="FlowPlugintitleoffset" type="text" default="5" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWTIOFF" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWTIOFF" />
+				<field name="FlowPlugindescriptionoffset" type="text" default="25" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWDESCOFF" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWDESCOFF" />
+				<field name="FlowPluginfont" type="text" default="Arial Rounded MT Bold" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWFONT" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWFONT" />
+				<field name="FlowPluginfontsize" type="text" default="12" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWFONTSIZE" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWFONTSIZE" />
+				<field name="FlowPlugincolor" type="text" default="f1f1f1" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWFONTCOLOR" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWFONTCOLOR" />
+				<field name="FlowPluginbackgroundcolor" type="text" default="000000" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWBACKGROUNDCOLOR" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWBACKGROUNDCOLOR" />
+				<field name="FlowPlugintweentime" type="text" default="0.6" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWTWTIME" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWTWTIME" />
+				<field name="FlowPluginautorotate" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWAUTORATE" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWAUTORATE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="FlowPluginrotatedelay" type="text" default="2500" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWROTDEL" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWROTDEL" />
+				<field name="FlowPlugincontrolbaricon" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGFLOWCTLICO" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGFLOWCTLICO">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_FACEBOOK">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGFACE" type="spacer" default="" />
+				<field	name="FacePluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGFACEEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGFACEEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="FacePluginfbitlink" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGFACELINK" description="MOD_PLAYERJR_AD_DESC_PLUGFACELINK" size="70" />
+				<field name="FacePluginfbitthumbnail" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGSHARINGTHUMB" description="MOD_PLAYERJR_AD_DESC_PLUGSHARINGTHUMB" size="70" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_TWEET">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGTWEET" type="spacer" default="" />
+				<field	name="TweetPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGTWEETEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGTWEETEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="TweetPlugintweetitlink" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGTWEETLINK" description="MOD_PLAYERJR_AD_DESC_PLUGTWEETLINK" size="70" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_DABBER">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGGRID" type="spacer" default="" />
+				<field name="GridPluginversion" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDVER" default="grid-2" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDVER">
+					<option value="grid-1">MOD_PLAYERJR_AD_VALUE_GRID_VERSION_1</option>
+					<option value="grid-2">MOD_PLAYERJR_AD_VALUE_GRID_VERSION_2</option>
+					<option value="basic-1">MOD_PLAYERJR_AD_VALUE_BASIC</option>
+					<option value="carousel-1">MOD_PLAYERJR_AD_VALUE_CAROUSEL</option>
+				</field>
+				<field	name="GridPluginEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="GridPluginrows" type="text" default="4" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDROWS" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDROWS" />
+				<field name="GridPlugintilt" type="text" default="8" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDTILT" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDTILT" />
+				<field name="GridPlugindistance" type="text" default="50" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDDIST" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDDIST" />
+				<field name="GridPluginstart_distance" type="text" default="500" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDSTARTDIS" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDSTARTDIS" />
+				<field name="GridPluginfocus_distance" type="text" default="200" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDFOCUSDIS" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDFOCUSDIS" />
+				<field name="GridPluginreflections" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDREFLECTIONS" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDREFLECTIONS">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="GridPluginglow" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDGLOW" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDGLOW">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="GridPluginthumbnailwidth" type="text" default="480" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDTHUMBWID" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDTHUMB" />
+				<field name="GridPluginthumbnailheight" type="text" default="270" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDTHUMBHEI" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDTHUMBHEI" />
+				<field name="GridPluginhorizontalmargin" type="text" default="100" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDHORMARG" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDHORMARG" />
+				<field name="GridPluginverticalmargin" type="text" default="150" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDVERMARG" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDVERMARG" />
+				<field name="GridPluginoutside" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDOUTSIDE" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDOUTSIDE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="GridPlugintitles" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDTITLE" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDTITLE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="GridPlugintitles_position" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDTITLEPOS" default="over" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDTITLEPOS">
+					<option value="over">MOD_PLAYERJR_AD_VALUE_OVER</option>
+					<option value="top">MOD_PLAYERJR_AD_VALUE_TOP</option>
+					<option value="bottom">MOD_PLAYERJR_AD_VALUE_BOTTOM</option>
+				</field>
+				<field name="GridPlugintitles_font" type="text" default="_sans" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDTITLEFONT" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDTITLEFONT" />
+				<field name="GridPluginfade_titles" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDTITLEFADE" default="1" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDTITLEFADE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="GridPluginborder" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDBORDER" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDBORDER">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="GridPlugindof_blur" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDDOFBLUR" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDDOFBLUR">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="GridPlugindof_fade" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGGRIDDOFFADE" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGGRIDDOFFADE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_ADTONOMYTEXT">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGADTTEXT" type="spacer" default="" />
+				<field name="adttextEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGADTTEXTEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGADTTEXTEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="adttextconfig" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGADTTEXTCONF" description="MOD_PLAYERJR_AD_DESC_PLUGADTTEXTCONF" size="70" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_ADTONOMYVIDEO">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGADTVIDEO" type="spacer" default="" />
+				<field name="adtvideoEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGADTVIDEOEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGADTVIDEOEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="adtvideoconfig" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGADTVIDEOCONF" description="MOD_PLAYERJR_AD_DESC_PLUGADTVIDEOCONF" size="70" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_ADTONOMYIMAGE">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGADTIMAGE" type="spacer" default="" />
+				<field name="adtimageEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGADTIMAGEEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGADTIMAGEEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="adtimagegraphic" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGADTIMAGEGRAPHIC" description="MOD_PLAYERJR_AD_DESC_PLUGADTIMAGEGRAPHIC" size="70" />
+				<field name="adtimagelink" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGADTIMAGELINK" description="MOD_PLAYERJR_AD_DESC_PLUGADTIMAGELINK" size="70" />
+				<field name="adtimagepositions" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGADTIMAGEPOS" default="pre,post" description="MOD_PLAYERJR_AD_DESC_PLUGADTIMAGEPOS">
+					<option value="pre,post">MOD_PLAYERJR_AD_VALUE_PRE_POST</option>
+					<option value="pre">MOD_PLAYERJR_AD_VALUE_PRE</option>
+					<option value="post">MOD_PLAYERJR_AD_VALUE_POST</option>
+					<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+				</field>
+				<field name="adtimageonpause" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGADTIMAGEPAUSE" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGADTIMAGEPAUSE">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_OVA">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGOVA" type="spacer" default="" />
+				<field name="ovaEnabled" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGOVAEN" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGOVAEN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="ovajson" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGOVAJSON" description="MOD_PLAYERJR_AD_DESC_PLUGOVAJSON" rows="5" cols="40" />
+				<field name="ovacompanion" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMP" default="0" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMP">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="ovacompanionposition" type="radio" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMPPOS" default="after" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPPOS">
+					<option value="before">MOD_PLAYERJR_AD_VALUE_BEFORE</option>
+					<option value="after">MOD_PLAYERJR_AD_VALUE_AFTER</option>
+				</field>
+				<field name="ovacompanioncsssrc" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMCSSSRC" default="preconfigure" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPCSSSRC">
+					<option value="preconfigure">MOD_PLAYERJR_AD_VALUE_OVACSSPRE</option>
+					<option value="cssfields">MOD_PLAYERJR_AD_VALUE_OVACSSFIELDS</option>
+					<option value="cssfile">MOD_PLAYERJR_AD_VALUE_OVACSSFILE</option>
+					<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+				</field>
+				<field name="ovacompanionbg" type="text" default="CCCCCC" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMPBG" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPBG" size="10" />
+				<field name="ovacompanionheight" type="text" default="240" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMPHEIGHT" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPHEIGHT" size="10" />
+				<field name="ovacompanionwidth" type="text" default="200" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMPWIDTH" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPWIDTH" size="10" />
+				<field name="ovacompanionfloat" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMPFLOAT" default="left" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPFLOAT">
+					<option value="left">MOD_PLAYERJR_AD_VALUE_LEFT</option>
+					<option value="right">MOD_PLAYERJR_AD_VALUE_RIGHT</option>
+					<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+				</field>
+				<field name="ovaplayerfloat" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGOVAPLAFLOAT" default="left" description="MOD_PLAYERJR_AD_DESC_PLUGOVAPLAFLOAT">
+					<option value="left">MOD_PLAYERJR_AD_VALUE_LEFT</option>
+					<option value="right">MOD_PLAYERJR_AD_VALUE_RIGHT</option>
+					<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+				</field>
+				<field name="ovacompanionmargin" type="text" default="5" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMPMARGIN" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPMARGIN" size="6" />
+				<field name="ovacompanionmarginpos" type="list" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMPMARGINPOS" default="left" description="MOD_PLAYERJR_AD_DESC_PLUGOVAMARGINPOS">
+					<option value="left">MOD_PLAYERJR_AD_VALUE_LEFT</option>
+					<option value="right">MOD_PLAYERJR_AD_VALUE_RIGHT</option>
+					<option value="top">MOD_PLAYERJR_AD_VALUE_TOP</option>
+					<option value="bottom">MOD_PLAYERJR_AD_VALUE_BOTTOM</option>
+				</field>
+				<field name="ovaplayercss" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGOVAPLACSS" description="MOD_PLAYERJR_AD_DESC_PLUGOVAPLACSS" rows="5" cols="40" />
+				<field name="ovacompanioncss" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGOVACOMCSS" description="MOD_PLAYERJR_AD_DESC_PLUGOVACOMPCSS" rows="5" cols="40" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_PLUGINS_EXTRA">
+				<field name="MOD_PLAYERJR_AD_DESC_PLUGEXTRA" type="spacer" default="" />
+				<field name="extrapluginlist" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGEXTRA" description="MOD_PLAYERJR_AD_DESC_PLUGEXTRALIST" rows="5" cols="40" />
+				<field name="extrapluginflashvarslist" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_PLUGEXTRAVARSLIST" description="MOD_PLAYERJR_AD_DESC_PLUGEXTRAVARSLIST" rows="5" cols="40" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_EVENT">
+				<field name="Playlistevents" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_EXTRAJSEVENTS" description="MOD_PLAYERJR_AD_DESC_EXTRAJSEVENTS" rows="5" cols="40" />
+				<field name="extrajsname" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_EXTRAJSNAME" description="MOD_PLAYERJR_AD_DESC_EXTRAJSNAME" />
+			</fieldset>
+			<fieldset name="PLAYERJR_AD_GLOBAL">
+				<field name="MOD_PLAYERJR_AD_DESC_GLOBAL" type="spacer" default="" />
+				<field name="PlaylistJWVersion" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALJWV" default="JW5_HTML5" description="MOD_PLAYERJR_AD_DESC_GLOBALJWV">
+					<option value="5">MOD_PLAYERJR_AD_VALUE_JW5</option>
+					<option value="JW5_HTML5">MOD_PLAYERJR_AD_VALUE_JW5_FALLBACK_HTML5</option>
+					<option value="HTML5_JW5">MOD_PLAYERJR_AD_VALUE_HTML5_FALLBACK_JW5</option>
+					<option value="4">MOD_PLAYERJR_AD_VALUE_JW4</option>
+				</field>
+				<field name="moduleclass_sfx" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_GLOBALCLASS" description="MOD_PLAYERJR_AD_DESC_GLOBALCLASS" />
+				<field name="PlaylistSwfobject" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALSWF" default="1" description="MOD_PLAYERJR_AD_DESC_GLOBALSWF">
+					<option value="2">MOD_PLAYERJR_AD_VALUE_AUTO</option>
+					<option value="0">MOD_PLAYERJR_AD_VALUE_FORNO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_FORYES</option>
+				</field>
+				<field name="Playlistmetaload" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALMETA" default="2" description="MOD_PLAYERJR_AD_DESC_GLOBALMETA">
+					<option value="2">MOD_PLAYERJR_AD_VALUE_AUTO</option>
+					<option value="0">MOD_PLAYERJR_AD_VALUE_FORNO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_FORYES</option>
+				</field>
+				<field name="PlaylistFlashinstall" type="radio" label="MOD_PLAYERJR_AD_LABEL_GLOBALFI" default="1" description="MOD_PLAYERJR_AD_DESC_GLOBALFI">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="Playlistconfig" type="text" default="" label="MOD_PLAYERJR_AD_LABEL_GLOBALCONFIG" description="MOD_PLAYERJR_AD_DESC_GLOBALCONFIG" size="70" />
+				<field name="MOD_PLAYERJR_AD_DESC_HTML5" type="spacer" default="" />
+				<field name="PlaylistjwplayerLoad" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALJWPLAYER" default="2" description="MOD_PLAYERJR_AD_DESC_GLOBALJWPLAYER">
+					<option value="2">MOD_PLAYERJR_AD_VALUE_AUTO</option>
+					<option value="0">MOD_PLAYERJR_AD_VALUE_FORNO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_FORYES</option>
+				</field>
+				<field name="Playlistfallbackdownload" type="radio" label="MOD_PLAYERJR_AD_LABEL_GLOBALFALLBACKDOWN" default="1" description="MOD_PLAYERJR_AD_DESC_GLOBALFALLBACKDOWN">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="PlaylistiscrollLoad" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALISCROLL" default="2" description="MOD_PLAYERJR_AD_DESC_GLOBALISCROLL">
+					<option value="2">MOD_PLAYERJR_AD_VALUE_AUTO</option>
+					<option value="0">MOD_PLAYERJR_AD_VALUE_FORNO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_FORYES</option>
+				</field>
+				<field name="MOD_PLAYERJR_AD_DESC_JWBOX" type="spacer" default="" />
+				<field name="PlaylistjqueryLoad" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALJQU" default="2" description="MOD_PLAYERJR_AD_DESC_GLOBALJQU">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_AUTO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_FORNO</option>
+					<option value="2">MOD_PLAYERJR_AD_VALUE_FORYES</option>
+				</field>
+				<field name="PlaylistjqueryjwboxLoad" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALJQUJWBOX" default="2" description="MOD_PLAYERJR_AD_DESC_GLOBALJQUJWBOX">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_AUTO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_FORNO</option>
+					<option value="2">MOD_PLAYERJR_AD_VALUE_FORYES</option>
+				</field>
+				<field name="Playlistjquerymootoolsconflict" type="radio" label="MOD_PLAYERJR_AD_LABEL_GLOBALJWBMOO" default="1" description="MOD_PLAYERJR_AD_DESC_GLOBALJWBMOO">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+				</field>
+				<field name="Playlistjwboxcontainer" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALJWBCON" default="0" description="MOD_PLAYERJR_AD_DESC_GLOBALJWBCON">
+					<option value="span">MOD_PLAYERJR_AD_VALUE_SPAN</option>
+					<option value="div">MOD_PLAYERJR_AD_VALUE_DIV</option>
+				</field>
+				<field name="PlaylistcssLoad" type="list" label="MOD_PLAYERJR_AD_LABEL_GLOBALCSS" default="1" description="MOD_PLAYERJR_AD_DESC_GLOBALCSS">
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NO</option>
+					<option value="1">MOD_PLAYERJR_AD_VALUE_YES</option>
+					<option value="2">MOD_PLAYERJR_AD_VALUE_USECSSFIELD</option>
+				</field>
+				<field name="mod_css" type="textarea" default="" label="MOD_PLAYERJR_AD_LABEL_GLOBALCSSFIELD" description="MOD_PLAYERJR_AD_DESC_GLOBALCSSFIELD" rows="5" cols="40" />
+				<field name="MOD_PLAYERJR_AD_DESC_CACHE" type="spacer" default="" />
+				<field name="cache" type="list" default="0" label="MOD_PLAYERJR_AD_LABEL_GLOBALCH" description="MOD_PLAYERJR_AD_DESC_GLOBALCH">
+					<option value="1">MOD_PLAYERJR_AD_VALUE_UGLOB</option>
+					<option value="0">MOD_PLAYERJR_AD_VALUE_NCH</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="MOD_PLAYERJR_AD_LABEL_GLOBALCHTI" description="MOD_PLAYERJR_AD_DESC_GLOBALCHTI" />
+				<field name="MOD_PLAYERJR_AD_DESC_DEBUG" type="spacer" default="" />
+				<field name="Playlistdebug" type="list" default="none" label="MOD_PLAYERJR_AD_LABEL_DEBUGCH" description="MOD_PLAYERJR_AD_DESC_DEBUGCH">
+					<option value="none">MOD_PLAYERJR_AD_VALUE_NONE</option>
+					<option value="trace">MOD_PLAYERJR_AD_VALUE_TRACE</option>
+					<option value="arthropod">MOD_PLAYERJR_AD_VALUE_ARTHROPOD</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+</install>

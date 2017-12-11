@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Quiz List Layout">
+		<message>
+			<![CDATA[QUIZ_LIST_LAYOUT_DESC]]>
+		</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request">
+
+			<field name="task" type="hidden"
+				label=""
+				default="quiz_list"
+				description=""
+			/>
+		</fieldset>
+	</fields>
+	<state>
+		<name>Quiz List Layout</name>
+		<description>QUIZ_LIST_LAYOUT_DESC</description>
+		<url>
+			<param name="task" type="hidden" default="quiz_list" label="" description="" />
+		</url>
+		<params>
+		</params>
+	</state>
+</metadata>

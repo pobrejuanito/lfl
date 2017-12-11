@@ -1,0 +1,76 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/*
+ * Widgetkit Slideshow: Revista Tabs Style
+ */
+
+
+
+.wk-slideshow.wk-slideshow-revista-tabs-copy 
+{
+	top:-27px;
+}
+
+/* Navigation
+----------------------------------------------------------------------------------------------------*/
+
+.wk-slideshow-revista-tabs-copy .nav,
+.wk-slideshow-revista-tabs-copy .nav li,
+.wk-slideshow-revista-tabs-copy .nav span { float: left; }
+
+.wk-slideshow-revista-tabs-copy .nav li {
+	border-left:  1px #ccc solid ;
+	border-radius: 5px;
+	background: #f1f1f1;
+	background-clip: padding-box;
+	color: #777;
+}
+.wk-slideshow-revista-tabs-copy .nav li:first-child { margin-left: 0;}
+
+.wk-slideshow-revista-tabs-copy .nav span {
+	padding: 5px 10px;
+	overflow: hidden;
+}
+
+.wk-slideshow-revista-tabs-copy .nav li:hover { background: #f8f8f8; color: #444; }
+/*.wk-slideshow-revista-tabs-copy .nav li:active:not([class*="active"]) span { padding-top: 4px; padding-bottom: 5px; }*/
+.wk-slideshow-revista-tabs-copy .nav li.active {
+	padding-bottom: 0px;
+	background: #fff;
+	background-clip: padding-box;
+	box-shadow: none;
+}
+
+
+/* Content
+----------------------------------------------------------------------------------------------------*/
+
+.wk-slideshow-revista-tabs-copy .slides-container {
+
+}
+
+.wk-slideshow-revista-tabs-copy .slides > li > article { padding: 0px; }
+
+
+/* Alignment: Navigation
+---------------------------------------------------------------------------------------------------*/
+
+/* Left */
+.wk-slideshow-revista-tabs-copy .nav-left + .slides-container { border-top-left-radius: 0; }
+
+/* Center */
+.wk-slideshow-revista-tabs-copy .nav-center .nav {
+	position: relative;
+	left: 50%;
+}
+
+.wk-slideshow-revista-tabs-copy .nav-center .nav li {
+	position: relative;
+	left: -50%;
+}
+
+/* Right */
+.wk-slideshow-revista-tabs-copy .nav-right .nav { float: right; }
+
+.wk-slideshow-revista-tabs-copy .nav-right + .slides-container { border-top-right-radius: 0; }
+

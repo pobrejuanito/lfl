@@ -1,0 +1,74 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+@import url(../../../css/system.css);
+
+
+
+
+/* Search
+----------------------------------------------------------------------------------------------------*/
+
+#searchbox
+{
+	background: url(../images/searchbox.png) no-repeat;
+	background-size: auto;
+	height: 28px;
+	margin: 3px 0;
+	border: none;
+	width: 65px;
+}
+#searchbox input
+{
+	color: #ddd;
+}
+
+#system
+{
+	padding:20px;
+}
+/* vod header
+--------------------*/
+
+#system .item > header
+{
+	margin:15px 0 0 0;
+}
+
+#system .item > header .title
+{
+}
+.replay #system .item > header .title, .sermon #system .item > header .title
+{
+bottom: 130px;
+    position: absolute;
+    z-index: 99;
+    color: #6d6d6d;
+    text-align: center;
+    width: 770px;
+    font-size: 18px;
+}
+
+.study #system
+{
+	padding: 0px;
+}
+
+#system-message-container {
+	padding: 0px;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+#jform_name-lbl {
+	width: 100px;
+}
+
+#system-message dd, #system-message dd.error
+{
+display: block;
+    height: 20px;
+    padding: 15px;
+    position: absolute;
+    top: 115px;
+    width: 930px;	
+}

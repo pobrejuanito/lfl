@@ -1,0 +1,84 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/*
+ * Widgetkit Slideshow: Revista Articles Style
+ */
+
+
+/* Navication Box
+
+----------------------------------------------------------------------------------------------------*/
+
+.wk-slideshow div div.navigation
+{
+	background: url(images/nav-box.png) repeat-x;
+	height: 35px;
+}
+
+
+/* Navigation
+----------------------------------------------------------------------------------------------------*/
+
+.wk-slideshow .next, .wk-slideshow .prev
+{
+}
+
+.wk-slideshow-revista-articles-copy .nav {
+	position: relative;
+	top: 10px;
+	right: 0;
+	text-align: center;
+	z-index: 5;
+}
+
+.wk-slideshow-revista-articles-copy .prev + .nav { right: 0px; }
+
+.wk-slideshow-revista-articles-copy .nav li {
+	display: inline-block;
+	margin-left: 3px;
+}
+.wk-slideshow-revista-articles-copy .nav li:first-child { margin-left: 0; }
+
+.wk-slideshow-revista-articles-copy .nav span {
+	display: none;
+	overflow: hidden;
+}
+.wk-slideshow-revista-articles-copy .nav .active span { display: inherit; }
+
+.wk-slideshow-revista-articles-copy ul.slides
+{
+	background: url(images/box-gradation.png) repeat-y;
+}
+/* Buttons
+----------------------------------------------------------------------------------------------------*/
+
+.wk-slideshow-revista-articles-copy > div { position: relative; }
+
+.wk-slideshow-revista-articles-copy > div .next,
+.wk-slideshow-revista-articles-copy > div .prev {
+	bottom:7px;
+	margin-right: 15px;
+	width: 21px;
+	height: 21px;
+	margin-top: 0;
+	background-image: url(images/buttons.png);
+	background-repeat: no-repeat;
+}
+.wk-slideshow-revista-articles-copy > div .prev {
+	right: 21px;
+	background-position: 0 0;
+}
+.wk-slideshow-revista-articles-copy > div .prev:hover { background-position: 0 -21px; }
+.wk-slideshow-revista-articles-copy > div .prev:active { background-position: 0 -21px; }
+.wk-slideshow-revista-articles-copy > div .next {
+	right: 0;
+	background-position: 0 -42px;
+}
+.wk-slideshow-revista-articles-copy > div .next:hover { background-position: 0 -63px; }
+.wk-slideshow-revista-articles-copy > div .next:active { background-position: 0 -63px; }
+
+/* IE7 Fixes */
+.wk-ie7 .wk-slideshow-revista-articles-copy .nav li,
+.wk-ie7 .wk-slideshow-revista-articles-copy .nav span { display: inline; }
+.wk-ie7 .wk-slideshow-revista-articles-copy .nav span { zoom: 1; }
+.wk-ie7 .wk-slideshow-revista-articles-copy .nav { top: 10px; }

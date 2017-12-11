@@ -1,0 +1,32 @@
+#jwbox2_background{
+	display: none;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: #131313;
+	z-index:1001;
+	zoom: 1;
+	-moz-opacity: 0.8;
+	opacity:0.80;
+	filter: alpha(opacity = 80);
+	overflow: auto;
+}
+.jwbox2_hidden {
+	display: none;
+	padding: 13px 26px 28px 28px;
+	position: fixed;
+	border: 16px clear;
+	background-color: clear;
+	z-index:1002;
+	overflow: hidden;
+	background-image:url('./../css/images/jwbox-close.png');
+	background-position:top right;
+	background-repeat:no-repeat;
+}
+.jwbox2_content{
+}
+.jwbox2 {
+clear: both;
+}
