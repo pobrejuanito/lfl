@@ -66,9 +66,17 @@ jQuery(document).ready(function($) {
 		//$("#down_audio_img").attr("src", $("#dai_"+$("#"+$(this).attr("parentlink")).attr("updateval")).attr("vimg"));
 		/* scroll to the top */
 		$("html, body").animate({ scrollTop: 0 }, "slow");
-		jwplayer(jwplayerid).load({
-			file: $("#"+$(this).attr("parentlink")).attr("vod_low_file"),
-		});
+        var server =  $("#"+$(this).attr("parentlink")).attr("vod_low_streamer");
+        if ( server.indexOf('tvstream') !== -1 ) {
+            server_location = 'http://tvdown.sostvnetwork.com/';
+        } else {
+            server_location = 'http://netdown.sostvnetwork.com/';
+        }
+
+        jwplayer(jwplayerid).load({
+            file: server_location+ $("#"+$(this).attr("parentlink")).attr("vod_low_file"),
+            //streamer: $("#"+$(this).attr("parentlink")).attr("vod_low_streamer")
+        });
 
 		jwplayer(jwplayerid).pause();
 		jwplayer(jwplayerid).seek(seek_time);
