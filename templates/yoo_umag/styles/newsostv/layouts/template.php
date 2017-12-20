@@ -17,11 +17,6 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="<?php echo $template_path; ?>/images/icons/favicon/favicon.png">
-    <link rel="apple-touch-icon" href="<?php echo $template_path; ?>/images/icons/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="<?php echo $template_path; ?>/images/icons/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="<?php echo $template_path; ?>/images/icons/favicon/apple-touch-icon-114x114.png">
     <!-- /. TO TOP ENDS
         ========================================================================= -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -184,6 +179,24 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
         <div class="row3 container-fluid">
             <div class="row">
                 <div class="col-lg-12 copyright">
+                    <ul class="social-icons">
+                        <li>
+                            <a href="https://www.facebook.com/soslive.tv" target="_blank"><img src="<?php echo $template_path; ?>images/socialicons/facebook.png" class="icon"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/sostvusa/" target="_blank"><img src="<?php echo $template_path; ?>images/socialicons/instagram.png" class="icon"></a>
+                        </li>
+                        <li>
+                            <a href="https://story.kakao.com/sostvus" target="_blank"><img src="<?php echo $template_path; ?>images/socialicons/kakao.png" class="icon"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCXtFSRtDJUhOywGJmSYAQTg" target="_blank"><img src="<?php echo $template_path; ?>images/socialicons/youtube.png" class="icon"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 copyright">
                     <ul class="contactus">
                         <li>미국: <a href="tel:(320) 500-1004">(320) 500-1004</a><br/> sostvus@hotmail.com</a></li>
                         <li>뉴질랜드: <a href="tel:(320) 500-1004">0800-42-3004</a><br/>sostvnz@gmail.com</a></li>
@@ -191,6 +204,7 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
                     </ul>
                 </div>
             </div>
+
         </div>
         <!-- 3RD ROW ENDS -->
     </section>
