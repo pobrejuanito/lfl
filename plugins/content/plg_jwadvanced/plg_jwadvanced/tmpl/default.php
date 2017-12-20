@@ -38,7 +38,7 @@ $return .=       ",{
 $return .=      "],   
                 'image': '/templates/yoo_umag/images/lighthouse.jpg',
                 'width': '100%',
-                'height':'450'
+                'height':'460'
             });";
 $return .= '});';
 $return .= '</script>';
