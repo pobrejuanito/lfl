@@ -178,7 +178,8 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
         <!-- 3RD ROW STARTS -->
         <div class="row3 container-fluid">
             <div class="row">
-                <div class="col-lg-12 copyright">
+                <div class="col-lg-6">
+                    <h3>SOSTV 네트워크</h3>
                     <ul class="social-icons">
                         <li>
                             <a href="https://www.facebook.com/soslive.tv" target="_blank"><img src="<?php echo $template_path; ?>images/socialicons/facebook.png" class="icon"></a>
@@ -194,18 +195,26 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 copyright">
+                <div class="col-lg-6">
+                    <h3>SOSTV Ministry</h3>
                     <ul class="contactus">
-                        <li>미국: <a href="tel:(320) 500-1004">(320) 500-1004</a><br/> sostvus@hotmail.com</a></li>
-                        <li>뉴질랜드: <a href="tel:(320) 500-1004">0800-42-3004</a><br/>sostvnz@gmail.com</a></li>
-                        <li>© Copyright <?php echo date('Y') ?> - SOSTV</li>
+                        <li><i class="fa fa-building-o"></i> 미국: P. O. Box 787 Commerce, GA 30529 U.S.A</li>
+                        <li><i class="fa fa-phone"></i><a href="tel:(320) 500-1004">(320) 500-1004</a></li>
+                        <li><i class="fa fa-envelope-o"></i>sostvus@hotmail.com</li>
+                        <li><i class="fa fa-building-o"></i> 뉴질랜드: 55 Monk RD Helensville, Auckland, New Zealand</li>
+                        <li><i class="fa fa-phone"></i><a href="tel:(320) 500-1004">0800-42-3004</a></li>
+                        <li><i class="fa fa-envelope-o"></i>sostvnz@gmail.com</li>
                     </ul>
                 </div>
             </div>
 
         </div>
+        <div class="row3 container-fluid" style="background-color: #292929;">
+            <div class="row">
+                <div class="col-lg-12 copyright">© Copyright <?php echo date('Y') ?> - SOSTV All Rights Reserved</div>
+            </div>
+        </div>
+
         <!-- 3RD ROW ENDS -->
     </section>
     <!-- /. FOOTER ENDS
