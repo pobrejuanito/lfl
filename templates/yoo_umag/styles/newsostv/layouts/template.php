@@ -191,7 +191,13 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
                             <a href="https://story.kakao.com/sostvus" target="_blank"><img src="<?php echo $template_path; ?>images/socialicons/kakao.png" class="icon"></a>
                         </li>
                         <li>
-                            <a href="https://www.youtube.com/channel/UCXtFSRtDJUhOywGJmSYAQTg" target="_blank"><img src="<?php echo $template_path; ?>images/socialicons/youtube.png" class="icon"></a>
+                            <a href="https://www.youtube.com/channel/UCXtFSRtDJUhOywGJmSYAQTg" target="_blank">
+                                <img src="<?php echo $template_path; ?>images/socialicons/youtube.png" class="icon"></a>
+                        </li>
+                        <li>
+                            <a href="http://finalg.sostvnetwork.com" target="_blank">
+                                <img src="<?php echo $template_path; ?>images/socialicons/finalg.png" class="icon" >
+                            </a>
                         </li>
                     </ul>
                 </div>
