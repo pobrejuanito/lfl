@@ -30,83 +30,6 @@ $app = JFactory::getApplication('site');
 
 <?php else : ?>
 
-<script>
-jQuery(document).ready(function($) {
-
-	<?php
-		$urls = json_decode($this->items[0]->urls);
-		$seek_time = (isset($urls->start_time) && ($urls->start_time != '')) ? $urls->start_time : 0;
-		echo 'var seek_time = ' . $seek_time . ';';
-	?>
-	var jwplayerid = $("#jwplayerid").attr("playerid");
-	/*
-	jwplayer(jwplayerid).onReady(function(e) {
-		jwplayer(jwplayerid).pause();
-		jwplayer(jwplayerid).seek(seek_time);
-		jwplayer(jwplayerid).play();
-	});
-    */
-	$('a[linktype^="video_links"]').click(function(event) {
-
-		event.preventDefault();
-		var seek_time = parseInt($("#"+$(this).attr("parentlink")).attr("seek_time"));
-		var jwplayerid = $("#jwplayerid").attr("playerid");
-		/* make bold what was clicked */
-		$('a[id^="atitle"]').each(function(index) {
-		 	$(this).removeClass('jw_category_active_link');
-		});
-		$("#video_title").html($(this).html());
-		$("#"+$(this).attr("parentlink")).addClass('jw_category_active_link');
-		/* transfer attribute information to vod buttons*/
-		$("#vodbutton_high").attr("file", $("#"+$(this).attr("parentlink")).attr("vod_high_file"));
-		$("#vodbutton_high").attr("streamer", $("#"+$(this).attr("parentlink")).attr("vod_high_streamer"));
-		$("#vodbutton_high").attr("aid", $("#"+$(this).attr("parentlink")).attr("updateval"));
-		$("#vodbutton_low").attr("file", $("#"+$(this).attr("parentlink")).attr("vod_low_file"));
-		$("#vodbutton_low").attr("streamer", $("#"+$(this).attr("parentlink")).attr("vod_low_streamer"));
-		//$("#vodbutton_audio").attr("file", $("#"+$(this).attr("parentlink")).attr("vod_audio"));
-		$("#button_youtube_a").attr("href", $("#ayt_"+$(this).attr('realId')).attr("href"));
-		$("#button_youtube_a").attr("target", $("#ayt_"+$(this).attr('realId')).attr("href"));
-		$("#button_youtube_img").attr("src", $("#iyt_"+$(this).attr('realId')).attr("vodSrc"));
-		/* transfer img information to vod buttons */
-		$("#down_high_img").attr("src", $("#dhi_"+$("#"+$(this).attr("parentlink")).attr("updateval")).attr("vimg"));
-		$("#down_low_img").attr("src", $("#dli_"+$("#"+$(this).attr("parentlink")).attr("updateval")).attr("vimg"));
-		//$("#down_audio_img").attr("src", $("#dai_"+$("#"+$(this).attr("parentlink")).attr("updateval")).attr("vimg"));
-		/* scroll to the top */
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-
-		var server =  $("#"+$(this).attr("parentlink")).attr("vod_low_streamer");
-		if ( server.indexOf('tvstream') !== -1 ) {
-		    server_location = 'http://tvdown.sostvnetwork.com/';
-        } else {
-		    server_location = 'http://netdown.sostvnetwork.com/';
-        }
-
-		jwplayer(jwplayerid).load({
-			file: server_location+ $("#"+$(this).attr("parentlink")).attr("vod_low_file"),
-			//streamer: $("#"+$(this).attr("parentlink")).attr("vod_low_streamer")
-		});
-
-		jwplayer(jwplayerid).pause();
-		jwplayer(jwplayerid).seek(seek_time);
-		jwplayer(jwplayerid).play();
-	});
-
-	$('a[id^="vodbutton"]').click( function() {
-
-		if ( $(this).attr('file') !== "javascript:void(0)" ) {
-			if ( $(this).attr('type') === "video" ) {
-				jwplayer().load({
-                    file: $(this).attr('file') + '?' + Math.round(1000 * Math.random()),
-                });
-			}
-		}
-	});
-
-	$('input[type=text]').click(function(e) {
-		$(this).select();
-	});
-});
-</script>
 
 <!-- ***** START Special JW Player Category ***** -->
 <?php if ( $this->params->get('show_jwplayer_listview') == 1 ): ?>
@@ -325,6 +248,85 @@ jQuery(document).ready(function($) {
 		<input type="hidden" name="limitstart" value="" />
 	</form>
 	</div>
+
+
+        <script>
+            jQuery(document).ready(function($) {
+
+                <?php
+                $urls = json_decode($this->items[0]->urls);
+                $seek_time = (isset($urls->start_time) && ($urls->start_time != '')) ? $urls->start_time : 0;
+                echo 'var seek_time = ' . $seek_time . ';';
+                ?>
+                var jwplayerid = $("#jwplayerid").attr("playerid");
+                /*
+                 jwplayer(jwplayerid).onReady(function(e) {
+                 jwplayer(jwplayerid).pause();
+                 jwplayer(jwplayerid).seek(seek_time);
+                 jwplayer(jwplayerid).play();
+                 });
+                 */
+                $('a[linktype^="video_links"]').click(function(event) {
+
+                    event.preventDefault();
+                    var seek_time = parseInt($("#"+$(this).attr("parentlink")).attr("seek_time"));
+                    var jwplayerid = $("#jwplayerid").attr("playerid");
+                    /* make bold what was clicked */
+                    $('a[id^="atitle"]').each(function(index) {
+                        $(this).removeClass('jw_category_active_link');
+                    });
+                    $("#video_title").html($(this).html());
+                    $("#"+$(this).attr("parentlink")).addClass('jw_category_active_link');
+                    /* transfer attribute information to vod buttons*/
+                    $("#vodbutton_high").attr("file", $("#"+$(this).attr("parentlink")).attr("vod_high_file"));
+                    $("#vodbutton_high").attr("streamer", $("#"+$(this).attr("parentlink")).attr("vod_high_streamer"));
+                    $("#vodbutton_high").attr("aid", $("#"+$(this).attr("parentlink")).attr("updateval"));
+                    $("#vodbutton_low").attr("file", $("#"+$(this).attr("parentlink")).attr("vod_low_file"));
+                    $("#vodbutton_low").attr("streamer", $("#"+$(this).attr("parentlink")).attr("vod_low_streamer"));
+                    //$("#vodbutton_audio").attr("file", $("#"+$(this).attr("parentlink")).attr("vod_audio"));
+                    $("#button_youtube_a").attr("href", $("#ayt_"+$(this).attr('realId')).attr("href"));
+                    $("#button_youtube_a").attr("target", $("#ayt_"+$(this).attr('realId')).attr("href"));
+                    $("#button_youtube_img").attr("src", $("#iyt_"+$(this).attr('realId')).attr("vodSrc"));
+                    /* transfer img information to vod buttons */
+                    $("#down_high_img").attr("src", $("#dhi_"+$("#"+$(this).attr("parentlink")).attr("updateval")).attr("vimg"));
+                    $("#down_low_img").attr("src", $("#dli_"+$("#"+$(this).attr("parentlink")).attr("updateval")).attr("vimg"));
+                    //$("#down_audio_img").attr("src", $("#dai_"+$("#"+$(this).attr("parentlink")).attr("updateval")).attr("vimg"));
+                    /* scroll to the top */
+                    $("html, body").animate({ scrollTop: 0 }, "slow");
+
+                    var server =  $("#"+$(this).attr("parentlink")).attr("vod_low_streamer");
+                    if ( server.indexOf('tvstream') !== -1 ) {
+                        server_location = 'http://tvdown.sostvnetwork.com/';
+                    } else {
+                        server_location = 'http://netdown.sostvnetwork.com/';
+                    }
+
+                    jwplayer(jwplayerid).load({
+                        file: server_location+ $("#"+$(this).attr("parentlink")).attr("vod_low_file"),
+                        //streamer: $("#"+$(this).attr("parentlink")).attr("vod_low_streamer")
+                    });
+
+                    jwplayer(jwplayerid).pause();
+                    jwplayer(jwplayerid).seek(seek_time);
+                    jwplayer(jwplayerid).play();
+                });
+
+                $('a[id^="vodbutton"]').click( function() {
+
+                    if ( $(this).attr('file') !== "javascript:void(0)" ) {
+                        if ( $(this).attr('type') === "video" ) {
+                            jwplayer().load({
+                                file: $(this).attr('file') + '?' + Math.round(1000 * Math.random()),
+                            });
+                        }
+                    }
+                });
+
+                $('input[type=text]').click(function(e) {
+                    $(this).select();
+                });
+            });
+        </script>
 <!-- ***** END Special JW Player Category ***** -->
 <?php else:  ?>
     <div class="row">
