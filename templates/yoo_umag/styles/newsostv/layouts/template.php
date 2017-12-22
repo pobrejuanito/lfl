@@ -5,7 +5,6 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
 <!DOCTYPE html>
 <html lang="<?php echo $this['config']->get('language'); ?>">
 <head>
-    <title>SOSTV</title>
     <?php echo $this['template']->render('head'); ?>
     <!-- All Stylesheets -->
     <link href="<?php echo $template_path; ?>/css/all-stylesheets.css" rel="stylesheet">
@@ -62,7 +61,7 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
         <div class="row">
             <div class="col-lg-12 logo">
                 <?php if ($this['modules']->count('logo')) : ?>
-                    <a href="<?php echo $this['config']->get('site_url'); ?>"><?php echo $this['modules']->render('logo'); ?></a>
+                    <?php echo $this['modules']->render('logo'); ?>
                 <?php endif; ?>
             </div>
         </div>

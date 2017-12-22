@@ -38,7 +38,7 @@ class WarpMenuDefault extends WarpMenu {
             if ( $li->children('ul')->length > 0 ) {
                 $li->attr('class','dropdown yamm-fw');
                 $children = $li->children('a,span');
-                $children[0]->append('<a class="dropdown-caret dropdown-toggle"  style="display: none" data-hover="dropdown" ></a>');
+                $children[0]->append('<a class="dropdown-caret dropdown-toggle" style="display: none" data-hover="dropdown" ></a>');
                 if ($children[0]->getAttribute('class') == 'about-us-class') {
                     $children[0]->append('<ul class="visible-xs">
                         <li><a href="about.html">SOSTV는 누구인가?</a></li>
