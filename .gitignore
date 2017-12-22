@@ -2,3 +2,4 @@ configuration.php
 .idea/
 .DS_Store
 images/
+cache/
