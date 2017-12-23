@@ -136,7 +136,6 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
             <div class="row">
                 <!-- ARTICLE STARTS -->
                 <?php echo $this['modules']->render('front-left-module'); ?>
-                <?php echo $this['modules']->render('front-middle-module'); ?>
                 <?php echo $this['modules']->render('front-right-module'); ?>
                 <!-- ARTICLE ENDS -->
             </div>
