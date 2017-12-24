@@ -4,7 +4,6 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this['config']->get('language'); ?>">
-<meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
 <head>
     <?php echo $this['template']->render('head'); ?>
     <!-- All Stylesheets -->
