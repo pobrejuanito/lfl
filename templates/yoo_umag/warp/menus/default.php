@@ -38,65 +38,72 @@ class WarpMenuDefault extends WarpMenu {
             if ( $li->children('ul')->length > 0 ) {
                 $li->attr('class','dropdown yamm-fw');
                 $children = $li->children('a,span');
-                $children[0]->append('<a class="dropdown-caret dropdown-toggle" style="display: none" data-hover="dropdown" ></a>');
+
+                //$children[0]->append('<a class="dropdown-caret dropdown-toggle" style="display: none" data-hover="dropdown">&nbsp;</a>');
+                $li->append('<a class="dropdown-caret dropdown-toggle" style="display: none" data-hover="dropdown">&nbsp;</a>');
                 if ($children[0]->getAttribute('class') == 'about-us-class') {
-                    $children[0]->append('<ul class="visible-xs">
-                        <li><a href="about.html">SOSTV는 누구인가?</a></li>
-                        <li><a href="about-us-must-watch.html">꼭들어야 하는설교</a></li>
-                        <li><a href="about-us-must-read.html">꼭읽어야 하는 글</a></li>
-                        <li><a href="about-us-faq.html">SOSTV FAQ</a></li>
-                    </ul><ul class="dropdown-menu hidden-xs hidden-sm">
-                        <li>
-                            <div class="yamm-content">
-                                <div class="row no-gutter-3">
-                                    <article class="col-lg-3 col-md-3">
-                                        <div class="picture">
-                                            <div class="category-image">
-                                                <img src="/images/newsite/aboutus_first.jpg" class="img-responsive" alt="" />
-                                                <h2 class="overlay-category">SOSTV는 누구인가?</h2>
+
+                    $li->append('
+                        <ul class="visible-xs">
+                            <li><a href="about.html">SOSTV는 누구인가?</a></li>
+                            <li><a href="about-us-must-watch.html">꼭들어야 하는설교</a></li>
+                            <li><a href="about-us-must-read.html">꼭읽어야 하는 글</a></li>
+                            <li><a href="about-us-faq.html">SOSTV FAQ</a></li>
+                        </ul>
+                        <ul class="dropdown-menu hidden-xs hidden-sm">
+                            <li>
+                                <div class="yamm-content">
+                                    <div class="row no-gutter-3">
+                                        <article class="col-lg-3 col-md-3">
+                                            <div class="picture">
+                                                <div class="category-image">
+                                                    <img src="/images/newsite/aboutus_first.jpg" class="img-responsive" alt="" />
+                                                    <h2 class="overlay-category">SOSTV는 누구인가?</h2>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="caption"><a href="about.html">SOSTV는 여러분의 마음과 생애 속에 빛을 가져다 드리기 위해 일합니다. 더 읽기...</a></div>
-                                        </div>
-                                    </article>
-                                    <article class="col-lg-3 col-md-3">
-                                        <div class="picture">
-                                            <div class="category-image">
-                                                <img src="/images/newsite/aboutus_second.jpg" class="img-responsive" alt="" />
-                                                <h2 class="overlay-category">꼭들어야 하는설교</h2>
+                                            <div class="detail">
+                                                <div class="caption"><a href="about.html">SOSTV는 여러분의 마음과 생애 속에 빛을 가져다 드리기 위해 일합니다. 더 읽기...</a></div>
                                             </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="caption"><a href="/about-us-must-watch.html">꼭 들어야 하는 설교. 더 읽기...</a></div>
-                                        </div>
-                                    </article>
-                                    <article class="col-lg-3 col-md-3">
-                                        <div class="picture">
-                                            <div class="category-image">
-                                                <img src="/images/newsite/aboutus_third.jpg" class="img-responsive" alt="" />
-                                                <h2 class="overlay-category">꼭읽어야 하는 글</h2>
+                                        </article>
+                                        <article class="col-lg-3 col-md-3">
+                                            <div class="picture">
+                                                <div class="category-image">
+                                                    <img src="/images/newsite/aboutus_second.jpg" class="img-responsive" alt="" />
+                                                    <h2 class="overlay-category">꼭들어야 하는설교</h2>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="caption"><a href="/about-us-must-read.html">꼭읽어야 하는 글. 더 읽기...</a></div>
-                                        </div>
-                                    </article>
-                                    <article class="col-lg-3 col-md-3">
-                                        <div class="picture">
-                                            <div class="category-image">
-                                                <img src="/images/newsite/aboutus_fourth.jpg" class="img-responsive" alt="" />
-                                                <h2 class="overlay-category">SOSTV FAQ</h2>
+                                            <div class="detail">
+                                                <div class="caption"><a href="/about-us-must-watch.html">꼭 들어야 하는 설교. 더 읽기...</a></div>
                                             </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="caption"><a href="/about-us-faq.html">SOSTV에서 전하는 진리를 믿는 사람들과 함께 교제하거나 예배드릴 수 있나요?. 더 읽기...</a></div>
-                                        </div>
-                                    </article>
+                                        </article>
+                                        <article class="col-lg-3 col-md-3">
+                                            <div class="picture">
+                                                <div class="category-image">
+                                                    <img src="/images/newsite/aboutus_third.jpg" class="img-responsive" alt="" />
+                                                    <h2 class="overlay-category">꼭읽어야 하는 글</h2>
+                                                </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="caption"><a href="/about-us-must-read.html">꼭읽어야 하는 글. 더 읽기...</a></div>
+                                            </div>
+                                        </article>
+                                        <article class="col-lg-3 col-md-3">
+                                            <div class="picture">
+                                                <div class="category-image">
+                                                    <img src="/images/newsite/aboutus_fourth.jpg" class="img-responsive" alt="" />
+                                                    <h2 class="overlay-category">SOSTV FAQ</h2>
+                                                </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="caption"><a href="/about-us-faq.html">SOSTV에서 전하는 진리를 믿는 사람들과 함께 교제하거나 예배드릴 수 있나요?. 더 읽기...</a></div>
+                                            </div>
+                                        </article>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>');
+                            </li>
+                        </ul>
+                    ');
+
                 }
                 $li->append('<ul class="dropdown-menu"><li><div class="yamm-content"><div class="row"></div></div></li></ul>');
                 $ul_element = $li->children('ul');
@@ -107,7 +114,6 @@ class WarpMenuDefault extends WarpMenu {
                         $u->attr('class', 'submenu-items');
                         // we don't want this ul on this level, so remove it, and place it at another level
                         $li->removeChild($u);
-
                         $column_width = floor($max_columns / $u->children('li')->length);
                         // iterate over menu columns get number of columns needed
                         foreach ($u->children('li') as $sub_menu_li) {
@@ -254,7 +260,7 @@ class WarpMenuDefault extends WarpMenu {
             if ($level == 0 ) {
                 $li->attr('class', 'dropdown yamm-fw');
                 $temp_child = $li->children('a,span');
-                $temp_child[0]->append('<a class="dropdown-caret dropdown-toggle" data-hover="dropdown" ></a>');
+                $temp_child[0]->append('<a class="dropdown-caret dropdown-toggle" data-hover="dropdown"></a>');
                 $li->append('<ul class="dropdown-menu"><li></li></ul>');
             }
 			// process submenu

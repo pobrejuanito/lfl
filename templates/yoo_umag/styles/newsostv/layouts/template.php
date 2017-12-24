@@ -4,6 +4,7 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this['config']->get('language'); ?>">
+<meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
 <head>
     <?php echo $this['template']->render('head'); ?>
     <!-- All Stylesheets -->
@@ -27,15 +28,15 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
     <!-- Sidr JS Menu -->
     <script src="<?php echo $template_path; ?>js/sidr/jquery.sidr.min.js"></script>
     <!-- Owl Carousel -->
-    <script type="text/javascript" src="<?php echo $template_path; ?>owl-carousel/owl-carousel/owl.carousel.js"></script>
+    <script src="<?php echo $template_path; ?>owl-carousel/owl-carousel/owl.carousel.js"></script>
     <!-- AJAX Contact Form -->
-    <script type="text/javascript" src="<?php echo $template_path; ?>js/contact/contact-form.js"></script>
+    <script src="<?php echo $template_path; ?>js/contact/contact-form.js"></script>
     <!-- Retina -->
-    <script type="text/javascript" src="<?php echo $template_path; ?>js/retina/retina.js"></script>
+    <script src="<?php echo $template_path; ?>js/retina/retina.js"></script>
     <!-- FitVids -->
-    <script type="text/javascript" src="<?php echo $template_path; ?>js/fitvids/jquery.fitvids.js"></script>
+    <script src="<?php echo $template_path; ?>js/fitvids/jquery.fitvids.js"></script>
     <!-- Custom -->
-    <script type="text/javascript" src="<?php echo $template_path; ?>js/custom/custom.js"></script>
+    <script src="<?php echo $template_path; ?>js/custom/custom.js"></script>
 </head>
 <body>
 <div class="container content-bg">
@@ -215,7 +216,6 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
                 <div class="col-lg-12 copyright">© Copyright <?php echo date('Y') ?> - SOSTV All Rights Reserved</div>
             </div>
         </div>
-
         <!-- 3RD ROW ENDS -->
     </section>
     <!-- /. FOOTER ENDS
@@ -224,6 +224,5 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
 <!-- TO TOP STARTS
     ========================================================================= -->
 <a href="#" class="scrollup">Scroll</a>
-
 </body>
 </html>
