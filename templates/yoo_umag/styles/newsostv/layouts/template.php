@@ -28,8 +28,6 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
     <script src="<?php echo $template_path; ?>js/sidr/jquery.sidr.min.js"></script>
     <!-- Owl Carousel -->
     <script src="<?php echo $template_path; ?>owl-carousel/owl-carousel/owl.carousel.js"></script>
-    <!-- AJAX Contact Form -->
-    <script src="<?php echo $template_path; ?>js/contact/contact-form.js"></script>
     <!-- Retina -->
     <script src="<?php echo $template_path; ?>js/retina/retina.js"></script>
     <!-- FitVids -->

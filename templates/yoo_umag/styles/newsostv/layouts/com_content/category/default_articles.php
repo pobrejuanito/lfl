@@ -21,7 +21,6 @@ $tplImgDir  = JURI::base() . "templates/yoo_nano/styles/newsostv/images/";
 
 $app = JFactory::getApplication('site');
 ?>
-<! -- My Path: newsostv/com_content/category/default_articles.php --!>
 <?php if (empty($this->items)) : ?>
 
 	<?php if ($this->params->get('show_no_articles', 1)) : ?>
@@ -89,9 +88,8 @@ $app = JFactory::getApplication('site');
 			<!-- SHOW CATEGORY & DESCRIPTION -->
 			<?php if ($this->params->get('show_category_title', 1)) : ?>
                 <div class="detail">
-                    <div class="caption"><?php echo $this->items[$displayIndex]->title;?></div>
+                    <div id="video_title" class="caption"><?php echo $this->items[$displayIndex]->title;?></div>
                 </div>
-				<h3></h3>
 			<?php endif; ?>
 			<?php if ($this->params->get('show_description', 1) || $this->params->def('show_description_image', 1)) :?>
 				<div class="jw_category_description">
