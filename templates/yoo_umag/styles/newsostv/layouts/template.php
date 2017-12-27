@@ -34,6 +34,15 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
     <script src="<?php echo $template_path; ?>js/fitvids/jquery.fitvids.js"></script>
     <!-- Custom -->
     <script src="<?php echo $template_path; ?>js/custom/custom.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111650938-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-111650938-1');
+    </script>
 </head>
 <body>
 <div class="container content-bg">
