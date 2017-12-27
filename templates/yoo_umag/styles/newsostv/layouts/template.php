@@ -212,7 +212,7 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
         </div>
         <div class="row3 container-fluid" style="background-color: #292929;">
             <div class="row">
-                <div class="col-lg-12 copyright">© Copyright <?php echo date('Y') ?> - SOSTV All Rights Reserved</div>
+                <div class="col-lg-12 copyright">© Copyright <?php echo date('Y') ?> - 생애의 빛 - Light for Life Ministry All Rights Reserved</div>
             </div>
         </div>
         <!-- 3RD ROW ENDS -->
