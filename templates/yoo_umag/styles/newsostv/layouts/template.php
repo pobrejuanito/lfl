@@ -45,33 +45,20 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
         gtag('config', 'UA-111650938-1');
 
         jQuery(document).ready(function($) {
-            if (typeof Cookies.get('hide-div') !== 'undefined') {
+            if (typeof Cookies.get('hide-notice') !== 'undefined') {
                 $("#notice").remove();
+            } else {
+                $('#noticeModal').modal("show");
             }
 
-            $(".close").click(function() {
-                $("#notice").remove();
-                Cookies.set('hide-div', true);
+            $(".ok").click(function() {
+                Cookies.set('hide-notice', true);
             });
         });
     </script>
 </head>
 <body>
 <div class="container content-bg">
-    <section>
-        <div class="row">
-            <div class="col-lg-12">
-                <div id="notice" class="alert alert-warning fade in"  style="margin-top: 15px;">
-                <strong>공지사항</strong><a href="#" class="close" data-dismiss="alert">&times;</a>
-                <p>새롭게 개편된 생애의 빛 웹사이트를 찾아오신 여러분을 환영합니다. 중요한 공지사항을 한 가지 알려드립니다.
-                생애의 빛은 지난 몇 년간 생애의 빛 한국 지부를 맡아 일하던 손계문 목사가 새롭게 시작한 11시 교회(11th hour network) 와 공식적으로 분리 되었음을 공지 합니다.
-                공식적인 분리의 이유는, 손계문 목사의 가르침과 성경의 해석 및 적용이 그동안 생애의 빛이 가르치고 전해오던 기존의 가르침과 달라졌기 때문입니다.
-                또한 손계문 목사의 11시 교회의 선교의 방향과 목적이 생애의 빛 독립 선교기관의 설립 취지와 목적에 일치하지 않으므로 분리하게 되었음을 알려드립니다.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- HEADER STARTS
         ========================================================================= -->
     <header>
@@ -256,5 +243,7 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
 <!-- TO TOP STARTS
     ========================================================================= -->
 <a href="#" class="scrollup">Scroll</a>
+<!-- Modal -->
+<?php echo $this['modules']->render('bootstrap-modal-alert'); ?>
 </body>
 </html>
