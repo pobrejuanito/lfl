@@ -277,7 +277,7 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
                 <div class="col-lg-6">
                     <h3>SOSTV Ministry</h3>
                     <ul class="contactus">
-                        <li><i class="fa fa-building-o"></i> 미국: P. O. Box 787 Commerce, GA 30529 U.S.A</li>
+                        <li><i class="fa fa-building-o"></i> 미국: P.O. Box 787 Commerce, GA 30529 U.S.A</li>
                         <li><i class="fa fa-phone"></i><a href="tel:(320) 500-1004">(888) 439-4301</a></li>
                         <li><i class="fa fa-envelope-o"></i>sostvus@hotmail.com</li>
                     </ul>
