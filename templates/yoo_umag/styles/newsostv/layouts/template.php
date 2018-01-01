@@ -7,9 +7,9 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
 <head>
     <?php echo $this['template']->render('head'); ?>
     <!-- All Stylesheets -->
-    <link href="<?php echo $template_path; ?>/css/all-stylesheets.css" rel="stylesheet">
+    <link href="<?php echo $template_path; ?>css/all-stylesheets.css" rel="stylesheet">
     <!-- Header & Nav Center Align -->
-    <link href="<?php echo $template_path; ?>/css/header-center-align.css" rel="stylesheet">
+    <link href="<?php echo $template_path; ?>css/header-center-align.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -188,11 +188,66 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
 
     <?php endif; ?>
     </section>
-    <!-- /. PAGE CONTENTS ENDS
-        ========================================================================= -->
-    <!-- FOOTER STARTS
-        ========================================================================= -->
+    <!-- /. PAGE CONTENTS ENDS ========================================================================= -->
+    <!-- FOOTER STARTS  ========================================================================= -->
     <section class="footer">
+        <div class="container-fluid">
+            <div class="row" style="background-color: #F9F9F9;">
+                <!-- FEATURED POSTS STARTS -->
+                <div class="col-lg-6">
+                    <h2><i class="fa fa-paper-plane-o" aria-hidden="true" style="color: #e4545b;"></i> SOSTV 메일링서비스</h2>
+                    <p style="font-size: larger">여러분의 EMAIL로 생애의 빛이 찾아갑니다!</p>
+                    <p style="font-size: larger">
+                        생애의 빛에서 발송되는 EMAIL 수신을 원하거나 주변 분들에게 보내기를 원하신다면 newsletter@sostv.net 으로 연락주세요!
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Begin MailChimp Signup Form -->
+                    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                        #mc_embed_signup{ clear:left; }
+                        #mc_embed_signup h2 {
+                            font-size: 28px;
+                            font-weight: normal;
+                        }
+                        #mc_embed_signup .button {
+                            color: #e4545b;
+                            background-color: #fff;
+                            border: 2px solid #e4545b;
+                            line-height: 10px;
+                        }
+                        #mc_embed_signup .button:hover {
+                            background-color: #e4545b;
+                            color: #FFFFFF;
+                            line-height: 10px;
+                        }
+                        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                    </style>
+                    <div id="mc_embed_signup">
+                        <form action="https://sostv.us17.list-manage.com/subscribe/post?u=d2506594c35f43c6050854095&amp;id=5f352fac06" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+
+                                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                                <div class="mc-field-group">
+                                    <label for="mce-EMAIL">EMAIL 주소  <span class="asterisk">*</span>
+                                    </label>
+                                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                                </div>
+                                <div id="mce-responses" class="clear">
+                                    <div class="response" id="mce-error-response" style="display:none"></div>
+                                    <div class="response" id="mce-success-response" style="display:none"></div>
+                                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d2506594c35f43c6050854095_5f352fac06" tabindex="-1" value=""></div>
+                                <div class="clear"><input type="submit" value="구독신청" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--End mc_embed_signup-->
+                </div>
+                <!-- FEATURED POSTS ENDS -->
+            </div>
+        </div>
         <!-- 3RD ROW STARTS -->
         <div class="row3 container-fluid">
             <div class="row">
