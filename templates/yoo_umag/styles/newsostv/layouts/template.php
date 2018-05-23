@@ -278,10 +278,13 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
                     <h3>SOSTV Ministry</h3>
                     <ul class="contactus">
                         <li><i class="fa fa-building-o"></i>
-                           미국: P.O. Box 787 Commerce, GA 30529 U.S.A 전화: <a href="tel:(320) 500-1004">(888) 439-4301</a> sostvus@hotmail.com
-                           한국: 전화 1670-9974 sostv119@naver.com
+                           미국: P.O. Box 787 Commerce, GA 30529 U.S.A <br />
+                           전화: <a href="tel:(320) 500-1004">(888) 439-4301</a> <br/>
+                           Email: sostvus@hotmail.com
                         </li>
-                        <li><i class="fa fa-envelope-o"></i>sostvus@hotmail.com</li>
+                        <li><i class="fa fa-building-o"></i>
+                           한국: 전화 1670-9974 <br/>Email: sostv119@naver.com
+                        </li>
                     </ul>
                 </div>
             </div>
