@@ -279,8 +279,7 @@ $template_path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
                     <ul class="contactus">
                         <li><i class="fa fa-building-o"></i>
                            미국: P.O. Box 787 Commerce, GA 30529 U.S.A <br />
-                           전화: <a href="tel:(320) 500-1004">(888) 439-4301</a> <br/>
-                           Email: sostvus@hotmail.com
+                           전화: <a href="tel:(320) 500-1004">(888) 439-4301</a> Email: sostvus@hotmail.com
                         </li>
                         <li><i class="fa fa-building-o"></i>
                            한국: 전화 1670-9974 <br/>Email: sostv119@naver.com
